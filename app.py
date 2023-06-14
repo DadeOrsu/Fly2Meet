@@ -11,13 +11,13 @@ def index():
 @app.route('/search_flights', methods=['POST'])
 def search_flights():
     # Recupera i dati dal form di richiesta
-    departure_airport = request.args.get('departure_airport')
-    departure_date = request.args.get('departure_date')
-    arrival_date = request.args.get('arrival_date')
-    max_base_price = request.args.get('max_base_price')
-    max_duration = request.args.get('max_duration')
-    max_wait_time = request.args.get('max_wait_time')
-    destination = request.args.get('destination')
+    departure_airport = request.form.get('departure_airport')
+    departure_date = request.form.get('departure_date')
+    arrival_date = request.form.get('arrival_date')
+    max_base_price = request.form.get('max_base_price')
+    max_duration = request.form.get('max_duration')
+    max_wait_time = request.form.get('max_wait_time')
+    destination = request.form.get('destination')
 
     # Esegui l'elaborazione dei dati come desiderato
 
