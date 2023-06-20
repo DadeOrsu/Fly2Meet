@@ -10,7 +10,7 @@
     <h1>fly2meet</h1>
 
     <form method="POST" action="{{ url_for('search_flights') }}">
-        <label for="departure_airport">Departure Airport:</label>
+        <label for="departure_airport">Departure City:</label>
         <input type="text" id="departure_airport" name="departure_airport" value="{{ request.form.get('departure_airport') }}" required>
 
         <label for="departure_date">Departure Date:</label>
@@ -33,7 +33,7 @@
 
         <div class="checkbox">
             <input type="checkbox" id="same_airport" name="same_airport">
-            <label for="same_airport">Same Airport</label>
+            <label for="same_airport">Same City</label>
         </div>
 
         <div class="checkbox">
