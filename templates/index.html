@@ -16,20 +16,30 @@
         <label for="departure_date">Departure Date:</label>
         <input type="date" id="departure_date" name="departure_date" value="{{ request.form.get('departure_date') }}" required>
 
-        <label for="arrival_date">Arrival Date:</label>
-        <input type="date" id="arrival_date" name="arrival_date" value="{{ request.form.get('arrival_date') }}" required>
+        <label for="return_date">Return Date:</label>
+        <input type="date" id="return_date" name="return_date" value="{{ request.form.get('return_date') }}">
 
         <label for="max_base_price">Max Base Price:</label>
-        <input type="number" id="max_base_price" name="max_base_price" value="{{ request.form.get('max_base_price') }}" required>
+        <input type="number" id="max_base_price" name="max_base_price" value="{{ request.form.get('max_base_price') }}" required min="0">
 
         <label for="max_duration">Max Duration:</label>
-        <input type="number" id="max_duration" name="max_duration" value="{{ request.form.get('max_duration') }}" required>
+        <input type="number" id="max_duration" name="max_duration" value="{{ request.form.get('max_duration') }}" required min="0">
 
         <label for="max_wait_time">Max Wait Time:</label>
-        <input type="number" id="max_wait_time" name="max_wait_time" value="{{ request.form.get('max_wait_time') }}" required>
+        <input type="number" id="max_wait_time" name="max_wait_time" value="{{ request.form.get('max_wait_time') }}" required min="0">
 
         <label for="destination">Destination:</label>
         <input type="text" id="destination" name="destination" value="{{ request.form.get('destination') }}">
+
+        <div class="checkbox">
+            <input type="checkbox" id="same_airport" name="same_airport">
+            <label for="same_airport">Same Airport</label>
+        </div>
+
+        <div class="checkbox">
+            <input type="checkbox" id="one_way" name="one_way">
+            <label for="one_way">One Way</label>
+        </div>
 
         <button type="submit">Search</button>
     </form>
