@@ -1,0 +1,20 @@
+/* Stile per la tabella */
+#flight-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Stile per le righe pari della tabella */
+#flight-table tr:nth-child(even) {
+    background-color: #EAF2F8; /* Colore freddo più chiaro */
+}
+
+/* Stile per le righe dispari della tabella */
+#flight-table tr:nth-child(odd) {
+    background-color: #D4E6F1; /* Colore freddo più scuro */
+}
+
+/* Stile per l'intestazione dei campi */
+#flight-table th {
+    background-color: #2980
+}
