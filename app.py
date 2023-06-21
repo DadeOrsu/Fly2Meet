@@ -1,24 +1,10 @@
-import requests
 from flask import Flask, render_template, request
 
-from helpers import get_access_token
+from helpers import *
 
 app = Flask(__name__)
 
 access_token = get_access_token('kMotx0vA8lrM8jQ0P3xZA8mAwgYMQXDS', '2JatjYoMT1mSeL0i')
-
-
-def get_data(departure_airport, _access_token):
-    url = "https://test.api.amadeus.com/v1/reference-data/locations"
-    headers = {
-        "Authorization": f"Bearer {_access_token}"
-    }
-    params = {
-        "subType": "AIRPORT",
-        "keyword": departure_airport
-    }
-    response = requests.get(url, headers=headers, params=params)
-    return response.json()
 
 
 @app.route('/search_flights', methods=['POST'])
@@ -36,6 +22,12 @@ def search_flights():
 
     print(departure_airport, departure_date, return_date, max_base_price, max_duration, max_wait_time, destination,
           same_airport, one_way)
+    flights = get_flight_inspirations(departure_airport, access_token)
+    flight_offers = []
+    for flight in flights:
+        fo = get_flight_offers(departure_airport, flight['destination'], departure_date, access_token)
+        flight_offers.extend(fo['data'])
+    print(json.dumps(flight_offers, indent=4))
     return "Risultati della ricerca dei voli"
 
 
