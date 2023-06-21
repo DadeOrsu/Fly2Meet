@@ -62,7 +62,7 @@ def search_flights():
     flights = get_flight_inspirations(departure_airport, access_token)
     all_flight_offers = []
     for flight in flights:
-        time.sleep(1)
+        time.sleep(2)
         fo = get_flight_offers(departure_airport, flight['destination'], departure_date, access_token)
         all_flight_offers.extend(fo['data'])
     print(json.dumps(all_flight_offers, indent=4))
