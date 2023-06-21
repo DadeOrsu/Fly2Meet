@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>Offerte di volo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Offerte di volo</h1>
+    <table id="flight-table">
+        <thead>
+            <tr>
+                <th id="origin-header">Origine</th>
+                <th id="destination-header">Destinazione</th>
+                <th id="departure-date-header">Data di partenza</th>
+                <th id="duration-header">Durata</th>
+                <th id="price-header">Prezzo</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for flight in all_flight_offers %}
+            <tr>
+                <td id="origin">{{ flight.itineraries[0].segments[0].departure.iataCode }}</td>
+                <td id="destination">{{ flight.itineraries[0].segments[0].arrival.iataCode }}</td>
+                <td id="departure-date">{{ flight.itineraries[0].segments[0].departure.at | format_datetime }}</td>
+                <td id="duration">{{ flight.itineraries[0].duration | format_duration }}</td>
+                <td id="price">{{ flight.price.total | format_price }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
