@@ -6,7 +6,6 @@ from helpers import *
 # Funzione per ottenere i dati dei voli da file json
 def flight_from_json(file_path):
     flights = []
-
     try:
         # Apri il file JSON in modalità lettura
         with open(file_path, 'r') as file:
@@ -68,10 +67,13 @@ def get_flight_offers(_origin, _destination, _departure_date, _access_token):
     }
 
     response = requests.get(url, headers=headers, params=params)
-    data = response.json()
-
-    # Restituisci i dati delle offerte di volo
-    return data
+    if response.status_code != 200:
+        print(f"Errore durante la richiesta di Flight Offers: {response.json()['errors'][0]['detail']}")
+        return None
+    else:
+        data = response.json()
+        # Restituisci i dati delle offerte di volo
+        return data
 
 
 # Funzione che restituisce access token

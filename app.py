@@ -66,6 +66,9 @@ def search_flights():
         fo = get_flight_offers(departure_airport, flight['destination'], departure_date, access_token)
         all_flight_offers.extend(fo['data'])
     print(json.dumps(all_flight_offers, indent=4))
+    # scrivi all_flight_offers in un file json
+    with open('flight_offers_paris.json', 'w') as file:
+        json.dump(all_flight_offers, file, indent=4)
     return render_template("results.html", all_flight_offers=all_flight_offers)
 
 
