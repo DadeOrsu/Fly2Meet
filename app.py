@@ -56,7 +56,7 @@ def search_flights():
     destination = request.form.get('destination')
     same_airport = request.form.get('same_airport')
     one_way = request.form.get('one_way')
-    #scrittura dei dati
+    # scrittura dei dati
     print(departure_airport, departure_date, return_date, max_base_price, max_duration, max_wait_time, destination,
           same_airport, one_way)
     flights = get_flight_inspirations(departure_airport, access_token)
