@@ -47,7 +47,8 @@ app.jinja_env.filters['format_datetime'] = format_datetime
 @app.route('/search_flights', methods=['POST'])
 def search_flights():
     # dati presi dal form
-    departure_airport = request.form.get('departure_airport')
+    departure_city_1 = request.form.get('departure_city_1')
+    departure_city_2 = request.form.get('departure_city_2')
     departure_date = request.form.get('departure_date')
     return_date = request.form.get('return_date')
     max_base_price = request.form.get('max_base_price')
@@ -57,13 +58,13 @@ def search_flights():
     same_airport = request.form.get('same_airport')
     one_way = request.form.get('one_way')
     # scrittura dei dati
-    print(departure_airport, departure_date, return_date, max_base_price, max_duration, max_wait_time, destination,
-          same_airport, one_way)
-    flights = get_flight_inspirations(departure_airport, access_token)
+    print(departure_city_1, departure_city_2, departure_date, return_date, max_base_price, max_duration,
+          max_wait_time, destination, same_airport, one_way)
+    flights = get_flight_inspirations(departure_city_1, access_token)
     all_flight_offers = []
     for flight in flights:
         time.sleep(2)
-        fo = get_flight_offers(departure_airport, flight['destination'], departure_date, access_token)
+        fo = get_flight_offers(departure_city_1, flight['destination'], departure_date, access_token)
         all_flight_offers.extend(fo['data'])
     print(json.dumps(all_flight_offers, indent=4))
     # scrivi all_flight_offers in un file json

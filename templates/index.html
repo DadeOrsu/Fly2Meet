@@ -10,8 +10,11 @@
     <h1>fly2meet</h1>
 
     <form method="POST" action="{{ url_for('search_flights') }}">
-        <label for="departure_airport">Departure City:</label>
-        <input type="text" id="departure_airport" name="departure_airport" value="{{ request.form.get('departure_airport') }}" required>
+        <label for="departure_city_1">Departure City 1:</label>
+        <input type="text" id="departure_city_1" name="departure_city_1" value="{{ request.form.get('departure_city_1') }}" required>
+
+        <label for="departure_city_2">Departure City 2:</label>
+        <input type="text" id="departure_city_2" name="departure_city_2" value="{{ request.form.get('departure_city_2') }}" required>
 
         <label for="departure_date">Departure Date:</label>
         <input type="date" id="departure_date" name="departure_date" value="{{ request.form.get('departure_date') }}" required>
