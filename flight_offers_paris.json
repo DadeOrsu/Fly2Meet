@@ -1429,8 +1429,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-23",
-        "lastTicketingDateTime": "2023-06-23",
+        "lastTicketingDate": "2023-06-30",
+        "lastTicketingDateTime": "2023-06-30",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -1465,8 +1465,8 @@
         ],
         "price": {
             "currency": "EUR",
-            "total": "146.59",
-            "base": "58.00",
+            "total": "176.59",
+            "base": "88.00",
             "fees": [
                 {
                     "amount": "0.00",
@@ -1477,7 +1477,7 @@
                     "type": "TICKETING"
                 }
             ],
-            "grandTotal": "146.59",
+            "grandTotal": "176.59",
             "additionalServices": [
                 {
                     "amount": "55.00",
@@ -1501,16 +1501,16 @@
                 "travelerType": "ADULT",
                 "price": {
                     "currency": "EUR",
-                    "total": "146.59",
-                    "base": "58.00"
+                    "total": "176.59",
+                    "base": "88.00"
                 },
                 "fareDetailsBySegment": [
                     {
                         "segmentId": "16",
                         "cabin": "ECONOMY",
-                        "fareBasis": "QOLGFR1",
+                        "fareBasis": "NOLGFR1",
                         "brandedFare": "ECOLIGHT",
-                        "class": "Q",
+                        "class": "N",
                         "includedCheckedBags": {
                             "quantity": 0
                         }
