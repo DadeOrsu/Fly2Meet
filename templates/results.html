@@ -26,6 +26,15 @@
                 <td id="price">{{ flight.price.total | format_price }}</td>
             </tr>
             {% endfor %}
+            {% for flight in second_city_offers %}
+            <tr>
+                <td id="origin_2">{{ flight.itineraries[0].segments[0].departure.iataCode }}</td>
+                <td id="destination_2">{{ flight.itineraries[0].segments[0].arrival.iataCode }}</td>
+                <td id="departure-date_2">{{ flight.itineraries[0].segments[0].departure.at | format_datetime }}</td>
+                <td id="duration_2">{{ flight.itineraries[0].duration | format_duration }}</td>
+                <td id="price_2">{{ flight.price.total | format_price }}</td>
+            </tr>
+            {% endfor %}
         </tbody>
     </table>
 </body>

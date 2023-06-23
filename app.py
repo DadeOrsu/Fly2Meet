@@ -60,17 +60,30 @@ def search_flights():
     # scrittura dei dati
     print(departure_city_1, departure_city_2, departure_date, return_date, max_base_price, max_duration,
           max_wait_time, destination, same_airport, one_way)
+    # richiesta delle flight inspirations per la prima città di partenza
     flights = get_flight_inspirations(departure_city_1, access_token)
+    # richiesta delle flight offers per la prima città di partenza
     all_flight_offers = []
+    first_city_destinations = set()
     for flight in flights:
         time.sleep(2)
         fo = get_flight_offers(departure_city_1, flight['destination'], departure_date, access_token)
+        # aggiungo la destinazione all'insieme delle destinazioni della prima città di partenza
+        if flight['destination'] not in first_city_destinations:
+            first_city_destinations.add(flight['destination'])
         all_flight_offers.extend(fo['data'])
     print(json.dumps(all_flight_offers, indent=4))
+
+    # richiesta delle flight offers per la seconda città di partenza
+    second_city_offers = []
+    for destination in first_city_destinations:
+        time.sleep(2)
+        fo = get_flight_offers(departure_city_2, destination, departure_date, access_token)
+        second_city_offers.extend(fo['data'])
     # scrivi all_flight_offers in un file json
     with open('flight_offers_paris.json', 'w') as file:
         json.dump(all_flight_offers, file, indent=4)
-    return render_template("results.html", all_flight_offers=all_flight_offers)
+    return render_template("results.html", all_flight_offers=all_flight_offers, second_city_offers=second_city_offers)
 
 
 @app.route('/')
