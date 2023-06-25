@@ -85,6 +85,7 @@ def search_flights():
         json.dump(all_flight_offers, file, indent=4)
     return render_template("results.html", all_flight_offers=all_flight_offers, second_city_offers=second_city_offers)
 
+
 @app.route('/')
 def index():
     return render_template('index.html')
