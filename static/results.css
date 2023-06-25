@@ -1,4 +1,4 @@
-/* Stile per la tabella */
+/* Stile per la tabella 1 */
 #flight-table {
     width: 100%;
     border-collapse: collapse;
@@ -16,5 +16,26 @@
 
 /* Stile per l'intestazione dei campi */
 #flight-table th {
+    background-color: #2980
+}
+
+/* Stile per la tabella 2 */
+#flight-table-2 {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Stile per le righe pari della tabella */
+#flight-table-2 tr:nth-child(even) {
+    background-color: #EAF2F8; /* Colore freddo più chiaro */
+}
+
+/* Stile per le righe dispari della tabella */
+#flight-table-2 tr:nth-child(odd) {
+    background-color: #D4E6F1; /* Colore freddo più scuro */
+}
+
+/* Stile per l'intestazione dei campi */
+#flight-table-2 th {
     background-color: #2980
 }

@@ -6,6 +6,8 @@
 </head>
 <body>
     <h1>Offerte di volo</h1>
+
+    <h2>Offerte per la prima città</h2>
     <table id="flight-table">
         <thead>
             <tr>
@@ -26,6 +28,21 @@
                 <td id="price">{{ flight.price.total | format_price }}</td>
             </tr>
             {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Offerte per la seconda città</h2>
+    <table id="flight-table-2">
+        <thead>
+            <tr>
+                <th id="origin-header-2">Origine</th>
+                <th id="destination-header-2">Destinazione</th>
+                <th id="departure-date-header-2">Data di partenza</th>
+                <th id="duration-header-2">Durata</th>
+                <th id="price-header-2">Prezzo</th>
+            </tr>
+        </thead>
+        <tbody>
             {% for flight in second_city_offers %}
             <tr>
                 <td id="origin_2">{{ flight.itineraries[0].segments[0].departure.iataCode }}</td>
