@@ -51,6 +51,8 @@ def search_flights():
     departure_city_2 = request.form.get('departure_city_2')
     departure_date = request.form.get('departure_date')
     return_date = request.form.get('return_date')
+    if return_date == '':
+        return_date = None
     max_base_price = request.form.get('max_base_price')
     max_duration = request.form.get('max_duration')
     max_wait_time = request.form.get('max_wait_time')
@@ -67,7 +69,8 @@ def search_flights():
     first_city_destinations = set()
     for flight in flights:
         time.sleep(2)
-        fo = get_flight_offers(departure_city_1, flight['destination'], departure_date, access_token)
+        fo = get_flight_offers(departure_city_1, flight['destination'], departure_date, return_date, max_base_price,
+                               access_token)
         # aggiungo la destinazione all'insieme delle destinazioni della prima città di partenza
         if flight['destination'] not in first_city_destinations:
             first_city_destinations.add(flight['destination'])
@@ -78,7 +81,7 @@ def search_flights():
     second_city_offers = []
     for destination in first_city_destinations:
         time.sleep(2)
-        fo = get_flight_offers(departure_city_2, destination, departure_date, access_token)
+        fo = get_flight_offers(departure_city_2, destination, departure_date, return_date, max_base_price, access_token)
         second_city_offers.extend(fo['data'])
     # scrivi all_flight_offers in un file json
     with open('flight_offers_paris.json', 'w') as file:

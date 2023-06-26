@@ -50,21 +50,54 @@ def get_flight_inspirations(_origin, _access_token):
 
 
 # Funzione che restituisce le flight offers
-def get_flight_offers(_origin, _destination, _departure_date, _access_token):
+def get_flight_offers(_origin, _destination, _departure_date, _return_date, _max_base_price, _access_token):
     url = "https://test.api.amadeus.com/v2/shopping/flight-offers"
 
     headers = {
         "Authorization": f"Bearer {_access_token}",
         "Content-Type": "application/json"
     }
-
-    params = {
-        "originLocationCode": _origin,  # Codice IATA dell'aeroporto di partenza
-        "destinationLocationCode": _destination,  # Codice IATA dell'aeroporto di destinazione
-        "departureDate": _departure_date,  # Formato: YYYY-MM-DD
-        "nonStop": "true",  # Solo voli diretti
-        "adults": 1  # Numero di adulti
-    }
+    if _return_date is not None and _max_base_price is not None:
+        params = {
+            "originLocationCode": _origin,  # Codice IATA dell'aeroporto di partenza
+            "destinationLocationCode": _destination,  # Codice IATA dell'aeroporto di destinazione
+            "departureDate": _departure_date,  # Formato: YYYY-MM-DD
+            "returnDate": _return_date,  # Formato: YYYY-MM-DD
+            "maxPrice": _max_base_price,  # Prezzo massimo
+            "currencyCode": "EUR",  # Valuta
+            "nonStop": "true",  # Solo voli diretti
+            "adults": 1  # Numero di adulti
+        }
+    elif _return_date is not None:
+        print("sono qui")
+        params = {
+            "originLocationCode": _origin,  # Codice IATA dell'aeroporto di partenza
+            "destinationLocationCode": _destination,  # Codice IATA dell'aeroporto di destinazione
+            "departureDate": _departure_date,  # Formato: YYYY-MM-DD
+            "returnDate": _return_date,  # Formato: YYYY-MM-DD
+            "currencyCode": "EUR",  # Valuta
+            "nonStop": "true",  # Solo voli diretti
+            "adults": 1  # Numero di adulti
+        }
+    elif _max_base_price is not None:
+        params = {
+            "originLocationCode": _origin,  # Codice IATA dell'aeroporto di partenza
+            "destinationLocationCode": _destination,  # Codice IATA dell'aeroporto di destinazione
+            "departureDate": _departure_date,  # Formato: YYYY-MM-DD
+            "maxPrice": _max_base_price,  # Prezzo massimo
+            "currencyCode": "EUR",  # Valuta
+            "nonStop": "true",  # Solo voli diretti
+            "adults": 1  # Numero di adulti
+        }
+    else:
+        params = {
+            "originLocationCode": _origin,  # Codice IATA dell'aeroporto di partenza
+            "destinationLocationCode": _destination,  # Codice IATA dell'aeroporto di destinazione
+            "departureDate": _departure_date,  # Formato: YYYY-MM-DD
+            "currencyCode": "EUR",  # Valuta
+            "nonStop": "true",  # Solo voli diretti
+            "adults": 1  # Numero di adulti
+        }
 
     response = requests.get(url, headers=headers, params=params)
     if response.status_code != 200:

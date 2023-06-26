@@ -20,7 +20,7 @@
         <input type="date" id="departure_date" name="departure_date" value="{{ request.form.get('departure_date') }}" required>
 
         <label for="return_date">Return Date:</label>
-        <input type="date" id="return_date" name="return_date" value="{{ request.form.get('return_date') }}">
+        <input type="date" id="return_date" name="return_date" value="{{ request.form.get('return_date', '') }}">
 
         <label for="max_base_price">Max Base Price:</label>
         <input type="number" id="max_base_price" name="max_base_price" value="{{ request.form.get('max_base_price') }}" required min="0">
