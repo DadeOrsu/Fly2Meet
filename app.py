@@ -80,14 +80,17 @@ def search_flights():
         # aggiungo la destinazione all'insieme delle destinazioni della prima città di partenza
         if flight['destination'] not in first_city_destinations:
             first_city_destinations.add(flight['destination'])
-        all_flight_offers.extend(fo['data'])
+        if fo['data']:
+            all_flight_offers.extend(fo['data'])
+    # scrivi all_flight_offers in un file json
     print(json.dumps(all_flight_offers, indent=4))
 
     # richiesta delle flight offers per la seconda città di partenza
     second_city_offers = []
     for destination in first_city_destinations:
         fo = get_flight_offers(departure_city_2, destination, departure_date, return_date, max_base_price, access_token)
-        second_city_offers.extend(fo['data'])
+        if fo['data']:
+            second_city_offers.extend(fo['data'])
     # scrivi all_flight_offers in un file json
     with open('flight_offers_paris.json', 'w') as file:
         json.dump(all_flight_offers, file, indent=4)
