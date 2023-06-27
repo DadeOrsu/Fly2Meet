@@ -57,8 +57,18 @@ def search_flights():
     same_airport = request.form.get('same_airport')
     one_way = request.form.get('one_way')
     # scrittura dei dati
-    print(departure_city_1, departure_city_2, departure_date, return_date, max_base_price, max_duration,
-          max_wait_time, destination, same_airport, one_way)
+    print(
+        f"departure_city_1: {departure_city_1}\n"
+        f"departure_city_2: {departure_city_2}\n"
+        f"departure_date: {departure_date}\n"
+        f"return_date: {return_date}\n"
+        f"max_base_price: {max_base_price}\n"
+        f"max_duration: {max_duration}\n"
+        f"max_wait_time: {max_wait_time}\n"
+        f"destination: {destination}\n"
+        f"same_airport: {same_airport}\n"
+        f"one_way: {one_way}\n"
+    )
     # richiesta delle flight inspirations per la prima città di partenza
     flights = get_flight_inspirations(departure_city_1, access_token)
     # richiesta delle flight offers per la prima città di partenza
