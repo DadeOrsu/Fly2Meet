@@ -1,8 +1,6 @@
 from datetime import datetime
 from flask import Flask, render_template, request
 import re
-
-
 from helpers import *
 
 app = Flask(__name__)
