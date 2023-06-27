@@ -68,7 +68,6 @@ def search_flights():
     all_flight_offers = []
     first_city_destinations = set()
     for flight in flights:
-        time.sleep(3)
         fo = get_flight_offers(departure_city_1, flight['destination'], departure_date, return_date, max_base_price,
                                access_token)
         # aggiungo la destinazione all'insieme delle destinazioni della prima città di partenza
@@ -80,7 +79,6 @@ def search_flights():
     # richiesta delle flight offers per la seconda città di partenza
     second_city_offers = []
     for destination in first_city_destinations:
-        time.sleep(3)
         fo = get_flight_offers(departure_city_2, destination, departure_date, return_date, max_base_price, access_token)
         second_city_offers.extend(fo['data'])
     # scrivi all_flight_offers in un file json
