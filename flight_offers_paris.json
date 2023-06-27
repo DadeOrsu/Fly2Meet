@@ -3277,7 +3277,7 @@
         ],
         "price": {
             "currency": "EUR",
-            "total": "91.19",
+            "total": "91.20",
             "base": "26.00",
             "fees": [
                 {
@@ -3289,7 +3289,7 @@
                     "type": "TICKETING"
                 }
             ],
-            "grandTotal": "91.19"
+            "grandTotal": "91.20"
         },
         "pricingOptions": {
             "fareType": [
@@ -3307,7 +3307,7 @@
                 "travelerType": "ADULT",
                 "price": {
                     "currency": "EUR",
-                    "total": "91.19",
+                    "total": "91.20",
                     "base": "26.00"
                 },
                 "fareDetailsBySegment": [
@@ -3368,7 +3368,7 @@
         ],
         "price": {
             "currency": "EUR",
-            "total": "91.19",
+            "total": "91.20",
             "base": "26.00",
             "fees": [
                 {
@@ -3380,7 +3380,7 @@
                     "type": "TICKETING"
                 }
             ],
-            "grandTotal": "91.19"
+            "grandTotal": "91.20"
         },
         "pricingOptions": {
             "fareType": [
@@ -3398,7 +3398,7 @@
                 "travelerType": "ADULT",
                 "price": {
                     "currency": "EUR",
-                    "total": "91.19",
+                    "total": "91.20",
                     "base": "26.00"
                 },
                 "fareDetailsBySegment": [
@@ -4112,7 +4112,7 @@
             "grandTotal": "176.59",
             "additionalServices": [
                 {
-                    "amount": "55.00",
+                    "amount": "60.00",
                     "type": "CHECKED_BAGS"
                 }
             ]
@@ -4209,7 +4209,7 @@
             "grandTotal": "176.59",
             "additionalServices": [
                 {
-                    "amount": "55.00",
+                    "amount": "60.00",
                     "type": "CHECKED_BAGS"
                 }
             ]
@@ -4396,7 +4396,7 @@
             "grandTotal": "182.43",
             "additionalServices": [
                 {
-                    "amount": "55.00",
+                    "amount": "60.00",
                     "type": "CHECKED_BAGS"
                 }
             ]
@@ -4492,7 +4492,7 @@
             "grandTotal": "182.43",
             "additionalServices": [
                 {
-                    "amount": "55.00",
+                    "amount": "60.00",
                     "type": "CHECKED_BAGS"
                 }
             ]
@@ -5230,7 +5230,7 @@
         ],
         "price": {
             "currency": "EUR",
-            "total": "152.48",
+            "total": "152.29",
             "base": "41.00",
             "fees": [
                 {
@@ -5242,7 +5242,7 @@
                     "type": "TICKETING"
                 }
             ],
-            "grandTotal": "152.48"
+            "grandTotal": "152.29"
         },
         "pricingOptions": {
             "fareType": [
@@ -5260,7 +5260,7 @@
                 "travelerType": "ADULT",
                 "price": {
                     "currency": "EUR",
-                    "total": "152.48",
+                    "total": "152.29",
                     "base": "41.00"
                 },
                 "fareDetailsBySegment": [
@@ -5320,7 +5320,7 @@
         ],
         "price": {
             "currency": "EUR",
-            "total": "152.48",
+            "total": "152.29",
             "base": "41.00",
             "fees": [
                 {
@@ -5332,7 +5332,7 @@
                     "type": "TICKETING"
                 }
             ],
-            "grandTotal": "152.48"
+            "grandTotal": "152.29"
         },
         "pricingOptions": {
             "fareType": [
@@ -5350,7 +5350,7 @@
                 "travelerType": "ADULT",
                 "price": {
                     "currency": "EUR",
-                    "total": "152.48",
+                    "total": "152.29",
                     "base": "41.00"
                 },
                 "fareDetailsBySegment": [

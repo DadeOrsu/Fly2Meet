@@ -1,11 +1,10 @@
+import time
 from datetime import datetime
 from flask import Flask, render_template, request
 import re
 from helpers import *
 
 app = Flask(__name__)
-
-access_token = get_access_token('kMotx0vA8lrM8jQ0P3xZA8mAwgYMQXDS', '2JatjYoMT1mSeL0i')
 
 
 # Filtro per formattare il prezzo
@@ -70,30 +69,31 @@ def search_flights():
         f"one_way: {one_way}\n"
     )
     # richiesta delle flight inspirations per la prima città di partenza
-    flights = get_flight_inspirations(departure_city_1, access_token)
+    flights = get_flight_inspirations(departure_city_1)
     # richiesta delle flight offers per la prima città di partenza
     all_flight_offers = []
     first_city_destinations = set()
     for flight in flights:
-        fo = get_flight_offers(departure_city_1, flight['destination'], departure_date, return_date, max_base_price,
-                               access_token)
+        time.sleep(2)
+        fo = get_flight_offers(departure_city_1, flight['destination'], departure_date, return_date, max_base_price)
+        print(fo)
         # aggiungo la destinazione all'insieme delle destinazioni della prima città di partenza
-        if flight['destination'] not in first_city_destinations:
+        if flight['destination'] not in first_city_destinations and len(fo['data']) > 0:
+            print("Aggiungo la destinazione")
             first_city_destinations.add(flight['destination'])
-        if fo['data']:
-            all_flight_offers.extend(fo['data'])
+        all_flight_offers.extend(fo['data'])
     # scrivi all_flight_offers in un file json
-    print(json.dumps(all_flight_offers, indent=4))
+    with open('flight_offers_paris.json', 'w') as file:
+        json.dump(all_flight_offers, file, indent=4)
 
     # richiesta delle flight offers per la seconda città di partenza
     second_city_offers = []
     for destination in first_city_destinations:
-        fo = get_flight_offers(departure_city_2, destination, departure_date, return_date, max_base_price, access_token)
-        if fo['data']:
-            second_city_offers.extend(fo['data'])
-    # scrivi all_flight_offers in un file json
-    with open('flight_offers_paris.json', 'w') as file:
-        json.dump(all_flight_offers, file, indent=4)
+        time.sleep(2)
+        fo = get_flight_offers(departure_city_2, destination, departure_date, return_date, max_base_price)
+        print(fo)
+        second_city_offers.extend(fo['data'])
+
     return render_template("results.html", all_flight_offers=all_flight_offers, second_city_offers=second_city_offers)
 
 
