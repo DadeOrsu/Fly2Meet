@@ -5,7 +5,6 @@ from utils.prolog_parser import prolog_flight_parser
 import time
 import re
 
-
 app = Flask(__name__)
 
 
@@ -96,7 +95,8 @@ def search_flights():
         print(fo)
         second_city_offers.extend(fo['data'])
 
-    print(prolog_flight_parser(all_flight_offers))
+    prolog_facts = prolog_flight_parser(all_flight_offers)
+    print(prolog_facts)
     return render_template("results.html", all_flight_offers=all_flight_offers, second_city_offers=second_city_offers)
 
 

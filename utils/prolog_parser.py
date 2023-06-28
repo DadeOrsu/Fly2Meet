@@ -26,7 +26,6 @@ def get_date(date_string, airport_code):
     date = datetime.fromisoformat(date_string)
     airports = Airports()
     airport_info = airports.airport_iata(airport_code)
-    print(airport_info)
     timezone_name = get_timezone_name_from_iana(airport_info.tzdb)
     # offset = get_timezone_offset(airport_info.tzdb)
     offset = int(float(airport_info.tz) * 3600)
