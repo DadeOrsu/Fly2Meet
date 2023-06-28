@@ -1,8 +1,10 @@
-import time
 from datetime import datetime
 from flask import Flask, render_template, request
-import re
 from utils.helpers import *
+from utils.prolog_parser import prolog_flight_parser
+import time
+import re
+
 
 app = Flask(__name__)
 
@@ -94,6 +96,7 @@ def search_flights():
         print(fo)
         second_city_offers.extend(fo['data'])
 
+    print(prolog_flight_parser(all_flight_offers))
     return render_template("results.html", all_flight_offers=all_flight_offers, second_city_offers=second_city_offers)
 
 

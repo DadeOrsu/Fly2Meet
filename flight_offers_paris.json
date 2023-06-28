@@ -6,8 +6,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -103,8 +103,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -290,8 +290,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -657,8 +657,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
         "numberOfBookableSeats": 7,
         "itineraries": [
             {
@@ -754,8 +754,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -851,8 +851,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
         "numberOfBookableSeats": 1,
         "itineraries": [
             {
@@ -948,8 +948,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -1045,8 +1045,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
         "numberOfBookableSeats": 3,
         "itineraries": [
             {
@@ -1142,8 +1142,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
         "numberOfBookableSeats": 4,
         "itineraries": [
             {
@@ -1610,8 +1610,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -1707,8 +1707,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
         "numberOfBookableSeats": 6,
         "itineraries": [
             {
@@ -1906,879 +1906,6 @@
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
-                "duration": "PT2H30M",
-                "segments": [
-                    {
-                        "departure": {
-                            "iataCode": "ORY",
-                            "terminal": "1",
-                            "at": "2023-06-30T10:20:00"
-                        },
-                        "arrival": {
-                            "iataCode": "LIS",
-                            "terminal": "1",
-                            "at": "2023-06-30T11:50:00"
-                        },
-                        "carrierCode": "TP",
-                        "number": "437",
-                        "aircraft": {
-                            "code": "321"
-                        },
-                        "operating": {
-                            "carrierCode": "TP"
-                        },
-                        "duration": "PT2H30M",
-                        "id": "3",
-                        "numberOfStops": 0,
-                        "blacklistedInEU": false
-                    }
-                ]
-            }
-        ],
-        "price": {
-            "currency": "EUR",
-            "total": "134.43",
-            "base": "66.00",
-            "fees": [
-                {
-                    "amount": "0.00",
-                    "type": "SUPPLIER"
-                },
-                {
-                    "amount": "0.00",
-                    "type": "TICKETING"
-                }
-            ],
-            "grandTotal": "134.43",
-            "additionalServices": [
-                {
-                    "amount": "39.00",
-                    "type": "CHECKED_BAGS"
-                }
-            ]
-        },
-        "pricingOptions": {
-            "fareType": [
-                "PUBLISHED"
-            ],
-            "includedCheckedBagsOnly": false
-        },
-        "validatingAirlineCodes": [
-            "TP"
-        ],
-        "travelerPricings": [
-            {
-                "travelerId": "1",
-                "fareOption": "STANDARD",
-                "travelerType": "ADULT",
-                "price": {
-                    "currency": "EUR",
-                    "total": "134.43",
-                    "base": "66.00"
-                },
-                "fareDetailsBySegment": [
-                    {
-                        "segmentId": "3",
-                        "cabin": "ECONOMY",
-                        "fareBasis": "A14DSC0B",
-                        "brandedFare": "DISCOUNT",
-                        "class": "A",
-                        "includedCheckedBags": {
-                            "quantity": 0
-                        }
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "type": "flight-offer",
-        "id": "2",
-        "source": "GDS",
-        "instantTicketingRequired": false,
-        "nonHomogeneous": false,
-        "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
-        "numberOfBookableSeats": 9,
-        "itineraries": [
-            {
-                "duration": "PT2H30M",
-                "segments": [
-                    {
-                        "departure": {
-                            "iataCode": "ORY",
-                            "terminal": "1",
-                            "at": "2023-06-30T11:55:00"
-                        },
-                        "arrival": {
-                            "iataCode": "LIS",
-                            "terminal": "1",
-                            "at": "2023-06-30T13:25:00"
-                        },
-                        "carrierCode": "TP",
-                        "number": "433",
-                        "aircraft": {
-                            "code": "32N"
-                        },
-                        "operating": {
-                            "carrierCode": "TP"
-                        },
-                        "duration": "PT2H30M",
-                        "id": "4",
-                        "numberOfStops": 0,
-                        "blacklistedInEU": false
-                    }
-                ]
-            }
-        ],
-        "price": {
-            "currency": "EUR",
-            "total": "134.43",
-            "base": "66.00",
-            "fees": [
-                {
-                    "amount": "0.00",
-                    "type": "SUPPLIER"
-                },
-                {
-                    "amount": "0.00",
-                    "type": "TICKETING"
-                }
-            ],
-            "grandTotal": "134.43",
-            "additionalServices": [
-                {
-                    "amount": "39.00",
-                    "type": "CHECKED_BAGS"
-                }
-            ]
-        },
-        "pricingOptions": {
-            "fareType": [
-                "PUBLISHED"
-            ],
-            "includedCheckedBagsOnly": false
-        },
-        "validatingAirlineCodes": [
-            "TP"
-        ],
-        "travelerPricings": [
-            {
-                "travelerId": "1",
-                "fareOption": "STANDARD",
-                "travelerType": "ADULT",
-                "price": {
-                    "currency": "EUR",
-                    "total": "134.43",
-                    "base": "66.00"
-                },
-                "fareDetailsBySegment": [
-                    {
-                        "segmentId": "4",
-                        "cabin": "ECONOMY",
-                        "fareBasis": "A14DSC0B",
-                        "brandedFare": "DISCOUNT",
-                        "class": "A",
-                        "includedCheckedBags": {
-                            "quantity": 0
-                        }
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "type": "flight-offer",
-        "id": "3",
-        "source": "GDS",
-        "instantTicketingRequired": false,
-        "nonHomogeneous": false,
-        "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
-        "numberOfBookableSeats": 9,
-        "itineraries": [
-            {
-                "duration": "PT2H30M",
-                "segments": [
-                    {
-                        "departure": {
-                            "iataCode": "ORY",
-                            "terminal": "1",
-                            "at": "2023-06-30T14:40:00"
-                        },
-                        "arrival": {
-                            "iataCode": "LIS",
-                            "terminal": "1",
-                            "at": "2023-06-30T16:10:00"
-                        },
-                        "carrierCode": "TP",
-                        "number": "439",
-                        "aircraft": {
-                            "code": "32Q"
-                        },
-                        "operating": {
-                            "carrierCode": "TP"
-                        },
-                        "duration": "PT2H30M",
-                        "id": "5",
-                        "numberOfStops": 0,
-                        "blacklistedInEU": false
-                    }
-                ]
-            }
-        ],
-        "price": {
-            "currency": "EUR",
-            "total": "134.43",
-            "base": "66.00",
-            "fees": [
-                {
-                    "amount": "0.00",
-                    "type": "SUPPLIER"
-                },
-                {
-                    "amount": "0.00",
-                    "type": "TICKETING"
-                }
-            ],
-            "grandTotal": "134.43",
-            "additionalServices": [
-                {
-                    "amount": "39.00",
-                    "type": "CHECKED_BAGS"
-                }
-            ]
-        },
-        "pricingOptions": {
-            "fareType": [
-                "PUBLISHED"
-            ],
-            "includedCheckedBagsOnly": false
-        },
-        "validatingAirlineCodes": [
-            "TP"
-        ],
-        "travelerPricings": [
-            {
-                "travelerId": "1",
-                "fareOption": "STANDARD",
-                "travelerType": "ADULT",
-                "price": {
-                    "currency": "EUR",
-                    "total": "134.43",
-                    "base": "66.00"
-                },
-                "fareDetailsBySegment": [
-                    {
-                        "segmentId": "5",
-                        "cabin": "ECONOMY",
-                        "fareBasis": "A14DSC0B",
-                        "brandedFare": "DISCOUNT",
-                        "class": "A",
-                        "includedCheckedBags": {
-                            "quantity": 0
-                        }
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "type": "flight-offer",
-        "id": "4",
-        "source": "GDS",
-        "instantTicketingRequired": false,
-        "nonHomogeneous": false,
-        "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
-        "numberOfBookableSeats": 9,
-        "itineraries": [
-            {
-                "duration": "PT2H30M",
-                "segments": [
-                    {
-                        "departure": {
-                            "iataCode": "ORY",
-                            "terminal": "1",
-                            "at": "2023-06-30T16:40:00"
-                        },
-                        "arrival": {
-                            "iataCode": "LIS",
-                            "terminal": "1",
-                            "at": "2023-06-30T18:10:00"
-                        },
-                        "carrierCode": "TP",
-                        "number": "441",
-                        "aircraft": {
-                            "code": "32Q"
-                        },
-                        "operating": {
-                            "carrierCode": "TP"
-                        },
-                        "duration": "PT2H30M",
-                        "id": "6",
-                        "numberOfStops": 0,
-                        "blacklistedInEU": false
-                    }
-                ]
-            }
-        ],
-        "price": {
-            "currency": "EUR",
-            "total": "134.43",
-            "base": "66.00",
-            "fees": [
-                {
-                    "amount": "0.00",
-                    "type": "SUPPLIER"
-                },
-                {
-                    "amount": "0.00",
-                    "type": "TICKETING"
-                }
-            ],
-            "grandTotal": "134.43",
-            "additionalServices": [
-                {
-                    "amount": "39.00",
-                    "type": "CHECKED_BAGS"
-                }
-            ]
-        },
-        "pricingOptions": {
-            "fareType": [
-                "PUBLISHED"
-            ],
-            "includedCheckedBagsOnly": false
-        },
-        "validatingAirlineCodes": [
-            "TP"
-        ],
-        "travelerPricings": [
-            {
-                "travelerId": "1",
-                "fareOption": "STANDARD",
-                "travelerType": "ADULT",
-                "price": {
-                    "currency": "EUR",
-                    "total": "134.43",
-                    "base": "66.00"
-                },
-                "fareDetailsBySegment": [
-                    {
-                        "segmentId": "6",
-                        "cabin": "ECONOMY",
-                        "fareBasis": "A14DSC0B",
-                        "brandedFare": "DISCOUNT",
-                        "class": "A",
-                        "includedCheckedBags": {
-                            "quantity": 0
-                        }
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "type": "flight-offer",
-        "id": "5",
-        "source": "GDS",
-        "instantTicketingRequired": false,
-        "nonHomogeneous": false,
-        "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
-        "numberOfBookableSeats": 9,
-        "itineraries": [
-            {
-                "duration": "PT2H30M",
-                "segments": [
-                    {
-                        "departure": {
-                            "iataCode": "ORY",
-                            "terminal": "1",
-                            "at": "2023-06-30T19:45:00"
-                        },
-                        "arrival": {
-                            "iataCode": "LIS",
-                            "terminal": "1",
-                            "at": "2023-06-30T21:15:00"
-                        },
-                        "carrierCode": "TP",
-                        "number": "431",
-                        "aircraft": {
-                            "code": "32N"
-                        },
-                        "operating": {
-                            "carrierCode": "TP"
-                        },
-                        "duration": "PT2H30M",
-                        "id": "7",
-                        "numberOfStops": 0,
-                        "blacklistedInEU": false
-                    }
-                ]
-            }
-        ],
-        "price": {
-            "currency": "EUR",
-            "total": "134.43",
-            "base": "66.00",
-            "fees": [
-                {
-                    "amount": "0.00",
-                    "type": "SUPPLIER"
-                },
-                {
-                    "amount": "0.00",
-                    "type": "TICKETING"
-                }
-            ],
-            "grandTotal": "134.43",
-            "additionalServices": [
-                {
-                    "amount": "39.00",
-                    "type": "CHECKED_BAGS"
-                }
-            ]
-        },
-        "pricingOptions": {
-            "fareType": [
-                "PUBLISHED"
-            ],
-            "includedCheckedBagsOnly": false
-        },
-        "validatingAirlineCodes": [
-            "TP"
-        ],
-        "travelerPricings": [
-            {
-                "travelerId": "1",
-                "fareOption": "STANDARD",
-                "travelerType": "ADULT",
-                "price": {
-                    "currency": "EUR",
-                    "total": "134.43",
-                    "base": "66.00"
-                },
-                "fareDetailsBySegment": [
-                    {
-                        "segmentId": "7",
-                        "cabin": "ECONOMY",
-                        "fareBasis": "A14DSC0B",
-                        "brandedFare": "DISCOUNT",
-                        "class": "A",
-                        "includedCheckedBags": {
-                            "quantity": 0
-                        }
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "type": "flight-offer",
-        "id": "6",
-        "source": "GDS",
-        "instantTicketingRequired": false,
-        "nonHomogeneous": false,
-        "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
-        "numberOfBookableSeats": 9,
-        "itineraries": [
-            {
-                "duration": "PT2H30M",
-                "segments": [
-                    {
-                        "departure": {
-                            "iataCode": "ORY",
-                            "terminal": "1",
-                            "at": "2023-06-30T21:05:00"
-                        },
-                        "arrival": {
-                            "iataCode": "LIS",
-                            "terminal": "1",
-                            "at": "2023-06-30T22:35:00"
-                        },
-                        "carrierCode": "TP",
-                        "number": "449",
-                        "aircraft": {
-                            "code": "32N"
-                        },
-                        "operating": {
-                            "carrierCode": "TP"
-                        },
-                        "duration": "PT2H30M",
-                        "id": "8",
-                        "numberOfStops": 0,
-                        "blacklistedInEU": false
-                    }
-                ]
-            }
-        ],
-        "price": {
-            "currency": "EUR",
-            "total": "134.43",
-            "base": "66.00",
-            "fees": [
-                {
-                    "amount": "0.00",
-                    "type": "SUPPLIER"
-                },
-                {
-                    "amount": "0.00",
-                    "type": "TICKETING"
-                }
-            ],
-            "grandTotal": "134.43",
-            "additionalServices": [
-                {
-                    "amount": "39.00",
-                    "type": "CHECKED_BAGS"
-                }
-            ]
-        },
-        "pricingOptions": {
-            "fareType": [
-                "PUBLISHED"
-            ],
-            "includedCheckedBagsOnly": false
-        },
-        "validatingAirlineCodes": [
-            "TP"
-        ],
-        "travelerPricings": [
-            {
-                "travelerId": "1",
-                "fareOption": "STANDARD",
-                "travelerType": "ADULT",
-                "price": {
-                    "currency": "EUR",
-                    "total": "134.43",
-                    "base": "66.00"
-                },
-                "fareDetailsBySegment": [
-                    {
-                        "segmentId": "8",
-                        "cabin": "ECONOMY",
-                        "fareBasis": "A14DSC0B",
-                        "brandedFare": "DISCOUNT",
-                        "class": "A",
-                        "includedCheckedBags": {
-                            "quantity": 0
-                        }
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "type": "flight-offer",
-        "id": "7",
-        "source": "GDS",
-        "instantTicketingRequired": false,
-        "nonHomogeneous": false,
-        "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
-        "numberOfBookableSeats": 9,
-        "itineraries": [
-            {
-                "duration": "PT2H30M",
-                "segments": [
-                    {
-                        "departure": {
-                            "iataCode": "ORY",
-                            "terminal": "1",
-                            "at": "2023-06-30T06:00:00"
-                        },
-                        "arrival": {
-                            "iataCode": "LIS",
-                            "terminal": "1",
-                            "at": "2023-06-30T07:30:00"
-                        },
-                        "carrierCode": "TP",
-                        "number": "447",
-                        "aircraft": {
-                            "code": "32Q"
-                        },
-                        "operating": {
-                            "carrierCode": "TP"
-                        },
-                        "duration": "PT2H30M",
-                        "id": "1",
-                        "numberOfStops": 0,
-                        "blacklistedInEU": false
-                    }
-                ]
-            }
-        ],
-        "price": {
-            "currency": "EUR",
-            "total": "154.43",
-            "base": "74.00",
-            "fees": [
-                {
-                    "amount": "0.00",
-                    "type": "SUPPLIER"
-                },
-                {
-                    "amount": "0.00",
-                    "type": "TICKETING"
-                }
-            ],
-            "grandTotal": "154.43",
-            "additionalServices": [
-                {
-                    "amount": "39.00",
-                    "type": "CHECKED_BAGS"
-                }
-            ]
-        },
-        "pricingOptions": {
-            "fareType": [
-                "PUBLISHED"
-            ],
-            "includedCheckedBagsOnly": false
-        },
-        "validatingAirlineCodes": [
-            "TP"
-        ],
-        "travelerPricings": [
-            {
-                "travelerId": "1",
-                "fareOption": "STANDARD",
-                "travelerType": "ADULT",
-                "price": {
-                    "currency": "EUR",
-                    "total": "154.43",
-                    "base": "74.00"
-                },
-                "fareDetailsBySegment": [
-                    {
-                        "segmentId": "1",
-                        "cabin": "ECONOMY",
-                        "fareBasis": "W14DSC0B",
-                        "brandedFare": "DISCOUNT",
-                        "class": "W",
-                        "includedCheckedBags": {
-                            "quantity": 0
-                        }
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "type": "flight-offer",
-        "id": "8",
-        "source": "GDS",
-        "instantTicketingRequired": false,
-        "nonHomogeneous": false,
-        "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
-        "numberOfBookableSeats": 9,
-        "itineraries": [
-            {
-                "duration": "PT2H30M",
-                "segments": [
-                    {
-                        "departure": {
-                            "iataCode": "ORY",
-                            "terminal": "1",
-                            "at": "2023-06-30T07:40:00"
-                        },
-                        "arrival": {
-                            "iataCode": "LIS",
-                            "terminal": "1",
-                            "at": "2023-06-30T09:10:00"
-                        },
-                        "carrierCode": "TP",
-                        "number": "443",
-                        "aircraft": {
-                            "code": "32Q"
-                        },
-                        "operating": {
-                            "carrierCode": "TP"
-                        },
-                        "duration": "PT2H30M",
-                        "id": "2",
-                        "numberOfStops": 0,
-                        "blacklistedInEU": false
-                    }
-                ]
-            }
-        ],
-        "price": {
-            "currency": "EUR",
-            "total": "154.43",
-            "base": "74.00",
-            "fees": [
-                {
-                    "amount": "0.00",
-                    "type": "SUPPLIER"
-                },
-                {
-                    "amount": "0.00",
-                    "type": "TICKETING"
-                }
-            ],
-            "grandTotal": "154.43",
-            "additionalServices": [
-                {
-                    "amount": "39.00",
-                    "type": "CHECKED_BAGS"
-                }
-            ]
-        },
-        "pricingOptions": {
-            "fareType": [
-                "PUBLISHED"
-            ],
-            "includedCheckedBagsOnly": false
-        },
-        "validatingAirlineCodes": [
-            "TP"
-        ],
-        "travelerPricings": [
-            {
-                "travelerId": "1",
-                "fareOption": "STANDARD",
-                "travelerType": "ADULT",
-                "price": {
-                    "currency": "EUR",
-                    "total": "154.43",
-                    "base": "74.00"
-                },
-                "fareDetailsBySegment": [
-                    {
-                        "segmentId": "2",
-                        "cabin": "ECONOMY",
-                        "fareBasis": "W14DSC0B",
-                        "brandedFare": "DISCOUNT",
-                        "class": "W",
-                        "includedCheckedBags": {
-                            "quantity": 0
-                        }
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "type": "flight-offer",
-        "id": "9",
-        "source": "GDS",
-        "instantTicketingRequired": false,
-        "nonHomogeneous": false,
-        "oneWay": false,
-        "lastTicketingDate": "2023-06-30",
-        "lastTicketingDateTime": "2023-06-30",
-        "numberOfBookableSeats": 9,
-        "itineraries": [
-            {
-                "duration": "PT2H40M",
-                "segments": [
-                    {
-                        "departure": {
-                            "iataCode": "CDG",
-                            "terminal": "2F",
-                            "at": "2023-06-30T09:35:00"
-                        },
-                        "arrival": {
-                            "iataCode": "LIS",
-                            "terminal": "1",
-                            "at": "2023-06-30T11:15:00"
-                        },
-                        "carrierCode": "AF",
-                        "number": "1024",
-                        "aircraft": {
-                            "code": "320"
-                        },
-                        "operating": {
-                            "carrierCode": "AF"
-                        },
-                        "duration": "PT2H40M",
-                        "id": "9",
-                        "numberOfStops": 0,
-                        "blacklistedInEU": false
-                    }
-                ]
-            }
-        ],
-        "price": {
-            "currency": "EUR",
-            "total": "193.87",
-            "base": "142.00",
-            "fees": [
-                {
-                    "amount": "0.00",
-                    "type": "SUPPLIER"
-                },
-                {
-                    "amount": "0.00",
-                    "type": "TICKETING"
-                }
-            ],
-            "grandTotal": "193.87",
-            "additionalServices": [
-                {
-                    "amount": "35.00",
-                    "type": "CHECKED_BAGS"
-                }
-            ]
-        },
-        "pricingOptions": {
-            "fareType": [
-                "PUBLISHED"
-            ],
-            "includedCheckedBagsOnly": false
-        },
-        "validatingAirlineCodes": [
-            "AF"
-        ],
-        "travelerPricings": [
-            {
-                "travelerId": "1",
-                "fareOption": "STANDARD",
-                "travelerType": "ADULT",
-                "price": {
-                    "currency": "EUR",
-                    "total": "193.87",
-                    "base": "142.00"
-                },
-                "fareDetailsBySegment": [
-                    {
-                        "segmentId": "9",
-                        "cabin": "ECONOMY",
-                        "fareBasis": "KH50BALG",
-                        "brandedFare": "LIGHT",
-                        "class": "K",
-                        "includedCheckedBags": {
-                            "quantity": 0
-                        }
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "type": "flight-offer",
-        "id": "1",
-        "source": "GDS",
-        "instantTicketingRequired": false,
-        "nonHomogeneous": false,
-        "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
-        "numberOfBookableSeats": 9,
-        "itineraries": [
-            {
                 "duration": "PT2H20M",
                 "segments": [
                     {
@@ -2954,8 +2081,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -3050,8 +2177,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -3146,8 +2273,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -3227,6 +2354,879 @@
                         "fareBasis": "A14DSC0B",
                         "brandedFare": "DISCOUNT",
                         "class": "A",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "1",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT2H30M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "ORY",
+                            "terminal": "1",
+                            "at": "2023-06-30T07:40:00"
+                        },
+                        "arrival": {
+                            "iataCode": "LIS",
+                            "terminal": "1",
+                            "at": "2023-06-30T09:10:00"
+                        },
+                        "carrierCode": "TP",
+                        "number": "443",
+                        "aircraft": {
+                            "code": "32Q"
+                        },
+                        "operating": {
+                            "carrierCode": "TP"
+                        },
+                        "duration": "PT2H30M",
+                        "id": "2",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "134.43",
+            "base": "66.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "134.43",
+            "additionalServices": [
+                {
+                    "amount": "39.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "TP"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "134.43",
+                    "base": "66.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "2",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "A14DSC0B",
+                        "brandedFare": "DISCOUNT",
+                        "class": "A",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "2",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT2H30M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "ORY",
+                            "terminal": "1",
+                            "at": "2023-06-30T10:20:00"
+                        },
+                        "arrival": {
+                            "iataCode": "LIS",
+                            "terminal": "1",
+                            "at": "2023-06-30T11:50:00"
+                        },
+                        "carrierCode": "TP",
+                        "number": "437",
+                        "aircraft": {
+                            "code": "321"
+                        },
+                        "operating": {
+                            "carrierCode": "TP"
+                        },
+                        "duration": "PT2H30M",
+                        "id": "3",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "134.43",
+            "base": "66.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "134.43",
+            "additionalServices": [
+                {
+                    "amount": "39.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "TP"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "134.43",
+                    "base": "66.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "3",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "A14DSC0B",
+                        "brandedFare": "DISCOUNT",
+                        "class": "A",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "3",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT2H30M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "ORY",
+                            "terminal": "1",
+                            "at": "2023-06-30T11:55:00"
+                        },
+                        "arrival": {
+                            "iataCode": "LIS",
+                            "terminal": "1",
+                            "at": "2023-06-30T13:25:00"
+                        },
+                        "carrierCode": "TP",
+                        "number": "433",
+                        "aircraft": {
+                            "code": "32N"
+                        },
+                        "operating": {
+                            "carrierCode": "TP"
+                        },
+                        "duration": "PT2H30M",
+                        "id": "4",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "134.43",
+            "base": "66.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "134.43",
+            "additionalServices": [
+                {
+                    "amount": "39.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "TP"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "134.43",
+                    "base": "66.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "4",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "A14DSC0B",
+                        "brandedFare": "DISCOUNT",
+                        "class": "A",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "4",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT2H30M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "ORY",
+                            "terminal": "1",
+                            "at": "2023-06-30T14:40:00"
+                        },
+                        "arrival": {
+                            "iataCode": "LIS",
+                            "terminal": "1",
+                            "at": "2023-06-30T16:10:00"
+                        },
+                        "carrierCode": "TP",
+                        "number": "439",
+                        "aircraft": {
+                            "code": "32Q"
+                        },
+                        "operating": {
+                            "carrierCode": "TP"
+                        },
+                        "duration": "PT2H30M",
+                        "id": "5",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "134.43",
+            "base": "66.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "134.43",
+            "additionalServices": [
+                {
+                    "amount": "39.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "TP"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "134.43",
+                    "base": "66.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "5",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "A14DSC0B",
+                        "brandedFare": "DISCOUNT",
+                        "class": "A",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "5",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT2H30M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "ORY",
+                            "terminal": "1",
+                            "at": "2023-06-30T16:40:00"
+                        },
+                        "arrival": {
+                            "iataCode": "LIS",
+                            "terminal": "1",
+                            "at": "2023-06-30T18:10:00"
+                        },
+                        "carrierCode": "TP",
+                        "number": "441",
+                        "aircraft": {
+                            "code": "32Q"
+                        },
+                        "operating": {
+                            "carrierCode": "TP"
+                        },
+                        "duration": "PT2H30M",
+                        "id": "6",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "134.43",
+            "base": "66.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "134.43",
+            "additionalServices": [
+                {
+                    "amount": "39.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "TP"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "134.43",
+                    "base": "66.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "6",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "A14DSC0B",
+                        "brandedFare": "DISCOUNT",
+                        "class": "A",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "6",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT2H30M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "ORY",
+                            "terminal": "1",
+                            "at": "2023-06-30T19:45:00"
+                        },
+                        "arrival": {
+                            "iataCode": "LIS",
+                            "terminal": "1",
+                            "at": "2023-06-30T21:15:00"
+                        },
+                        "carrierCode": "TP",
+                        "number": "431",
+                        "aircraft": {
+                            "code": "32N"
+                        },
+                        "operating": {
+                            "carrierCode": "TP"
+                        },
+                        "duration": "PT2H30M",
+                        "id": "7",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "134.43",
+            "base": "66.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "134.43",
+            "additionalServices": [
+                {
+                    "amount": "39.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "TP"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "134.43",
+                    "base": "66.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "7",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "A14DSC0B",
+                        "brandedFare": "DISCOUNT",
+                        "class": "A",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "7",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT2H30M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "ORY",
+                            "terminal": "1",
+                            "at": "2023-06-30T21:05:00"
+                        },
+                        "arrival": {
+                            "iataCode": "LIS",
+                            "terminal": "1",
+                            "at": "2023-06-30T22:35:00"
+                        },
+                        "carrierCode": "TP",
+                        "number": "449",
+                        "aircraft": {
+                            "code": "32N"
+                        },
+                        "operating": {
+                            "carrierCode": "TP"
+                        },
+                        "duration": "PT2H30M",
+                        "id": "8",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "134.43",
+            "base": "66.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "134.43",
+            "additionalServices": [
+                {
+                    "amount": "39.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "TP"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "134.43",
+                    "base": "66.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "8",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "A14DSC0B",
+                        "brandedFare": "DISCOUNT",
+                        "class": "A",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "8",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT2H30M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "ORY",
+                            "terminal": "1",
+                            "at": "2023-06-30T06:00:00"
+                        },
+                        "arrival": {
+                            "iataCode": "LIS",
+                            "terminal": "1",
+                            "at": "2023-06-30T07:30:00"
+                        },
+                        "carrierCode": "TP",
+                        "number": "447",
+                        "aircraft": {
+                            "code": "32Q"
+                        },
+                        "operating": {
+                            "carrierCode": "TP"
+                        },
+                        "duration": "PT2H30M",
+                        "id": "1",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "154.43",
+            "base": "74.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "154.43",
+            "additionalServices": [
+                {
+                    "amount": "39.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "TP"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "154.43",
+                    "base": "74.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "1",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "W14DSC0B",
+                        "brandedFare": "DISCOUNT",
+                        "class": "W",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "9",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-06-30",
+        "lastTicketingDateTime": "2023-06-30",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT2H40M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "CDG",
+                            "terminal": "2F",
+                            "at": "2023-06-30T09:35:00"
+                        },
+                        "arrival": {
+                            "iataCode": "LIS",
+                            "terminal": "1",
+                            "at": "2023-06-30T11:15:00"
+                        },
+                        "carrierCode": "AF",
+                        "number": "1024",
+                        "aircraft": {
+                            "code": "320"
+                        },
+                        "operating": {
+                            "carrierCode": "AF"
+                        },
+                        "duration": "PT2H40M",
+                        "id": "9",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "193.87",
+            "base": "142.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "193.87",
+            "additionalServices": [
+                {
+                    "amount": "35.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "AF"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "193.87",
+                    "base": "142.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "9",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "KH50BALG",
+                        "brandedFare": "LIGHT",
+                        "class": "K",
                         "includedCheckedBags": {
                             "quantity": 0
                         }
@@ -4163,29 +4163,29 @@
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
-                "duration": "PT2H10M",
+                "duration": "PT2H5M",
                 "segments": [
                     {
                         "departure": {
                             "iataCode": "CDG",
                             "terminal": "2F",
-                            "at": "2023-06-30T18:15:00"
+                            "at": "2023-06-30T13:20:00"
                         },
                         "arrival": {
                             "iataCode": "FCO",
                             "terminal": "1",
-                            "at": "2023-06-30T20:25:00"
+                            "at": "2023-06-30T15:25:00"
                         },
                         "carrierCode": "AZ",
-                        "number": "325",
+                        "number": "333",
                         "aircraft": {
                             "code": "320"
                         },
                         "operating": {
                             "carrierCode": "AZ"
                         },
-                        "duration": "PT2H10M",
-                        "id": "6",
+                        "duration": "PT2H5M",
+                        "id": "5",
                         "numberOfStops": 0,
                         "blacklistedInEU": false
                     }
@@ -4235,7 +4235,7 @@
                 },
                 "fareDetailsBySegment": [
                     {
-                        "segmentId": "6",
+                        "segmentId": "5",
                         "cabin": "ECONOMY",
                         "fareBasis": "NOLGFR1",
                         "brandedFare": "ECOLIGHT",
@@ -4251,6 +4251,103 @@
     {
         "type": "flight-offer",
         "id": "6",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-06-30",
+        "lastTicketingDateTime": "2023-06-30",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT2H10M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "CDG",
+                            "terminal": "2F",
+                            "at": "2023-06-30T18:15:00"
+                        },
+                        "arrival": {
+                            "iataCode": "FCO",
+                            "terminal": "1",
+                            "at": "2023-06-30T20:25:00"
+                        },
+                        "carrierCode": "AZ",
+                        "number": "325",
+                        "aircraft": {
+                            "code": "320"
+                        },
+                        "operating": {
+                            "carrierCode": "AZ"
+                        },
+                        "duration": "PT2H10M",
+                        "id": "7",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "176.59",
+            "base": "88.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "176.59",
+            "additionalServices": [
+                {
+                    "amount": "60.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "AZ"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "176.59",
+                    "base": "88.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "7",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "NOLGFR1",
+                        "brandedFare": "ECOLIGHT",
+                        "class": "N",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "7",
         "source": "GDS",
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
@@ -4282,7 +4379,7 @@
                             "carrierCode": "VY"
                         },
                         "duration": "PT2H5M",
-                        "id": "5",
+                        "id": "6",
                         "numberOfStops": 0,
                         "blacklistedInEU": false
                     }
@@ -4326,7 +4423,7 @@
                 },
                 "fareDetailsBySegment": [
                     {
-                        "segmentId": "5",
+                        "segmentId": "6",
                         "cabin": "ECONOMY",
                         "fareBasis": "MO2VYTF",
                         "brandedFare": "TIMEFLEXVY",
@@ -4342,198 +4439,6 @@
     {
         "type": "flight-offer",
         "id": "1",
-        "source": "GDS",
-        "instantTicketingRequired": false,
-        "nonHomogeneous": false,
-        "oneWay": false,
-        "lastTicketingDate": "2023-06-27",
-        "lastTicketingDateTime": "2023-06-27",
-        "numberOfBookableSeats": 9,
-        "itineraries": [
-            {
-                "duration": "PT1H25M",
-                "segments": [
-                    {
-                        "departure": {
-                            "iataCode": "ORY",
-                            "terminal": "2",
-                            "at": "2023-06-30T07:30:00"
-                        },
-                        "arrival": {
-                            "iataCode": "LIN",
-                            "at": "2023-06-30T08:55:00"
-                        },
-                        "carrierCode": "AZ",
-                        "number": "357",
-                        "aircraft": {
-                            "code": "32S"
-                        },
-                        "operating": {
-                            "carrierCode": "AZ"
-                        },
-                        "duration": "PT1H25M",
-                        "id": "1",
-                        "numberOfStops": 0,
-                        "blacklistedInEU": false
-                    }
-                ]
-            }
-        ],
-        "price": {
-            "currency": "EUR",
-            "total": "182.43",
-            "base": "95.00",
-            "fees": [
-                {
-                    "amount": "0.00",
-                    "type": "SUPPLIER"
-                },
-                {
-                    "amount": "0.00",
-                    "type": "TICKETING"
-                }
-            ],
-            "grandTotal": "182.43",
-            "additionalServices": [
-                {
-                    "amount": "60.00",
-                    "type": "CHECKED_BAGS"
-                }
-            ]
-        },
-        "pricingOptions": {
-            "fareType": [
-                "PUBLISHED"
-            ],
-            "includedCheckedBagsOnly": false
-        },
-        "validatingAirlineCodes": [
-            "AZ"
-        ],
-        "travelerPricings": [
-            {
-                "travelerId": "1",
-                "fareOption": "STANDARD",
-                "travelerType": "ADULT",
-                "price": {
-                    "currency": "EUR",
-                    "total": "182.43",
-                    "base": "95.00"
-                },
-                "fareDetailsBySegment": [
-                    {
-                        "segmentId": "1",
-                        "cabin": "ECONOMY",
-                        "fareBasis": "SOLGFR1",
-                        "brandedFare": "ECOLIGHT",
-                        "class": "S",
-                        "includedCheckedBags": {
-                            "quantity": 0
-                        }
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "type": "flight-offer",
-        "id": "2",
-        "source": "GDS",
-        "instantTicketingRequired": false,
-        "nonHomogeneous": false,
-        "oneWay": false,
-        "lastTicketingDate": "2023-06-27",
-        "lastTicketingDateTime": "2023-06-27",
-        "numberOfBookableSeats": 9,
-        "itineraries": [
-            {
-                "duration": "PT1H25M",
-                "segments": [
-                    {
-                        "departure": {
-                            "iataCode": "ORY",
-                            "terminal": "2",
-                            "at": "2023-06-30T09:10:00"
-                        },
-                        "arrival": {
-                            "iataCode": "LIN",
-                            "at": "2023-06-30T10:35:00"
-                        },
-                        "carrierCode": "AZ",
-                        "number": "351",
-                        "aircraft": {
-                            "code": "32S"
-                        },
-                        "operating": {
-                            "carrierCode": "AZ"
-                        },
-                        "duration": "PT1H25M",
-                        "id": "2",
-                        "numberOfStops": 0,
-                        "blacklistedInEU": false
-                    }
-                ]
-            }
-        ],
-        "price": {
-            "currency": "EUR",
-            "total": "182.43",
-            "base": "95.00",
-            "fees": [
-                {
-                    "amount": "0.00",
-                    "type": "SUPPLIER"
-                },
-                {
-                    "amount": "0.00",
-                    "type": "TICKETING"
-                }
-            ],
-            "grandTotal": "182.43",
-            "additionalServices": [
-                {
-                    "amount": "60.00",
-                    "type": "CHECKED_BAGS"
-                }
-            ]
-        },
-        "pricingOptions": {
-            "fareType": [
-                "PUBLISHED"
-            ],
-            "includedCheckedBagsOnly": false
-        },
-        "validatingAirlineCodes": [
-            "AZ"
-        ],
-        "travelerPricings": [
-            {
-                "travelerId": "1",
-                "fareOption": "STANDARD",
-                "travelerType": "ADULT",
-                "price": {
-                    "currency": "EUR",
-                    "total": "182.43",
-                    "base": "95.00"
-                },
-                "fareDetailsBySegment": [
-                    {
-                        "segmentId": "2",
-                        "cabin": "ECONOMY",
-                        "fareBasis": "SOLGFR1",
-                        "brandedFare": "ECOLIGHT",
-                        "class": "S",
-                        "includedCheckedBags": {
-                            "quantity": 0
-                        }
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "type": "flight-offer",
-        "id": "3",
         "source": "GDS",
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
@@ -4564,6 +4469,198 @@
                             "carrierCode": "AF"
                         },
                         "duration": "PT1H25M",
+                        "id": "1",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "189.87",
+            "base": "138.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "189.87",
+            "additionalServices": [
+                {
+                    "amount": "40.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "AF"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "189.87",
+                    "base": "138.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "1",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "TS50BALG",
+                        "brandedFare": "LIGHT",
+                        "class": "T",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "2",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-06-30",
+        "lastTicketingDateTime": "2023-06-30",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT1H30M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "CDG",
+                            "terminal": "2F",
+                            "at": "2023-06-30T07:20:00"
+                        },
+                        "arrival": {
+                            "iataCode": "LIN",
+                            "at": "2023-06-30T08:50:00"
+                        },
+                        "carrierCode": "AF",
+                        "number": "1212",
+                        "aircraft": {
+                            "code": "223"
+                        },
+                        "operating": {
+                            "carrierCode": "AF"
+                        },
+                        "duration": "PT1H30M",
+                        "id": "2",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "189.87",
+            "base": "138.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "189.87",
+            "additionalServices": [
+                {
+                    "amount": "40.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "AF"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "189.87",
+                    "base": "138.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "2",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "TS50BALG",
+                        "brandedFare": "LIGHT",
+                        "class": "T",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "3",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-06-30",
+        "lastTicketingDateTime": "2023-06-30",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT1H30M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "CDG",
+                            "terminal": "2F",
+                            "at": "2023-06-30T11:35:00"
+                        },
+                        "arrival": {
+                            "iataCode": "LIN",
+                            "at": "2023-06-30T13:05:00"
+                        },
+                        "carrierCode": "AF",
+                        "number": "1012",
+                        "aircraft": {
+                            "code": "320"
+                        },
+                        "operating": {
+                            "carrierCode": "AF"
+                        },
+                        "duration": "PT1H30M",
                         "id": "3",
                         "numberOfStops": 0,
                         "blacklistedInEU": false
@@ -4636,198 +4733,6 @@
         "oneWay": false,
         "lastTicketingDate": "2023-06-30",
         "lastTicketingDateTime": "2023-06-30",
-        "numberOfBookableSeats": 9,
-        "itineraries": [
-            {
-                "duration": "PT1H30M",
-                "segments": [
-                    {
-                        "departure": {
-                            "iataCode": "CDG",
-                            "terminal": "2F",
-                            "at": "2023-06-30T07:20:00"
-                        },
-                        "arrival": {
-                            "iataCode": "LIN",
-                            "at": "2023-06-30T08:50:00"
-                        },
-                        "carrierCode": "AF",
-                        "number": "1212",
-                        "aircraft": {
-                            "code": "223"
-                        },
-                        "operating": {
-                            "carrierCode": "AF"
-                        },
-                        "duration": "PT1H30M",
-                        "id": "4",
-                        "numberOfStops": 0,
-                        "blacklistedInEU": false
-                    }
-                ]
-            }
-        ],
-        "price": {
-            "currency": "EUR",
-            "total": "189.87",
-            "base": "138.00",
-            "fees": [
-                {
-                    "amount": "0.00",
-                    "type": "SUPPLIER"
-                },
-                {
-                    "amount": "0.00",
-                    "type": "TICKETING"
-                }
-            ],
-            "grandTotal": "189.87",
-            "additionalServices": [
-                {
-                    "amount": "40.00",
-                    "type": "CHECKED_BAGS"
-                }
-            ]
-        },
-        "pricingOptions": {
-            "fareType": [
-                "PUBLISHED"
-            ],
-            "includedCheckedBagsOnly": false
-        },
-        "validatingAirlineCodes": [
-            "AF"
-        ],
-        "travelerPricings": [
-            {
-                "travelerId": "1",
-                "fareOption": "STANDARD",
-                "travelerType": "ADULT",
-                "price": {
-                    "currency": "EUR",
-                    "total": "189.87",
-                    "base": "138.00"
-                },
-                "fareDetailsBySegment": [
-                    {
-                        "segmentId": "4",
-                        "cabin": "ECONOMY",
-                        "fareBasis": "TS50BALG",
-                        "brandedFare": "LIGHT",
-                        "class": "T",
-                        "includedCheckedBags": {
-                            "quantity": 0
-                        }
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "type": "flight-offer",
-        "id": "5",
-        "source": "GDS",
-        "instantTicketingRequired": false,
-        "nonHomogeneous": false,
-        "oneWay": false,
-        "lastTicketingDate": "2023-06-30",
-        "lastTicketingDateTime": "2023-06-30",
-        "numberOfBookableSeats": 9,
-        "itineraries": [
-            {
-                "duration": "PT1H30M",
-                "segments": [
-                    {
-                        "departure": {
-                            "iataCode": "CDG",
-                            "terminal": "2F",
-                            "at": "2023-06-30T11:35:00"
-                        },
-                        "arrival": {
-                            "iataCode": "LIN",
-                            "at": "2023-06-30T13:05:00"
-                        },
-                        "carrierCode": "AF",
-                        "number": "1012",
-                        "aircraft": {
-                            "code": "320"
-                        },
-                        "operating": {
-                            "carrierCode": "AF"
-                        },
-                        "duration": "PT1H30M",
-                        "id": "5",
-                        "numberOfStops": 0,
-                        "blacklistedInEU": false
-                    }
-                ]
-            }
-        ],
-        "price": {
-            "currency": "EUR",
-            "total": "189.87",
-            "base": "138.00",
-            "fees": [
-                {
-                    "amount": "0.00",
-                    "type": "SUPPLIER"
-                },
-                {
-                    "amount": "0.00",
-                    "type": "TICKETING"
-                }
-            ],
-            "grandTotal": "189.87",
-            "additionalServices": [
-                {
-                    "amount": "40.00",
-                    "type": "CHECKED_BAGS"
-                }
-            ]
-        },
-        "pricingOptions": {
-            "fareType": [
-                "PUBLISHED"
-            ],
-            "includedCheckedBagsOnly": false
-        },
-        "validatingAirlineCodes": [
-            "AF"
-        ],
-        "travelerPricings": [
-            {
-                "travelerId": "1",
-                "fareOption": "STANDARD",
-                "travelerType": "ADULT",
-                "price": {
-                    "currency": "EUR",
-                    "total": "189.87",
-                    "base": "138.00"
-                },
-                "fareDetailsBySegment": [
-                    {
-                        "segmentId": "5",
-                        "cabin": "ECONOMY",
-                        "fareBasis": "TS50BALG",
-                        "brandedFare": "LIGHT",
-                        "class": "T",
-                        "includedCheckedBags": {
-                            "quantity": 0
-                        }
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "type": "flight-offer",
-        "id": "6",
-        "source": "GDS",
-        "instantTicketingRequired": false,
-        "nonHomogeneous": false,
-        "oneWay": false,
-        "lastTicketingDate": "2023-06-30",
-        "lastTicketingDateTime": "2023-06-30",
         "numberOfBookableSeats": 2,
         "itineraries": [
             {
@@ -4852,7 +4757,7 @@
                             "carrierCode": "AF"
                         },
                         "duration": "PT1H30M",
-                        "id": "6",
+                        "id": "4",
                         "numberOfStops": 0,
                         "blacklistedInEU": false
                     }
@@ -4902,7 +4807,7 @@
                 },
                 "fareDetailsBySegment": [
                     {
-                        "segmentId": "6",
+                        "segmentId": "4",
                         "cabin": "ECONOMY",
                         "fareBasis": "LS50BALG",
                         "brandedFare": "LIGHT",
@@ -4922,8 +4827,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-27",
-        "lastTicketingDateTime": "2023-06-27",
+        "lastTicketingDate": "2023-06-28",
+        "lastTicketingDateTime": "2023-06-28",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -5196,8 +5101,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-27",
-        "lastTicketingDateTime": "2023-06-27",
+        "lastTicketingDate": "2023-06-28",
+        "lastTicketingDateTime": "2023-06-28",
         "numberOfBookableSeats": 1,
         "itineraries": [
             {
@@ -5286,8 +5191,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-27",
-        "lastTicketingDateTime": "2023-06-27",
+        "lastTicketingDate": "2023-06-28",
+        "lastTicketingDateTime": "2023-06-28",
         "numberOfBookableSeats": 1,
         "itineraries": [
             {

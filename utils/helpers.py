@@ -1,5 +1,5 @@
 import requests
-from session_module import session
+from utils.session_module import session
 import json
 
 
