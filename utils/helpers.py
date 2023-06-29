@@ -21,7 +21,6 @@ def flight_from_json(file_path):
         print("File non trovato.")
     except json.JSONDecodeError:
         print("Errore durante la decodifica del file JSON.")
-
     return flights
 
 
