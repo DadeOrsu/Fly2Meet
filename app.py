@@ -55,7 +55,6 @@ def search_flights():
     max_wait_time = request.form.get('max_wait_time')
     destination = request.form.get('destination')
     same_airport = request.form.get('same_airport')
-    one_way = request.form.get('one_way')
     # scrittura dei dati
     print(
         f"departure_city_1: {departure_city_1}\n"
@@ -67,7 +66,6 @@ def search_flights():
         f"max_wait_time: {max_wait_time}\n"
         f"destination: {destination}\n"
         f"same_airport: {same_airport}\n"
-        f"one_way: {one_way}\n"
     )
     # richiesta delle flight inspirations per la prima città di partenza
     flights = get_flight_inspirations(departure_city_1)
@@ -96,6 +94,9 @@ def search_flights():
         second_city_offers.extend(fo['data'])
 
     prolog_facts = prolog_flight_parser(all_flight_offers)
+    prolog_file = open('prolog_facts.pl', 'w')
+    prolog_file.write('\n'.join(prolog_facts))
+    prolog_file.close()
     print(prolog_facts)
     return render_template("results.html", all_flight_offers=all_flight_offers, second_city_offers=second_city_offers)
 

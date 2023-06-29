@@ -63,8 +63,4 @@ def prolog_flight_parser(all_flight_offers):
             f" {arrival_date},"  # arrival date
             f" {duration},"  # duration
             f" {price}).")  # price
-
-    prolog_file = open('prolog_facts.pl', 'w')
-    prolog_file.write('\n'.join(prolog_facts))
-    prolog_file.close()
     return prolog_facts

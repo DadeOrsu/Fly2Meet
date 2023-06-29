@@ -51,27 +51,17 @@ def get_flight_inspirations(_origin):
 # Funzione che restituisce le flight offers
 def get_flight_offers(_origin, _destination, _departure_date, _return_date, _max_base_price):
     url = "https://test.api.amadeus.com/v2/shopping/flight-offers"
+    params = {
+        "originLocationCode": _origin,
+        "destinationLocationCode": _destination,
+        "departureDate": _departure_date,
+        "maxPrice": _max_base_price,
+        "currencyCode": "EUR",
+        "nonStop": "true",
+        "adults": 1
+    }
     if _return_date is not None:
-        params = {
-            "originLocationCode": _origin,  # Codice IATA dell'aeroporto di partenza
-            "destinationLocationCode": _destination,  # Codice IATA dell'aeroporto di destinazione
-            "departureDate": _departure_date,  # Formato: YYYY-MM-DD
-            "returnDate": _return_date,  # Formato: YYYY-MM-DD
-            "maxPrice": _max_base_price,  # Prezzo massimo
-            "currencyCode": "EUR",  # Valuta
-            "nonStop": "true",  # Solo voli diretti
-            "adults": 1  # Numero di adulti
-        }
-    else:
-        params = {
-            "originLocationCode": _origin,  # Codice IATA dell'aeroporto di partenza
-            "destinationLocationCode": _destination,  # Codice IATA dell'aeroporto di destinazione
-            "departureDate": _departure_date,  # Formato: YYYY-MM-DD
-            "maxPrice": _max_base_price,  # Prezzo massimo
-            "currencyCode": "EUR",  # Valuta
-            "nonStop": "true",  # Solo voli diretti
-            "adults": 1  # Numero di adulti
-        }
+        params["returnDate"] = _return_date
     try:
         response = session.get(url, params=params)
         if response.status_code != 200:

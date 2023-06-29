@@ -17,6 +17,103 @@
                         "departure": {
                             "iataCode": "ORY",
                             "terminal": "1",
+                            "at": "2023-06-30T14:20:00"
+                        },
+                        "arrival": {
+                            "iataCode": "MAD",
+                            "terminal": "4",
+                            "at": "2023-06-30T16:20:00"
+                        },
+                        "carrierCode": "IB",
+                        "number": "3405",
+                        "aircraft": {
+                            "code": "321"
+                        },
+                        "operating": {
+                            "carrierCode": "IB"
+                        },
+                        "duration": "PT2H",
+                        "id": "6",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "74.43",
+            "base": "43.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "74.43",
+            "additionalServices": [
+                {
+                    "amount": "50.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "IB"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "74.43",
+                    "base": "43.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "6",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "ADNNAOB4",
+                        "brandedFare": "BASIC",
+                        "class": "A",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "2",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT2H",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "ORY",
+                            "terminal": "1",
                             "at": "2023-06-30T17:05:00"
                         },
                         "arrival": {
@@ -33,7 +130,7 @@
                             "carrierCode": "UX"
                         },
                         "duration": "PT2H",
-                        "id": "7",
+                        "id": "8",
                         "numberOfStops": 0,
                         "blacklistedInEU": false
                     }
@@ -57,7 +154,7 @@
             "grandTotal": "92.43",
             "additionalServices": [
                 {
-                    "amount": "40.00",
+                    "amount": "65.00",
                     "type": "CHECKED_BAGS"
                 }
             ]
@@ -83,7 +180,7 @@
                 },
                 "fareDetailsBySegment": [
                     {
-                        "segmentId": "7",
+                        "segmentId": "8",
                         "cabin": "ECONOMY",
                         "fareBasis": "PYYO5L",
                         "brandedFare": "LITE",
@@ -98,7 +195,7 @@
     },
     {
         "type": "flight-offer",
-        "id": "2",
+        "id": "3",
         "source": "GDS",
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
@@ -154,7 +251,7 @@
             "grandTotal": "103.43",
             "additionalServices": [
                 {
-                    "amount": "40.00",
+                    "amount": "65.00",
                     "type": "CHECKED_BAGS"
                 }
             ]
@@ -195,13 +292,13 @@
     },
     {
         "type": "flight-offer",
-        "id": "3",
+        "id": "4",
         "source": "GDS",
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -227,7 +324,7 @@
                             "carrierCode": "IB"
                         },
                         "duration": "PT2H",
-                        "id": "12",
+                        "id": "13",
                         "numberOfStops": 0,
                         "blacklistedInEU": false
                     }
@@ -271,7 +368,7 @@
                 },
                 "fareDetailsBySegment": [
                     {
-                        "segmentId": "12",
+                        "segmentId": "13",
                         "cabin": "ECONOMY",
                         "fareBasis": "PWIBOPT",
                         "class": "P",
@@ -285,7 +382,7 @@
     },
     {
         "type": "flight-offer",
-        "id": "4",
+        "id": "5",
         "source": "GDS",
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
@@ -317,7 +414,7 @@
                             "carrierCode": "I2"
                         },
                         "duration": "PT2H15M",
-                        "id": "19",
+                        "id": "20",
                         "numberOfStops": 0,
                         "blacklistedInEU": false
                     }
@@ -367,7 +464,7 @@
                 },
                 "fareDetailsBySegment": [
                     {
-                        "segmentId": "19",
+                        "segmentId": "20",
                         "cabin": "ECONOMY",
                         "fareBasis": "NDNNEOB2",
                         "brandedFare": "BASIC",
@@ -382,13 +479,13 @@
     },
     {
         "type": "flight-offer",
-        "id": "5",
+        "id": "6",
         "source": "GDS",
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -414,7 +511,7 @@
                             "carrierCode": "IB"
                         },
                         "duration": "PT2H",
-                        "id": "6",
+                        "id": "7",
                         "numberOfStops": 0,
                         "blacklistedInEU": false
                     }
@@ -458,7 +555,7 @@
                 },
                 "fareDetailsBySegment": [
                     {
-                        "segmentId": "6",
+                        "segmentId": "7",
                         "cabin": "ECONOMY",
                         "fareBasis": "OWIBOPT",
                         "class": "O",
@@ -472,13 +569,13 @@
     },
     {
         "type": "flight-offer",
-        "id": "6",
+        "id": "7",
         "source": "GDS",
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -504,7 +601,7 @@
                             "carrierCode": "IB"
                         },
                         "duration": "PT2H",
-                        "id": "8",
+                        "id": "9",
                         "numberOfStops": 0,
                         "blacklistedInEU": false
                     }
@@ -548,7 +645,7 @@
                 },
                 "fareDetailsBySegment": [
                     {
-                        "segmentId": "8",
+                        "segmentId": "9",
                         "cabin": "ECONOMY",
                         "fareBasis": "OWIBOPT",
                         "class": "O",
@@ -562,13 +659,13 @@
     },
     {
         "type": "flight-offer",
-        "id": "7",
+        "id": "8",
         "source": "GDS",
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -594,7 +691,7 @@
                             "carrierCode": "IB"
                         },
                         "duration": "PT2H5M",
-                        "id": "15",
+                        "id": "16",
                         "numberOfStops": 0,
                         "blacklistedInEU": false
                     }
@@ -638,7 +735,7 @@
                 },
                 "fareDetailsBySegment": [
                     {
-                        "segmentId": "15",
+                        "segmentId": "16",
                         "cabin": "ECONOMY",
                         "fareBasis": "OWIBOPT",
                         "class": "O",
@@ -652,7 +749,7 @@
     },
     {
         "type": "flight-offer",
-        "id": "8",
+        "id": "9",
         "source": "GDS",
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
@@ -749,7 +846,7 @@
     },
     {
         "type": "flight-offer",
-        "id": "9",
+        "id": "10",
         "source": "GDS",
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
@@ -781,7 +878,7 @@
                             "carrierCode": "UX"
                         },
                         "duration": "PT2H",
-                        "id": "11",
+                        "id": "12",
                         "numberOfStops": 0,
                         "blacklistedInEU": false
                     }
@@ -805,7 +902,7 @@
             "grandTotal": "125.43",
             "additionalServices": [
                 {
-                    "amount": "40.00",
+                    "amount": "65.00",
                     "type": "CHECKED_BAGS"
                 }
             ]
@@ -831,7 +928,7 @@
                 },
                 "fareDetailsBySegment": [
                     {
-                        "segmentId": "11",
+                        "segmentId": "12",
                         "cabin": "ECONOMY",
                         "fareBasis": "UYYO5L",
                         "brandedFare": "LITE",
@@ -846,7 +943,7 @@
     },
     {
         "type": "flight-offer",
-        "id": "10",
+        "id": "11",
         "source": "GDS",
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
@@ -878,7 +975,7 @@
                             "carrierCode": "I2"
                         },
                         "duration": "PT2H10M",
-                        "id": "18",
+                        "id": "19",
                         "numberOfStops": 0,
                         "blacklistedInEU": false
                     }
@@ -928,7 +1025,7 @@
                 },
                 "fareDetailsBySegment": [
                     {
-                        "segmentId": "18",
+                        "segmentId": "19",
                         "cabin": "ECONOMY",
                         "fareBasis": "SDNNEOB2",
                         "brandedFare": "BASIC",
@@ -943,7 +1040,7 @@
     },
     {
         "type": "flight-offer",
-        "id": "11",
+        "id": "12",
         "source": "GDS",
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
@@ -1040,7 +1137,7 @@
     },
     {
         "type": "flight-offer",
-        "id": "12",
+        "id": "13",
         "source": "GDS",
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
@@ -1072,7 +1169,7 @@
                             "carrierCode": "IB"
                         },
                         "duration": "PT2H",
-                        "id": "9",
+                        "id": "10",
                         "numberOfStops": 0,
                         "blacklistedInEU": false
                     }
@@ -1122,7 +1219,7 @@
                 },
                 "fareDetailsBySegment": [
                     {
-                        "segmentId": "9",
+                        "segmentId": "10",
                         "cabin": "ECONOMY",
                         "fareBasis": "SDNNAOB4",
                         "brandedFare": "BASIC",
@@ -1137,7 +1234,7 @@
     },
     {
         "type": "flight-offer",
-        "id": "13",
+        "id": "14",
         "source": "GDS",
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
@@ -1169,7 +1266,7 @@
                             "carrierCode": "IB"
                         },
                         "duration": "PT2H5M",
-                        "id": "16",
+                        "id": "17",
                         "numberOfStops": 0,
                         "blacklistedInEU": false
                     }
@@ -1219,7 +1316,7 @@
                 },
                 "fareDetailsBySegment": [
                     {
-                        "segmentId": "16",
+                        "segmentId": "17",
                         "cabin": "ECONOMY",
                         "fareBasis": "SDNNAOB4",
                         "brandedFare": "BASIC",
@@ -1234,13 +1331,13 @@
     },
     {
         "type": "flight-offer",
-        "id": "14",
+        "id": "15",
         "source": "GDS",
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -1324,7 +1421,7 @@
     },
     {
         "type": "flight-offer",
-        "id": "15",
+        "id": "16",
         "source": "GDS",
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
@@ -1355,7 +1452,7 @@
                             "carrierCode": "6X"
                         },
                         "duration": "PT2H5M",
-                        "id": "17",
+                        "id": "18",
                         "numberOfStops": 0,
                         "blacklistedInEU": false
                     }
@@ -1405,7 +1502,7 @@
                 },
                 "fareDetailsBySegment": [
                     {
-                        "segmentId": "17",
+                        "segmentId": "18",
                         "cabin": "ECONOMY",
                         "fareBasis": "Y6XHIPCT",
                         "brandedFare": "ECPLTE",
@@ -1420,7 +1517,7 @@
     },
     {
         "type": "flight-offer",
-        "id": "16",
+        "id": "17",
         "source": "GDS",
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
@@ -1450,7 +1547,7 @@
                             "carrierCode": "6X"
                         },
                         "duration": "PT2H15M",
-                        "id": "20",
+                        "id": "21",
                         "numberOfStops": 0,
                         "blacklistedInEU": false
                     }
@@ -1500,7 +1597,7 @@
                 },
                 "fareDetailsBySegment": [
                     {
-                        "segmentId": "20",
+                        "segmentId": "21",
                         "cabin": "ECONOMY",
                         "fareBasis": "Y6XHIPCT",
                         "brandedFare": "ECPLTE",
@@ -1515,13 +1612,13 @@
     },
     {
         "type": "flight-offer",
-        "id": "17",
+        "id": "18",
         "source": "GDS",
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -1605,7 +1702,7 @@
     },
     {
         "type": "flight-offer",
-        "id": "18",
+        "id": "19",
         "source": "GDS",
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
@@ -1637,7 +1734,7 @@
                             "carrierCode": "IB"
                         },
                         "duration": "PT2H",
-                        "id": "10",
+                        "id": "11",
                         "numberOfStops": 0,
                         "blacklistedInEU": false
                     }
@@ -1687,7 +1784,7 @@
                 },
                 "fareDetailsBySegment": [
                     {
-                        "segmentId": "10",
+                        "segmentId": "11",
                         "cabin": "ECONOMY",
                         "fareBasis": "VDNNAOB4",
                         "brandedFare": "BASIC",
@@ -1702,7 +1799,7 @@
     },
     {
         "type": "flight-offer",
-        "id": "19",
+        "id": "20",
         "source": "GDS",
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
@@ -1734,7 +1831,7 @@
                             "carrierCode": "IB"
                         },
                         "duration": "PT2H",
-                        "id": "13",
+                        "id": "14",
                         "numberOfStops": 0,
                         "blacklistedInEU": false
                     }
@@ -1784,7 +1881,7 @@
                 },
                 "fareDetailsBySegment": [
                     {
-                        "segmentId": "13",
+                        "segmentId": "14",
                         "cabin": "ECONOMY",
                         "fareBasis": "VDNNAOB4",
                         "brandedFare": "BASIC",
@@ -1799,7 +1896,7 @@
     },
     {
         "type": "flight-offer",
-        "id": "20",
+        "id": "21",
         "source": "GDS",
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
@@ -1831,7 +1928,7 @@
                             "carrierCode": "AF"
                         },
                         "duration": "PT2H5M",
-                        "id": "14",
+                        "id": "15",
                         "numberOfStops": 0,
                         "blacklistedInEU": false
                     }
@@ -1855,7 +1952,7 @@
             "grandTotal": "185.87",
             "additionalServices": [
                 {
-                    "amount": "35.00",
+                    "amount": "60.00",
                     "type": "CHECKED_BAGS"
                 }
             ]
@@ -1881,7 +1978,7 @@
                 },
                 "fareDetailsBySegment": [
                     {
-                        "segmentId": "14",
+                        "segmentId": "15",
                         "cabin": "ECONOMY",
                         "fareBasis": "KS50BALG",
                         "brandedFare": "LIGHT",
@@ -1901,8 +1998,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -1991,8 +2088,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
         "numberOfBookableSeats": 4,
         "itineraries": [
             {
@@ -2081,8 +2178,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-29",
-        "lastTicketingDateTime": "2023-06-29",
+        "lastTicketingDate": "2023-06-30",
+        "lastTicketingDateTime": "2023-06-30",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -2131,7 +2228,7 @@
             "grandTotal": "135.43",
             "additionalServices": [
                 {
-                    "amount": "39.00",
+                    "amount": "55.00",
                     "type": "CHECKED_BAGS"
                 }
             ]
@@ -2177,8 +2274,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-29",
-        "lastTicketingDateTime": "2023-06-29",
+        "lastTicketingDate": "2023-06-30",
+        "lastTicketingDateTime": "2023-06-30",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -2227,7 +2324,7 @@
             "grandTotal": "135.43",
             "additionalServices": [
                 {
-                    "amount": "39.00",
+                    "amount": "55.00",
                     "type": "CHECKED_BAGS"
                 }
             ]
@@ -2273,8 +2370,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-29",
-        "lastTicketingDateTime": "2023-06-29",
+        "lastTicketingDate": "2023-06-30",
+        "lastTicketingDateTime": "2023-06-30",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -2323,7 +2420,7 @@
             "grandTotal": "135.43",
             "additionalServices": [
                 {
-                    "amount": "39.00",
+                    "amount": "55.00",
                     "type": "CHECKED_BAGS"
                 }
             ]
@@ -2369,8 +2466,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-29",
-        "lastTicketingDateTime": "2023-06-29",
+        "lastTicketingDate": "2023-06-30",
+        "lastTicketingDateTime": "2023-06-30",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -2420,7 +2517,7 @@
             "grandTotal": "134.43",
             "additionalServices": [
                 {
-                    "amount": "39.00",
+                    "amount": "55.00",
                     "type": "CHECKED_BAGS"
                 }
             ]
@@ -2466,8 +2563,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-29",
-        "lastTicketingDateTime": "2023-06-29",
+        "lastTicketingDate": "2023-06-30",
+        "lastTicketingDateTime": "2023-06-30",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -2517,7 +2614,7 @@
             "grandTotal": "134.43",
             "additionalServices": [
                 {
-                    "amount": "39.00",
+                    "amount": "55.00",
                     "type": "CHECKED_BAGS"
                 }
             ]
@@ -2563,8 +2660,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-29",
-        "lastTicketingDateTime": "2023-06-29",
+        "lastTicketingDate": "2023-06-30",
+        "lastTicketingDateTime": "2023-06-30",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -2614,7 +2711,7 @@
             "grandTotal": "134.43",
             "additionalServices": [
                 {
-                    "amount": "39.00",
+                    "amount": "55.00",
                     "type": "CHECKED_BAGS"
                 }
             ]
@@ -2660,8 +2757,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-29",
-        "lastTicketingDateTime": "2023-06-29",
+        "lastTicketingDate": "2023-06-30",
+        "lastTicketingDateTime": "2023-06-30",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -2711,7 +2808,7 @@
             "grandTotal": "134.43",
             "additionalServices": [
                 {
-                    "amount": "39.00",
+                    "amount": "55.00",
                     "type": "CHECKED_BAGS"
                 }
             ]
@@ -2757,8 +2854,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-29",
-        "lastTicketingDateTime": "2023-06-29",
+        "lastTicketingDate": "2023-06-30",
+        "lastTicketingDateTime": "2023-06-30",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -2808,7 +2905,7 @@
             "grandTotal": "134.43",
             "additionalServices": [
                 {
-                    "amount": "39.00",
+                    "amount": "55.00",
                     "type": "CHECKED_BAGS"
                 }
             ]
@@ -2854,8 +2951,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-29",
-        "lastTicketingDateTime": "2023-06-29",
+        "lastTicketingDate": "2023-06-30",
+        "lastTicketingDateTime": "2023-06-30",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -2905,7 +3002,7 @@
             "grandTotal": "134.43",
             "additionalServices": [
                 {
-                    "amount": "39.00",
+                    "amount": "55.00",
                     "type": "CHECKED_BAGS"
                 }
             ]
@@ -2951,8 +3048,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-29",
-        "lastTicketingDateTime": "2023-06-29",
+        "lastTicketingDate": "2023-06-30",
+        "lastTicketingDateTime": "2023-06-30",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -3002,7 +3099,7 @@
             "grandTotal": "134.43",
             "additionalServices": [
                 {
-                    "amount": "39.00",
+                    "amount": "55.00",
                     "type": "CHECKED_BAGS"
                 }
             ]
@@ -3048,8 +3145,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-29",
-        "lastTicketingDateTime": "2023-06-29",
+        "lastTicketingDate": "2023-06-30",
+        "lastTicketingDateTime": "2023-06-30",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -3099,7 +3196,7 @@
             "grandTotal": "154.43",
             "additionalServices": [
                 {
-                    "amount": "39.00",
+                    "amount": "55.00",
                     "type": "CHECKED_BAGS"
                 }
             ]
@@ -3196,7 +3293,7 @@
             "grandTotal": "193.87",
             "additionalServices": [
                 {
-                    "amount": "35.00",
+                    "amount": "60.00",
                     "type": "CHECKED_BAGS"
                 }
             ]
@@ -3424,9 +3521,9 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
-        "numberOfBookableSeats": 9,
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
+        "numberOfBookableSeats": 4,
         "itineraries": [
             {
                 "duration": "PT1H45M",
@@ -3442,10 +3539,10 @@
                             "terminal": "1",
                             "at": "2023-06-30T12:15:00"
                         },
-                        "carrierCode": "VY",
-                        "number": "8003",
+                        "carrierCode": "IB",
+                        "number": "5783",
                         "aircraft": {
-                            "code": "32A"
+                            "code": "320"
                         },
                         "operating": {
                             "carrierCode": "VY"
@@ -3481,7 +3578,7 @@
             "includedCheckedBagsOnly": true
         },
         "validatingAirlineCodes": [
-            "VY"
+            "IB"
         ],
         "travelerPricings": [
             {
@@ -3497,11 +3594,11 @@
                     {
                         "segmentId": "1",
                         "cabin": "ECONOMY",
-                        "fareBasis": "OW2FLX",
+                        "fareBasis": "OO2VYTF",
+                        "brandedFare": "TIMEFLEXVY",
                         "class": "O",
                         "includedCheckedBags": {
-                            "weight": 25,
-                            "weightUnit": "KG"
+                            "quantity": 1
                         }
                     }
                 ]
@@ -3515,9 +3612,9 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
-        "numberOfBookableSeats": 9,
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
+        "numberOfBookableSeats": 4,
         "itineraries": [
             {
                 "duration": "PT1H45M",
@@ -3533,99 +3630,8 @@
                             "terminal": "1",
                             "at": "2023-06-30T18:35:00"
                         },
-                        "carrierCode": "VY",
-                        "number": "8011",
-                        "aircraft": {
-                            "code": "32A"
-                        },
-                        "operating": {
-                            "carrierCode": "VY"
-                        },
-                        "duration": "PT1H45M",
-                        "id": "2",
-                        "numberOfStops": 0,
-                        "blacklistedInEU": false
-                    }
-                ]
-            }
-        ],
-        "price": {
-            "currency": "EUR",
-            "total": "149.43",
-            "base": "118.00",
-            "fees": [
-                {
-                    "amount": "0.00",
-                    "type": "SUPPLIER"
-                },
-                {
-                    "amount": "0.00",
-                    "type": "TICKETING"
-                }
-            ],
-            "grandTotal": "149.43"
-        },
-        "pricingOptions": {
-            "fareType": [
-                "PUBLISHED"
-            ],
-            "includedCheckedBagsOnly": true
-        },
-        "validatingAirlineCodes": [
-            "VY"
-        ],
-        "travelerPricings": [
-            {
-                "travelerId": "1",
-                "fareOption": "STANDARD",
-                "travelerType": "ADULT",
-                "price": {
-                    "currency": "EUR",
-                    "total": "149.43",
-                    "base": "118.00"
-                },
-                "fareDetailsBySegment": [
-                    {
-                        "segmentId": "2",
-                        "cabin": "ECONOMY",
-                        "fareBasis": "OW2FLX",
-                        "class": "O",
-                        "includedCheckedBags": {
-                            "weight": 25,
-                            "weightUnit": "KG"
-                        }
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "type": "flight-offer",
-        "id": "3",
-        "source": "GDS",
-        "instantTicketingRequired": false,
-        "nonHomogeneous": false,
-        "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
-        "numberOfBookableSeats": 4,
-        "itineraries": [
-            {
-                "duration": "PT1H45M",
-                "segments": [
-                    {
-                        "departure": {
-                            "iataCode": "ORY",
-                            "terminal": "1",
-                            "at": "2023-06-30T21:50:00"
-                        },
-                        "arrival": {
-                            "iataCode": "BCN",
-                            "terminal": "1",
-                            "at": "2023-06-30T23:35:00"
-                        },
                         "carrierCode": "IB",
-                        "number": "5795",
+                        "number": "5038",
                         "aircraft": {
                             "code": "320"
                         },
@@ -3692,13 +3698,286 @@
     },
     {
         "type": "flight-offer",
+        "id": "3",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
+        "numberOfBookableSeats": 4,
+        "itineraries": [
+            {
+                "duration": "PT1H45M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "ORY",
+                            "terminal": "1",
+                            "at": "2023-06-30T21:50:00"
+                        },
+                        "arrival": {
+                            "iataCode": "BCN",
+                            "terminal": "1",
+                            "at": "2023-06-30T23:35:00"
+                        },
+                        "carrierCode": "IB",
+                        "number": "5795",
+                        "aircraft": {
+                            "code": "320"
+                        },
+                        "operating": {
+                            "carrierCode": "VY"
+                        },
+                        "duration": "PT1H45M",
+                        "id": "5",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "149.43",
+            "base": "118.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "149.43"
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": true
+        },
+        "validatingAirlineCodes": [
+            "IB"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "149.43",
+                    "base": "118.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "5",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "OO2VYTF",
+                        "brandedFare": "TIMEFLEXVY",
+                        "class": "O",
+                        "includedCheckedBags": {
+                            "quantity": 1
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
         "id": "4",
         "source": "GDS",
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT1H45M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "ORY",
+                            "terminal": "1",
+                            "at": "2023-06-30T10:30:00"
+                        },
+                        "arrival": {
+                            "iataCode": "BCN",
+                            "terminal": "1",
+                            "at": "2023-06-30T12:15:00"
+                        },
+                        "carrierCode": "VY",
+                        "number": "8003",
+                        "aircraft": {
+                            "code": "32A"
+                        },
+                        "operating": {
+                            "carrierCode": "VY"
+                        },
+                        "duration": "PT1H45M",
+                        "id": "2",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "149.43",
+            "base": "118.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "149.43"
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": true
+        },
+        "validatingAirlineCodes": [
+            "VY"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "149.43",
+                    "base": "118.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "2",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "OW2FLX",
+                        "class": "O",
+                        "includedCheckedBags": {
+                            "weight": 25,
+                            "weightUnit": "KG"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "5",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT1H45M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "ORY",
+                            "terminal": "1",
+                            "at": "2023-06-30T16:50:00"
+                        },
+                        "arrival": {
+                            "iataCode": "BCN",
+                            "terminal": "1",
+                            "at": "2023-06-30T18:35:00"
+                        },
+                        "carrierCode": "VY",
+                        "number": "8011",
+                        "aircraft": {
+                            "code": "32A"
+                        },
+                        "operating": {
+                            "carrierCode": "VY"
+                        },
+                        "duration": "PT1H45M",
+                        "id": "4",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "149.43",
+            "base": "118.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "149.43"
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": true
+        },
+        "validatingAirlineCodes": [
+            "VY"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "149.43",
+                    "base": "118.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "4",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "OW2FLX",
+                        "class": "O",
+                        "includedCheckedBags": {
+                            "weight": 25,
+                            "weightUnit": "KG"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "6",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
         "numberOfBookableSeats": 4,
         "itineraries": [
             {
@@ -3724,7 +4003,7 @@
                             "carrierCode": "VY"
                         },
                         "duration": "PT1H55M",
-                        "id": "4",
+                        "id": "6",
                         "numberOfStops": 0,
                         "blacklistedInEU": false
                     }
@@ -3768,7 +4047,7 @@
                 },
                 "fareDetailsBySegment": [
                     {
-                        "segmentId": "4",
+                        "segmentId": "6",
                         "cabin": "ECONOMY",
                         "fareBasis": "OOVYTF",
                         "brandedFare": "TIMEFLEXVY",
@@ -3788,8 +4067,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
         "numberOfBookableSeats": 4,
         "itineraries": [
             {
@@ -3879,8 +4158,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
         "numberOfBookableSeats": 4,
         "itineraries": [
             {
@@ -3970,8 +4249,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -4352,8 +4631,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
         "numberOfBookableSeats": 4,
         "itineraries": [
             {
@@ -4428,6 +4707,280 @@
                         "fareBasis": "MO2VYTF",
                         "brandedFare": "TIMEFLEXVY",
                         "class": "M",
+                        "includedCheckedBags": {
+                            "quantity": 1
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "1",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT3H5M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "CDG",
+                            "terminal": "1",
+                            "at": "2023-06-30T14:05:00"
+                        },
+                        "arrival": {
+                            "iataCode": "ATH",
+                            "at": "2023-06-30T18:10:00"
+                        },
+                        "carrierCode": "H1",
+                        "number": "221",
+                        "aircraft": {
+                            "code": "32N"
+                        },
+                        "operating": {
+                            "carrierCode": "GQ"
+                        },
+                        "duration": "PT3H5M",
+                        "id": "1",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "130.59",
+            "base": "73.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "130.59"
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": true
+        },
+        "validatingAirlineCodes": [
+            "HR"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "130.59",
+                    "base": "73.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "1",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "UOWGQ",
+                        "class": "U",
+                        "includedCheckedBags": {
+                            "quantity": 1
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "2",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-06-30",
+        "lastTicketingDateTime": "2023-06-30",
+        "numberOfBookableSeats": 8,
+        "itineraries": [
+            {
+                "duration": "PT3H10M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "CDG",
+                            "terminal": "1",
+                            "at": "2023-06-30T17:00:00"
+                        },
+                        "arrival": {
+                            "iataCode": "ATH",
+                            "at": "2023-06-30T21:10:00"
+                        },
+                        "carrierCode": "A3",
+                        "number": "613",
+                        "aircraft": {
+                            "code": "32Q"
+                        },
+                        "operating": {
+                            "carrierCode": "A3"
+                        },
+                        "duration": "PT3H10M",
+                        "id": "2",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "159.59",
+            "base": "116.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "159.59",
+            "additionalServices": [
+                {
+                    "amount": "50.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "A3"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "159.59",
+                    "base": "116.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "2",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "SHFLXLW",
+                        "brandedFare": "FLEX",
+                        "class": "S",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "3",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-06-30",
+        "lastTicketingDateTime": "2023-06-30",
+        "numberOfBookableSeats": 4,
+        "itineraries": [
+            {
+                "duration": "PT3H10M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "CDG",
+                            "terminal": "3",
+                            "at": "2023-06-30T17:00:00"
+                        },
+                        "arrival": {
+                            "iataCode": "ATH",
+                            "at": "2023-06-30T21:10:00"
+                        },
+                        "carrierCode": "V7",
+                        "number": "5015",
+                        "aircraft": {
+                            "code": "32Q"
+                        },
+                        "operating": {
+                            "carrierCode": "A3"
+                        },
+                        "duration": "PT3H10M",
+                        "id": "3",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "194.59",
+            "base": "152.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "194.59"
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": true
+        },
+        "validatingAirlineCodes": [
+            "V7"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "194.59",
+                    "base": "152.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "3",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "EHV7GSPK",
+                        "class": "E",
                         "includedCheckedBags": {
                             "quantity": 1
                         }
@@ -4589,7 +5142,7 @@
             "grandTotal": "189.87",
             "additionalServices": [
                 {
-                    "amount": "40.00",
+                    "amount": "60.00",
                     "type": "CHECKED_BAGS"
                 }
             ]
@@ -4827,282 +5380,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
-        "numberOfBookableSeats": 9,
-        "itineraries": [
-            {
-                "duration": "PT3H5M",
-                "segments": [
-                    {
-                        "departure": {
-                            "iataCode": "CDG",
-                            "terminal": "1",
-                            "at": "2023-06-30T14:05:00"
-                        },
-                        "arrival": {
-                            "iataCode": "ATH",
-                            "at": "2023-06-30T18:10:00"
-                        },
-                        "carrierCode": "H1",
-                        "number": "221",
-                        "aircraft": {
-                            "code": "32N"
-                        },
-                        "operating": {
-                            "carrierCode": "GQ"
-                        },
-                        "duration": "PT3H5M",
-                        "id": "1",
-                        "numberOfStops": 0,
-                        "blacklistedInEU": false
-                    }
-                ]
-            }
-        ],
-        "price": {
-            "currency": "EUR",
-            "total": "130.59",
-            "base": "73.00",
-            "fees": [
-                {
-                    "amount": "0.00",
-                    "type": "SUPPLIER"
-                },
-                {
-                    "amount": "0.00",
-                    "type": "TICKETING"
-                }
-            ],
-            "grandTotal": "130.59"
-        },
-        "pricingOptions": {
-            "fareType": [
-                "PUBLISHED"
-            ],
-            "includedCheckedBagsOnly": true
-        },
-        "validatingAirlineCodes": [
-            "HR"
-        ],
-        "travelerPricings": [
-            {
-                "travelerId": "1",
-                "fareOption": "STANDARD",
-                "travelerType": "ADULT",
-                "price": {
-                    "currency": "EUR",
-                    "total": "130.59",
-                    "base": "73.00"
-                },
-                "fareDetailsBySegment": [
-                    {
-                        "segmentId": "1",
-                        "cabin": "ECONOMY",
-                        "fareBasis": "UOWGQ",
-                        "class": "U",
-                        "includedCheckedBags": {
-                            "quantity": 1
-                        }
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "type": "flight-offer",
-        "id": "2",
-        "source": "GDS",
-        "instantTicketingRequired": false,
-        "nonHomogeneous": false,
-        "oneWay": false,
-        "lastTicketingDate": "2023-06-30",
-        "lastTicketingDateTime": "2023-06-30",
-        "numberOfBookableSeats": 8,
-        "itineraries": [
-            {
-                "duration": "PT3H10M",
-                "segments": [
-                    {
-                        "departure": {
-                            "iataCode": "CDG",
-                            "terminal": "1",
-                            "at": "2023-06-30T17:00:00"
-                        },
-                        "arrival": {
-                            "iataCode": "ATH",
-                            "at": "2023-06-30T21:10:00"
-                        },
-                        "carrierCode": "A3",
-                        "number": "613",
-                        "aircraft": {
-                            "code": "32Q"
-                        },
-                        "operating": {
-                            "carrierCode": "A3"
-                        },
-                        "duration": "PT3H10M",
-                        "id": "2",
-                        "numberOfStops": 0,
-                        "blacklistedInEU": false
-                    }
-                ]
-            }
-        ],
-        "price": {
-            "currency": "EUR",
-            "total": "159.59",
-            "base": "116.00",
-            "fees": [
-                {
-                    "amount": "0.00",
-                    "type": "SUPPLIER"
-                },
-                {
-                    "amount": "0.00",
-                    "type": "TICKETING"
-                }
-            ],
-            "grandTotal": "159.59",
-            "additionalServices": [
-                {
-                    "amount": "45.00",
-                    "type": "CHECKED_BAGS"
-                }
-            ]
-        },
-        "pricingOptions": {
-            "fareType": [
-                "PUBLISHED"
-            ],
-            "includedCheckedBagsOnly": false
-        },
-        "validatingAirlineCodes": [
-            "A3"
-        ],
-        "travelerPricings": [
-            {
-                "travelerId": "1",
-                "fareOption": "STANDARD",
-                "travelerType": "ADULT",
-                "price": {
-                    "currency": "EUR",
-                    "total": "159.59",
-                    "base": "116.00"
-                },
-                "fareDetailsBySegment": [
-                    {
-                        "segmentId": "2",
-                        "cabin": "ECONOMY",
-                        "fareBasis": "SHFLXLW",
-                        "brandedFare": "FLEX",
-                        "class": "S",
-                        "includedCheckedBags": {
-                            "quantity": 0
-                        }
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "type": "flight-offer",
-        "id": "3",
-        "source": "GDS",
-        "instantTicketingRequired": false,
-        "nonHomogeneous": false,
-        "oneWay": false,
-        "lastTicketingDate": "2023-06-30",
-        "lastTicketingDateTime": "2023-06-30",
-        "numberOfBookableSeats": 4,
-        "itineraries": [
-            {
-                "duration": "PT3H10M",
-                "segments": [
-                    {
-                        "departure": {
-                            "iataCode": "CDG",
-                            "terminal": "3",
-                            "at": "2023-06-30T17:00:00"
-                        },
-                        "arrival": {
-                            "iataCode": "ATH",
-                            "at": "2023-06-30T21:10:00"
-                        },
-                        "carrierCode": "V7",
-                        "number": "5015",
-                        "aircraft": {
-                            "code": "32Q"
-                        },
-                        "operating": {
-                            "carrierCode": "A3"
-                        },
-                        "duration": "PT3H10M",
-                        "id": "3",
-                        "numberOfStops": 0,
-                        "blacklistedInEU": false
-                    }
-                ]
-            }
-        ],
-        "price": {
-            "currency": "EUR",
-            "total": "194.59",
-            "base": "152.00",
-            "fees": [
-                {
-                    "amount": "0.00",
-                    "type": "SUPPLIER"
-                },
-                {
-                    "amount": "0.00",
-                    "type": "TICKETING"
-                }
-            ],
-            "grandTotal": "194.59"
-        },
-        "pricingOptions": {
-            "fareType": [
-                "PUBLISHED"
-            ],
-            "includedCheckedBagsOnly": true
-        },
-        "validatingAirlineCodes": [
-            "V7"
-        ],
-        "travelerPricings": [
-            {
-                "travelerId": "1",
-                "fareOption": "STANDARD",
-                "travelerType": "ADULT",
-                "price": {
-                    "currency": "EUR",
-                    "total": "194.59",
-                    "base": "152.00"
-                },
-                "fareDetailsBySegment": [
-                    {
-                        "segmentId": "3",
-                        "cabin": "ECONOMY",
-                        "fareBasis": "EHV7GSPK",
-                        "class": "E",
-                        "includedCheckedBags": {
-                            "quantity": 1
-                        }
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "type": "flight-offer",
-        "id": "1",
-        "source": "GDS",
-        "instantTicketingRequired": false,
-        "nonHomogeneous": false,
-        "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
         "numberOfBookableSeats": 1,
         "itineraries": [
             {
@@ -5191,8 +5470,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-06-28",
-        "lastTicketingDateTime": "2023-06-28",
+        "lastTicketingDate": "2023-06-29",
+        "lastTicketingDateTime": "2023-06-29",
         "numberOfBookableSeats": 1,
         "itineraries": [
             {
