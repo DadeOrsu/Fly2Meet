@@ -97,7 +97,6 @@ def search_flights():
     prolog_file = open('prolog_facts.pl', 'w')
     prolog_file.write('\n'.join(prolog_facts))
     prolog_file.close()
-    print(prolog_facts)
     return render_template("results.html", all_flight_offers=all_flight_offers, second_city_offers=second_city_offers)
 
 
