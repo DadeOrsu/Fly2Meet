@@ -10,7 +10,15 @@ body {
 }
 
 h1 {
-  color: #336699;
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  font-family: "Lato", sans-serif;
+  margin: 20px;
+}
+
+
+.colored-character {
+  color: #6ca6d4; /* Colore del carattere "2" */
 }
 
 form {

@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>fly2meet</h1>
+    <h1>
+        fly<span class="colored-character">2</span>meet
+    </h1>
 
     <form method="POST" action="{{ url_for('search_flights') }}">
         <label for="departure_city_1">Departure City 1:</label>
