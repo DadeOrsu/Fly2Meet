@@ -75,7 +75,8 @@ def search_flights():
     time.sleep(2)
     all_flight_offers = []
     second_city_offers = []
-    if destination is None and destination_country is None:
+    if destination == "None" and destination_country == "None":
+        print("Destinazione e destinazione country sono None")
         # richiesta delle flight inspirations per la prima città di partenza
         flights = get_flight_inspirations(iata_departure_city_1)
         # richiesta delle flight offers per la prima città di partenza
