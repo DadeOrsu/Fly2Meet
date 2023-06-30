@@ -67,14 +67,18 @@ def search_flights():
         f"destination: {destination}\n"
         f"same_airport: {same_airport}\n"
     )
+
+    iata_departure_city_1 = get_iata_code(departure_city_1)
+    iata_departure_city_2 = get_iata_code(departure_city_2)
     # richiesta delle flight inspirations per la prima città di partenza
-    flights = get_flight_inspirations(departure_city_1)
+    flights = get_flight_inspirations(iata_departure_city_1)
     # richiesta delle flight offers per la prima città di partenza
     all_flight_offers = []
     first_city_destinations = set()
     for flight in flights:
         time.sleep(2)
-        fo = get_flight_offers(departure_city_1, flight['destination'], departure_date, return_date, max_base_price)
+        fo = get_flight_offers(iata_departure_city_1, flight['destination'], departure_date, return_date,
+                               max_base_price)
         print(fo)
         # aggiungo la destinazione all'insieme delle destinazioni della prima città di partenza
         if flight['destination'] not in first_city_destinations and len(fo['data']) > 0:
@@ -89,7 +93,7 @@ def search_flights():
     second_city_offers = []
     for destination in first_city_destinations:
         time.sleep(2)
-        fo = get_flight_offers(departure_city_2, destination, departure_date, return_date, max_base_price)
+        fo = get_flight_offers(iata_departure_city_2, destination, departure_date, return_date, max_base_price)
         print(fo)
         second_city_offers.extend(fo['data'])
 

@@ -73,3 +73,25 @@ def get_flight_offers(_origin, _destination, _departure_date, _return_date, _max
     except requests.exceptions.RequestException as e:
         print(f"Errore durante la richiesta di Flight Offers: {e}")
         return None
+
+
+# Funzione che restituisce il codice iata di una città in base al nome
+def get_iata_code(name):
+    url = "https://test.api.amadeus.com/v1/reference-data/locations"
+    params = {
+        "subType": "CITY",
+        "keyword": name,
+        "view": "LIGHT"
+    }
+    try:
+        response = session.get(url, params=params)
+        if response.status_code != 200:
+            print(f"Errore durante la richiesta di IATA: {response.json()['errors'][0]['detail']}")
+            return None
+        else:
+            data = response.json()
+            # Restituisci i dati delle offerte di volo
+            return data['data'][0]['iataCode']
+    except requests.exceptions.RequestException as e:
+        print(f"Errore durante la richiesta di IATA: {e}")
+        return None
