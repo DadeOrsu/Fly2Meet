@@ -1,5 +1,6 @@
 import requests
 from utils.session_module import session
+from geopy import Nominatim
 import json
 
 
@@ -94,4 +95,36 @@ def get_iata_code(name):
             return data['data'][0]['iataCode']
     except requests.exceptions.RequestException as e:
         print(f"Errore durante la richiesta di IATA: {e}")
+        return None
+
+
+# Funzione per ottenere le coordinate geografiche a partire dal country name
+def get_country_center_coordinates(country_name):
+    geolocator = Nominatim(user_agent="my_geocoder")
+    location = geolocator.geocode(country_name)
+    if location:
+        return location.latitude, location.longitude
+    else:
+        return None
+
+
+# Funzione per ottenere a partire dalle coordinate del centro di una nazione tutti gli aeroporti di quella nazione
+def get_airports_from_country_center_coordinates(latitude, longitude):
+    url = "https://test.api.amadeus.com/v1/reference-data/locations/airports"
+    params = {
+        "latitude": latitude,
+        "longitude": longitude,
+        "radius": 200
+    }
+    try:
+        response = session.get(url, params=params)
+        if response.status_code != 200:
+            print(f"Errore durante la richiesta di AIRPORTS: {response.json()['errors'][0]['detail']}")
+            return None
+        else:
+            data = response.json()
+            # Restituisci i dati delle offerte di volo
+            return data['data']
+    except requests.exceptions.RequestException as e:
+        print(f"Errore durante la richiesta di AIRPORTS: {e}")
         return None

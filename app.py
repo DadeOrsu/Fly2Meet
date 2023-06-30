@@ -54,6 +54,7 @@ def search_flights():
     max_duration = request.form.get('max_duration')
     max_wait_time = request.form.get('max_wait_time')
     destination = request.form.get('destination')
+    destination_country = request.form.get('destination_country')
     same_airport = request.form.get('same_airport')
     # scrittura dei dati
     print(
@@ -65,13 +66,16 @@ def search_flights():
         f"max_duration: {max_duration}\n"
         f"max_wait_time: {max_wait_time}\n"
         f"destination: {destination}\n"
+        f"destination_country: {destination_country}\n"
         f"same_airport: {same_airport}\n"
     )
     iata_departure_city_1 = get_iata_code(departure_city_1)
     time.sleep(2)
     iata_departure_city_2 = get_iata_code(departure_city_2)
     time.sleep(2)
-    if destination is None:
+    all_flight_offers = []
+    second_city_offers = []
+    if destination is None and destination_country is None:
         # richiesta delle flight inspirations per la prima città di partenza
         flights = get_flight_inspirations(iata_departure_city_1)
         # richiesta delle flight offers per la prima città di partenza
@@ -100,22 +104,43 @@ def search_flights():
             second_city_offers.extend(fo['data'])
 
     else:
-        iata_destination = get_iata_code(destination)
-        time.sleep(2)
-        all_flight_offers = get_flight_offers(iata_departure_city_1, iata_destination, departure_date, return_date,
-                                              max_base_price)
-        all_flight_offers = all_flight_offers['data']
-        time.sleep(2)
-        second_city_offers = get_flight_offers(iata_departure_city_2, iata_destination, departure_date, return_date,
-                                               max_base_price)
-        second_city_offers = second_city_offers['data']
+        if destination != 'None':
+            print("Destinazione non è None")
+            iata_destination = get_iata_code(destination)
+            time.sleep(2)
+            response = get_flight_offers(iata_departure_city_1, iata_destination, departure_date, return_date,
+                                         max_base_price)
+            all_flight_offers.extend(response['data'])
+            time.sleep(2)
+            response = get_flight_offers(iata_departure_city_2, iata_destination, departure_date, return_date,
+                                         max_base_price)
+            second_city_offers.extend(response['data'])
+        if destination_country != 'None':
+            print("Destinazione country non è None")
+            (lat, lon) = get_country_center_coordinates(destination_country)
+            time.sleep(2)
+            print(lat, lon)
+            time.sleep(2)
+            response = get_airports_from_country_center_coordinates(lat, lon)
+            time.sleep(2)
+            target_country_airports = response
+            print(target_country_airports)
+            target_country_airports_iata = [airport['iataCode'] for airport in target_country_airports]
+            for iata in target_country_airports_iata:
+                time.sleep(2)
+                response = get_flight_offers(iata_departure_city_1, iata, departure_date, return_date,
+                                             max_base_price)
+                all_flight_offers.extend(response['data'])
+                time.sleep(2)
+                response = get_flight_offers(iata_departure_city_2, iata, departure_date, return_date,
+                                             max_base_price)
+                second_city_offers.extend(response['data'])
 
     prolog_facts = prolog_flight_parser(all_flight_offers)
     prolog_file = open('prolog_facts.pl', 'w')
     prolog_file.write('\n'.join(prolog_facts))
     prolog_file.close()
-    return render_template("results.html", all_flight_offers=all_flight_offers,
-                           second_city_offers=second_city_offers)
+    return render_template("results.html", all_flight_offers=all_flight_offers, second_city_offers=second_city_offers)
 
 
 @app.route('/')
