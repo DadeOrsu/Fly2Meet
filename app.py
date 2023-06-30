@@ -105,13 +105,10 @@ def search_flights():
         all_flight_offers = get_flight_offers(iata_departure_city_1, iata_destination, departure_date, return_date,
                                               max_base_price)
         all_flight_offers = all_flight_offers['data']
-        print(json.dumps(all_flight_offers, indent=4))
-        print("ciaooooo")
         time.sleep(2)
         second_city_offers = get_flight_offers(iata_departure_city_2, iata_destination, departure_date, return_date,
                                                max_base_price)
         second_city_offers = second_city_offers['data']
-        print(json.dumps(second_city_offers, indent=4))
 
     prolog_facts = prolog_flight_parser(all_flight_offers)
     prolog_file = open('prolog_facts.pl', 'w')
