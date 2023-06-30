@@ -67,41 +67,58 @@ def search_flights():
         f"destination: {destination}\n"
         f"same_airport: {same_airport}\n"
     )
-
     iata_departure_city_1 = get_iata_code(departure_city_1)
+    time.sleep(2)
     iata_departure_city_2 = get_iata_code(departure_city_2)
-    # richiesta delle flight inspirations per la prima città di partenza
-    flights = get_flight_inspirations(iata_departure_city_1)
-    # richiesta delle flight offers per la prima città di partenza
-    all_flight_offers = []
-    first_city_destinations = set()
-    for flight in flights:
-        time.sleep(2)
-        fo = get_flight_offers(iata_departure_city_1, flight['destination'], departure_date, return_date,
-                               max_base_price)
-        print(fo)
-        # aggiungo la destinazione all'insieme delle destinazioni della prima città di partenza
-        if flight['destination'] not in first_city_destinations and len(fo['data']) > 0:
-            print("Aggiungo la destinazione")
-            first_city_destinations.add(flight['destination'])
-        all_flight_offers.extend(fo['data'])
-    # scrivi all_flight_offers in un file json
-    with open('flight_offers_paris.json', 'w') as file:
-        json.dump(all_flight_offers, file, indent=4)
+    time.sleep(2)
+    if destination is None:
+        # richiesta delle flight inspirations per la prima città di partenza
+        flights = get_flight_inspirations(iata_departure_city_1)
+        # richiesta delle flight offers per la prima città di partenza
+        all_flight_offers = []
+        first_city_destinations = set()
+        for flight in flights:
+            time.sleep(2)
+            fo = get_flight_offers(iata_departure_city_1, flight['destination'], departure_date, return_date,
+                                   max_base_price)
+            print(fo)
+            # aggiungo la destinazione all'insieme delle destinazioni della prima città di partenza
+            if flight['destination'] not in first_city_destinations and len(fo['data']) > 0:
+                print("Aggiungo la destinazione")
+                first_city_destinations.add(flight['destination'])
+            all_flight_offers.extend(fo['data'])
+        # scrivi all_flight_offers in un file json
+        with open('flight_offers_paris.json', 'w') as file:
+            json.dump(all_flight_offers, file, indent=4)
 
-    # richiesta delle flight offers per la seconda città di partenza
-    second_city_offers = []
-    for destination in first_city_destinations:
+        # richiesta delle flight offers per la seconda città di partenza
+        second_city_offers = []
+        for destination in first_city_destinations:
+            time.sleep(2)
+            fo = get_flight_offers(iata_departure_city_2, destination, departure_date, return_date, max_base_price)
+            print(fo)
+            second_city_offers.extend(fo['data'])
+
+    else:
+        iata_destination = get_iata_code(destination)
         time.sleep(2)
-        fo = get_flight_offers(iata_departure_city_2, destination, departure_date, return_date, max_base_price)
-        print(fo)
-        second_city_offers.extend(fo['data'])
+        all_flight_offers = get_flight_offers(iata_departure_city_1, iata_destination, departure_date, return_date,
+                                              max_base_price)
+        all_flight_offers = all_flight_offers['data']
+        print(json.dumps(all_flight_offers, indent=4))
+        print("ciaooooo")
+        time.sleep(2)
+        second_city_offers = get_flight_offers(iata_departure_city_2, iata_destination, departure_date, return_date,
+                                               max_base_price)
+        second_city_offers = second_city_offers['data']
+        print(json.dumps(second_city_offers, indent=4))
 
     prolog_facts = prolog_flight_parser(all_flight_offers)
     prolog_file = open('prolog_facts.pl', 'w')
     prolog_file.write('\n'.join(prolog_facts))
     prolog_file.close()
-    return render_template("results.html", all_flight_offers=all_flight_offers, second_city_offers=second_city_offers)
+    return render_template("results.html", all_flight_offers=all_flight_offers,
+                           second_city_offers=second_city_offers)
 
 
 @app.route('/')
