@@ -1,0 +1,1793 @@
+[
+    {
+        "type": "flight-offer",
+        "id": "1",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-07-02",
+        "lastTicketingDateTime": "2023-07-02",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT2H",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "ORY",
+                            "terminal": "1",
+                            "at": "2023-07-03T17:05:00"
+                        },
+                        "arrival": {
+                            "iataCode": "MAD",
+                            "terminal": "2",
+                            "at": "2023-07-03T19:05:00"
+                        },
+                        "carrierCode": "UX",
+                        "number": "1222",
+                        "aircraft": {
+                            "code": "73H"
+                        },
+                        "operating": {
+                            "carrierCode": "UX"
+                        },
+                        "duration": "PT2H",
+                        "id": "6",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "81.43",
+            "base": "50.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "81.43",
+            "additionalServices": [
+                {
+                    "amount": "40.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "UX"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "81.43",
+                    "base": "50.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "6",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "AYYO5L",
+                        "brandedFare": "LITE",
+                        "class": "A",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "2",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-07-02",
+        "lastTicketingDateTime": "2023-07-02",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT2H",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "ORY",
+                            "terminal": "1",
+                            "at": "2023-07-03T19:25:00"
+                        },
+                        "arrival": {
+                            "iataCode": "MAD",
+                            "terminal": "2",
+                            "at": "2023-07-03T21:25:00"
+                        },
+                        "carrierCode": "UX",
+                        "number": "1026",
+                        "aircraft": {
+                            "code": "789"
+                        },
+                        "operating": {
+                            "carrierCode": "UX"
+                        },
+                        "duration": "PT2H",
+                        "id": "11",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "81.43",
+            "base": "50.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "81.43",
+            "additionalServices": [
+                {
+                    "amount": "40.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "UX"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "81.43",
+                    "base": "50.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "11",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "AYYO5L",
+                        "brandedFare": "LITE",
+                        "class": "A",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "3",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-07-01",
+        "lastTicketingDateTime": "2023-07-01",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT2H",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "ORY",
+                            "terminal": "1",
+                            "at": "2023-07-03T07:30:00"
+                        },
+                        "arrival": {
+                            "iataCode": "MAD",
+                            "terminal": "4",
+                            "at": "2023-07-03T09:30:00"
+                        },
+                        "carrierCode": "VY",
+                        "number": "5135",
+                        "aircraft": {
+                            "code": "32S"
+                        },
+                        "operating": {
+                            "carrierCode": "IB"
+                        },
+                        "duration": "PT2H",
+                        "id": "1",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "114.43",
+            "base": "83.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "114.43"
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": true
+        },
+        "validatingAirlineCodes": [
+            "VY"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "114.43",
+                    "base": "83.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "1",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "OWIBOPT",
+                        "class": "O",
+                        "includedCheckedBags": {
+                            "quantity": 1
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "4",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-07-01",
+        "lastTicketingDateTime": "2023-07-01",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT2H",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "ORY",
+                            "terminal": "1",
+                            "at": "2023-07-03T10:15:00"
+                        },
+                        "arrival": {
+                            "iataCode": "MAD",
+                            "terminal": "4",
+                            "at": "2023-07-03T12:15:00"
+                        },
+                        "carrierCode": "VY",
+                        "number": "5132",
+                        "aircraft": {
+                            "code": "32S"
+                        },
+                        "operating": {
+                            "carrierCode": "IB"
+                        },
+                        "duration": "PT2H",
+                        "id": "2",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "114.43",
+            "base": "83.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "114.43"
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": true
+        },
+        "validatingAirlineCodes": [
+            "VY"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "114.43",
+                    "base": "83.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "2",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "OWIBOPT",
+                        "class": "O",
+                        "includedCheckedBags": {
+                            "quantity": 1
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "5",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-07-01",
+        "lastTicketingDateTime": "2023-07-01",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT2H",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "ORY",
+                            "terminal": "1",
+                            "at": "2023-07-03T14:20:00"
+                        },
+                        "arrival": {
+                            "iataCode": "MAD",
+                            "terminal": "4",
+                            "at": "2023-07-03T16:20:00"
+                        },
+                        "carrierCode": "VY",
+                        "number": "5133",
+                        "aircraft": {
+                            "code": "32S"
+                        },
+                        "operating": {
+                            "carrierCode": "IB"
+                        },
+                        "duration": "PT2H",
+                        "id": "5",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "114.43",
+            "base": "83.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "114.43"
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": true
+        },
+        "validatingAirlineCodes": [
+            "VY"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "114.43",
+                    "base": "83.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "5",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "OWIBOPT",
+                        "class": "O",
+                        "includedCheckedBags": {
+                            "quantity": 1
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "6",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-07-01",
+        "lastTicketingDateTime": "2023-07-01",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT2H",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "ORY",
+                            "terminal": "1",
+                            "at": "2023-07-03T17:20:00"
+                        },
+                        "arrival": {
+                            "iataCode": "MAD",
+                            "terminal": "4",
+                            "at": "2023-07-03T19:20:00"
+                        },
+                        "carrierCode": "VY",
+                        "number": "5254",
+                        "aircraft": {
+                            "code": "32S"
+                        },
+                        "operating": {
+                            "carrierCode": "IB"
+                        },
+                        "duration": "PT2H",
+                        "id": "7",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "114.43",
+            "base": "83.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "114.43"
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": true
+        },
+        "validatingAirlineCodes": [
+            "VY"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "114.43",
+                    "base": "83.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "7",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "OWIBOPT",
+                        "class": "O",
+                        "includedCheckedBags": {
+                            "quantity": 1
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "7",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-07-01",
+        "lastTicketingDateTime": "2023-07-01",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT2H",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "ORY",
+                            "terminal": "1",
+                            "at": "2023-07-03T19:15:00"
+                        },
+                        "arrival": {
+                            "iataCode": "MAD",
+                            "terminal": "4",
+                            "at": "2023-07-03T21:15:00"
+                        },
+                        "carrierCode": "VY",
+                        "number": "5141",
+                        "aircraft": {
+                            "code": "32S"
+                        },
+                        "operating": {
+                            "carrierCode": "IB"
+                        },
+                        "duration": "PT2H",
+                        "id": "9",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "114.43",
+            "base": "83.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "114.43"
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": true
+        },
+        "validatingAirlineCodes": [
+            "VY"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "114.43",
+                    "base": "83.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "9",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "OWIBOPT",
+                        "class": "O",
+                        "includedCheckedBags": {
+                            "quantity": 1
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "8",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-07-01",
+        "lastTicketingDateTime": "2023-07-01",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT2H5M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "ORY",
+                            "terminal": "1",
+                            "at": "2023-07-03T12:30:00"
+                        },
+                        "arrival": {
+                            "iataCode": "MAD",
+                            "terminal": "4",
+                            "at": "2023-07-03T14:35:00"
+                        },
+                        "carrierCode": "VY",
+                        "number": "5136",
+                        "aircraft": {
+                            "code": "32S"
+                        },
+                        "operating": {
+                            "carrierCode": "IB"
+                        },
+                        "duration": "PT2H5M",
+                        "id": "14",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "114.43",
+            "base": "83.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "114.43"
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": true
+        },
+        "validatingAirlineCodes": [
+            "VY"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "114.43",
+                    "base": "83.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "14",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "OWIBOPT",
+                        "class": "O",
+                        "includedCheckedBags": {
+                            "quantity": 1
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "9",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-07-02",
+        "lastTicketingDateTime": "2023-07-02",
+        "numberOfBookableSeats": 8,
+        "itineraries": [
+            {
+                "duration": "PT2H",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "ORY",
+                            "terminal": "1",
+                            "at": "2023-07-03T10:55:00"
+                        },
+                        "arrival": {
+                            "iataCode": "MAD",
+                            "terminal": "2",
+                            "at": "2023-07-03T12:55:00"
+                        },
+                        "carrierCode": "UX",
+                        "number": "1028",
+                        "aircraft": {
+                            "code": "73H"
+                        },
+                        "operating": {
+                            "carrierCode": "UX"
+                        },
+                        "duration": "PT2H",
+                        "id": "4",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "114.43",
+            "base": "83.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "114.43",
+            "additionalServices": [
+                {
+                    "amount": "40.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "UX"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "114.43",
+                    "base": "83.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "4",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "TYYO5L",
+                        "brandedFare": "LITE",
+                        "class": "T",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "10",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-07-02",
+        "lastTicketingDateTime": "2023-07-02",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT2H",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "ORY",
+                            "terminal": "1",
+                            "at": "2023-07-03T10:15:00"
+                        },
+                        "arrival": {
+                            "iataCode": "MAD",
+                            "terminal": "4",
+                            "at": "2023-07-03T12:15:00"
+                        },
+                        "carrierCode": "IB",
+                        "number": "3403",
+                        "aircraft": {
+                            "code": "321"
+                        },
+                        "operating": {
+                            "carrierCode": "IB"
+                        },
+                        "duration": "PT2H",
+                        "id": "3",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "116.43",
+            "base": "85.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "116.43",
+            "additionalServices": [
+                {
+                    "amount": "50.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "IB"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "116.43",
+                    "base": "85.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "3",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "NDNNAOB4",
+                        "brandedFare": "BASIC",
+                        "class": "N",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "11",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-07-02",
+        "lastTicketingDateTime": "2023-07-02",
+        "numberOfBookableSeats": 2,
+        "itineraries": [
+            {
+                "duration": "PT2H",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "ORY",
+                            "terminal": "1",
+                            "at": "2023-07-03T20:55:00"
+                        },
+                        "arrival": {
+                            "iataCode": "MAD",
+                            "terminal": "4",
+                            "at": "2023-07-03T22:55:00"
+                        },
+                        "carrierCode": "IB",
+                        "number": "3441",
+                        "aircraft": {
+                            "code": "321"
+                        },
+                        "operating": {
+                            "carrierCode": "IB"
+                        },
+                        "duration": "PT2H",
+                        "id": "12",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "116.43",
+            "base": "85.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "116.43",
+            "additionalServices": [
+                {
+                    "amount": "50.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "IB"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "116.43",
+                    "base": "85.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "12",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "NDNNAOB4",
+                        "brandedFare": "BASIC",
+                        "class": "N",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "12",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-07-02",
+        "lastTicketingDateTime": "2023-07-02",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT2H",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "ORY",
+                            "terminal": "1",
+                            "at": "2023-07-03T17:20:00"
+                        },
+                        "arrival": {
+                            "iataCode": "MAD",
+                            "terminal": "4",
+                            "at": "2023-07-03T19:20:00"
+                        },
+                        "carrierCode": "IB",
+                        "number": "3443",
+                        "aircraft": {
+                            "code": "321"
+                        },
+                        "operating": {
+                            "carrierCode": "IB"
+                        },
+                        "duration": "PT2H",
+                        "id": "8",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "143.43",
+            "base": "112.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "143.43",
+            "additionalServices": [
+                {
+                    "amount": "50.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "IB"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "143.43",
+                    "base": "112.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "8",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "SDNNAOB4",
+                        "brandedFare": "BASIC",
+                        "class": "S",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "13",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-07-02",
+        "lastTicketingDateTime": "2023-07-02",
+        "numberOfBookableSeats": 7,
+        "itineraries": [
+            {
+                "duration": "PT2H5M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "ORY",
+                            "terminal": "1",
+                            "at": "2023-07-03T12:30:00"
+                        },
+                        "arrival": {
+                            "iataCode": "MAD",
+                            "terminal": "4",
+                            "at": "2023-07-03T14:35:00"
+                        },
+                        "carrierCode": "IB",
+                        "number": "3435",
+                        "aircraft": {
+                            "code": "321"
+                        },
+                        "operating": {
+                            "carrierCode": "IB"
+                        },
+                        "duration": "PT2H5M",
+                        "id": "15",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "143.43",
+            "base": "112.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "143.43",
+            "additionalServices": [
+                {
+                    "amount": "50.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "IB"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "143.43",
+                    "base": "112.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "15",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "SDNNAOB4",
+                        "brandedFare": "BASIC",
+                        "class": "S",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "14",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-07-02",
+        "lastTicketingDateTime": "2023-07-02",
+        "numberOfBookableSeats": 3,
+        "itineraries": [
+            {
+                "duration": "PT2H10M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "CDG",
+                            "terminal": "3",
+                            "at": "2023-07-03T16:50:00"
+                        },
+                        "arrival": {
+                            "iataCode": "MAD",
+                            "terminal": "4",
+                            "at": "2023-07-03T19:00:00"
+                        },
+                        "carrierCode": "IB",
+                        "number": "3741",
+                        "aircraft": {
+                            "code": "32A"
+                        },
+                        "operating": {
+                            "carrierCode": "I2"
+                        },
+                        "duration": "PT2H10M",
+                        "id": "17",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "161.59",
+            "base": "129.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "161.59",
+            "additionalServices": [
+                {
+                    "amount": "50.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "IB"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "161.59",
+                    "base": "129.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "17",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "VDNNEOB2",
+                        "brandedFare": "BASIC",
+                        "class": "V",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "15",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-07-02",
+        "lastTicketingDateTime": "2023-07-02",
+        "numberOfBookableSeats": 6,
+        "itineraries": [
+            {
+                "duration": "PT2H15M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "CDG",
+                            "terminal": "3",
+                            "at": "2023-07-03T07:00:00"
+                        },
+                        "arrival": {
+                            "iataCode": "MAD",
+                            "terminal": "4",
+                            "at": "2023-07-03T09:15:00"
+                        },
+                        "carrierCode": "IB",
+                        "number": "3743",
+                        "aircraft": {
+                            "code": "32A"
+                        },
+                        "operating": {
+                            "carrierCode": "I2"
+                        },
+                        "duration": "PT2H15M",
+                        "id": "18",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "161.59",
+            "base": "129.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "161.59",
+            "additionalServices": [
+                {
+                    "amount": "50.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "IB"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "161.59",
+                    "base": "129.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "18",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "VDNNEOB2",
+                        "brandedFare": "BASIC",
+                        "class": "V",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "16",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-07-03",
+        "lastTicketingDateTime": "2023-07-03",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT2H5M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "CDG",
+                            "terminal": "1",
+                            "at": "2023-07-03T12:35:00"
+                        },
+                        "arrival": {
+                            "iataCode": "MAD",
+                            "at": "2023-07-03T14:40:00"
+                        },
+                        "carrierCode": "6X",
+                        "number": "1199",
+                        "aircraft": {
+                            "code": "319"
+                        },
+                        "operating": {
+                            "carrierCode": "6X"
+                        },
+                        "duration": "PT2H5M",
+                        "id": "16",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "167.59",
+            "base": "35.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "167.59",
+            "additionalServices": [
+                {
+                    "amount": "1.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": true
+        },
+        "validatingAirlineCodes": [
+            "6X"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "167.59",
+                    "base": "35.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "16",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "Y6XHIPCT",
+                        "brandedFare": "ECPLTE",
+                        "class": "Y",
+                        "includedCheckedBags": {
+                            "quantity": 1
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "17",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-07-03",
+        "lastTicketingDateTime": "2023-07-03",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT2H15M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "CDG",
+                            "at": "2023-07-03T16:45:00"
+                        },
+                        "arrival": {
+                            "iataCode": "MAD",
+                            "at": "2023-07-03T19:00:00"
+                        },
+                        "carrierCode": "6X",
+                        "number": "3868",
+                        "aircraft": {
+                            "code": "321"
+                        },
+                        "operating": {
+                            "carrierCode": "6X"
+                        },
+                        "duration": "PT2H15M",
+                        "id": "19",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "167.59",
+            "base": "35.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "167.59",
+            "additionalServices": [
+                {
+                    "amount": "1.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": true
+        },
+        "validatingAirlineCodes": [
+            "6X"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "167.59",
+                    "base": "35.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "19",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "Y6XHIPCT",
+                        "brandedFare": "ECPLTE",
+                        "class": "Y",
+                        "includedCheckedBags": {
+                            "quantity": 1
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "18",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-07-02",
+        "lastTicketingDateTime": "2023-07-02",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT2H",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "ORY",
+                            "terminal": "1",
+                            "at": "2023-07-03T19:15:00"
+                        },
+                        "arrival": {
+                            "iataCode": "MAD",
+                            "terminal": "4",
+                            "at": "2023-07-03T21:15:00"
+                        },
+                        "carrierCode": "IB",
+                        "number": "3445",
+                        "aircraft": {
+                            "code": "321"
+                        },
+                        "operating": {
+                            "carrierCode": "IB"
+                        },
+                        "duration": "PT2H",
+                        "id": "10",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "176.43",
+            "base": "145.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "176.43",
+            "additionalServices": [
+                {
+                    "amount": "50.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "IB"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "176.43",
+                    "base": "145.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "10",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "VDNNAOB4",
+                        "brandedFare": "BASIC",
+                        "class": "V",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "19",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-07-01",
+        "lastTicketingDateTime": "2023-07-01",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT2H",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "ORY",
+                            "terminal": "1",
+                            "at": "2023-07-03T20:55:00"
+                        },
+                        "arrival": {
+                            "iataCode": "MAD",
+                            "terminal": "4",
+                            "at": "2023-07-03T22:55:00"
+                        },
+                        "carrierCode": "VY",
+                        "number": "5146",
+                        "aircraft": {
+                            "code": "32S"
+                        },
+                        "operating": {
+                            "carrierCode": "IB"
+                        },
+                        "duration": "PT2H",
+                        "id": "13",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "176.43",
+            "base": "145.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "176.43"
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": true
+        },
+        "validatingAirlineCodes": [
+            "VY"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "176.43",
+                    "base": "145.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "13",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "ZWIBOPT",
+                        "class": "Z",
+                        "includedCheckedBags": {
+                            "quantity": 1
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]
