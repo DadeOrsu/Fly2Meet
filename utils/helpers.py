@@ -27,6 +27,19 @@ def flight_from_json(file_path):
     return flights
 
 
+# Funzione per scrivere i voli su file json
+def write_flights_to_json(flights, file_path):
+    try:
+        # Apri il file JSON in modalità scrittura
+        with open(file_path, 'w') as file:
+            # Scrivi il contenuto del file JSON
+            json.dump(flights, file, indent=4)
+    except FileNotFoundError:
+        print("File non trovato.")
+    except json.JSONDecodeError:
+        print("Errore durante la decodifica del file JSON.")
+
+
 # Funzione che restituisce flight inspirations
 def get_flight_inspirations(_origin):
     url = 'https://test.api.amadeus.com/v1/shopping/flight-destinations'
