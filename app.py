@@ -51,7 +51,7 @@ def search_flights():
     if return_date == '':
         return_date = None
     max_base_price = request.form.get('max_base_price')
-    max_duration = request.form.get('max_duration')
+    max_duration = int(request.form.get('max_duration'))
     max_wait_time = request.form.get('max_wait_time')
     destination = request.form.get('destination')
     destination_country = request.form.get('destination_country')
@@ -135,6 +135,9 @@ def search_flights():
                 response = get_flight_offers(iata_departure_city_2, iata, departure_date, return_date, max_base_price)
                 second_city_offers.extend(response['data'])
 
+    # filtro le offerte di volo in base alla durata immessa
+    all_flight_offers = filter_flight_offers_by_duration(all_flight_offers, max_duration)
+    second_city_offers = filter_flight_offers_by_duration(second_city_offers, max_duration)
     prolog_facts = prolog_flight_parser(all_flight_offers)
     prolog_file = open('prolog_facts.pl', 'w')
     prolog_file.write('\n'.join(prolog_facts))

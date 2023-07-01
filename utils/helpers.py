@@ -1,3 +1,5 @@
+from datetime import timedelta
+from isodate import parse_duration
 import requests
 from utils.session_module import session
 from geopy import Nominatim
@@ -128,3 +130,25 @@ def get_airports_from_country_center_coordinates(latitude, longitude):
     except requests.exceptions.RequestException as e:
         print(f"Errore durante la richiesta di AIRPORTS: {e}")
         return None
+
+
+# Funzione per comparare ora in input e durata in formato iso
+def compare_duration_with_hours(hour, duration_iso):
+    duration_timedelta = parse_duration(duration_iso)
+    hour_timedelta = timedelta(hours=hour)
+    return duration_timedelta < hour_timedelta
+
+
+# funzione per filtrare i voli in base alla durata
+def filter_flight_offers_by_duration(flight_offers, hour):
+    filtered_flight_offers = []
+    for flight_offer in flight_offers:
+        itineraries = flight_offer['itineraries']
+        for itinerary in itineraries:
+            segments = itinerary['segments']
+            for segment in segments:
+                duration_iso = segment['duration']
+                if compare_duration_with_hours(hour, duration_iso):
+                    filtered_flight_offers.append(flight_offer)
+                    break  # Esci dal ciclo interno se almeno un segmento soddisfa la condizione
+    return filtered_flight_offers
