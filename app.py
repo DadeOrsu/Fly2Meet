@@ -142,6 +142,7 @@ def search_flights():
     # scrittura dei voli su file json
     write_flights_to_json(first_city_offers, 'jsonDumps/'+departure_city_1+departure_date+'.json')
     write_flights_to_json(second_city_offers, 'jsonDumps/'+departure_city_2+departure_date+'.json')
+    # scrittura dei fatti prolog su file
     prolog_facts = prolog_flight_parser(first_city_offers)
     prolog_file = open('prolog_facts.pl', 'w')
     prolog_file.write('\n'.join(prolog_facts))
