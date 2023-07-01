@@ -116,25 +116,23 @@ def search_flights():
             response = get_flight_offers(iata_departure_city_2, iata_destination, departure_date, return_date,
                                          max_base_price)
             second_city_offers.extend(response['data'])
+
         if destination_country != 'None':
             print("Destinazione country non è None")
-            (lat, lon) = get_country_center_coordinates(destination_country)
+            lat, lon = get_country_center_coordinates(destination_country)
             time.sleep(2)
             print(lat, lon)
             time.sleep(2)
-            response = get_airports_from_country_center_coordinates(lat, lon)
-            time.sleep(2)
-            target_country_airports = response
+            target_country_airports = get_airports_from_country_center_coordinates(lat, lon)
             print(target_country_airports)
             target_country_airports_iata = [airport['iataCode'] for airport in target_country_airports]
+
             for iata in target_country_airports_iata:
                 time.sleep(2)
-                response = get_flight_offers(iata_departure_city_1, iata, departure_date, return_date,
-                                             max_base_price)
+                response = get_flight_offers(iata_departure_city_1, iata, departure_date, return_date, max_base_price)
                 all_flight_offers.extend(response['data'])
                 time.sleep(2)
-                response = get_flight_offers(iata_departure_city_2, iata, departure_date, return_date,
-                                             max_base_price)
+                response = get_flight_offers(iata_departure_city_2, iata, departure_date, return_date, max_base_price)
                 second_city_offers.extend(response['data'])
 
     prolog_facts = prolog_flight_parser(all_flight_offers)

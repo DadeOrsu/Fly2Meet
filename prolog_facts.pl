@@ -17,3 +17,8 @@ flight(cdg, mad, 6x, 1199, date(2023, 7, 3, 12, 35, 0, 3600, 'CEST', true), date
 flight(cdg, mad, 6x, 3868, date(2023, 7, 3, 16, 45, 0, 3600, 'CEST', true), date(2023, 7, 3, 19, 0, 0, 3600, 'CEST', true), 8100, 167.59).
 flight(ory, mad, ib, 3445, date(2023, 7, 3, 19, 15, 0, 3600, 'CEST', true), date(2023, 7, 3, 21, 15, 0, 3600, 'CEST', true), 7200, 176.43).
 flight(ory, mad, vy, 5146, date(2023, 7, 3, 20, 55, 0, 3600, 'CEST', true), date(2023, 7, 3, 22, 55, 0, 3600, 'CEST', true), 7200, 176.43).
+flight(cdg, fra, af, 1018, date(2023, 7, 3, 20, 45, 0, 3600, 'CEST', true), date(2023, 7, 3, 22, 5, 0, 3600, 'CEST', true), 4800, 182.59).
+flight(cdg, fra, af, 1518, date(2023, 7, 3, 7, 35, 0, 3600, 'CEST', true), date(2023, 7, 3, 9, 0, 0, 3600, 'CEST', true), 5100, 182.59).
+flight(cdg, fra, af, 1318, date(2023, 7, 3, 16, 25, 0, 3600, 'CEST', true), date(2023, 7, 3, 17, 50, 0, 3600, 'CEST', true), 5100, 182.59).
+flight(cdg, fra, af, 1818, date(2023, 7, 3, 17, 50, 0, 3600, 'CEST', true), date(2023, 7, 3, 19, 15, 0, 3600, 'CEST', true), 5100, 182.59).
+flight(cdg, fra, af, 1618, date(2023, 7, 3, 9, 55, 0, 3600, 'CEST', true), date(2023, 7, 3, 11, 25, 0, 3600, 'CEST', true), 5400, 182.59).
