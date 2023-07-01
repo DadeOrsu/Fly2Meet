@@ -18,7 +18,7 @@
             </tr>
         </thead>
         <tbody>
-            {% for flight in all_flight_offers %}
+            {% for flight in first_city_offers %}
             <tr>
                 <td id="origin">{{ flight.itineraries[0].segments[0].departure.iataCode }}</td>
                 <td id="destination">{{ flight.itineraries[0].segments[0].arrival.iataCode }}</td>
