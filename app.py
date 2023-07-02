@@ -92,10 +92,6 @@ def search_flights():
                 print("Aggiungo la destinazione")
                 first_city_destinations.add(flight['destination'])
             first_city_offers.extend(fo['data'])
-        # scrivi all_flight_offers in un file json
-        with open('flight_offers_paris.json', 'w') as file:
-            json.dump(first_city_offers, file, indent=4)
-
         # richiesta delle flight offers per la seconda città di partenza
         second_city_offers = []
         for destination in first_city_destinations:
