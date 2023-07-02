@@ -50,6 +50,12 @@ flight(cdg, lin, az, 313, date(2023, 7, 10, 16, 55, 0, 3600, 'CEST', true), date
 flight(cdg, lin, az, 311, date(2023, 7, 10, 21, 30, 0, 3600, 'CEST', true), date(2023, 7, 10, 23, 0, 0, 3600, 'CEST', true), 5400, 174.59).
 flight(cdg, lin, af, 1312, date(2023, 7, 10, 18, 20, 0, 3600, 'CEST', true), date(2023, 7, 10, 19, 45, 0, 3600, 'CEST', true), 5100, 189.87).
 flight(cdg, lin, af, 1212, date(2023, 7, 10, 7, 20, 0, 3600, 'CEST', true), date(2023, 7, 10, 8, 50, 0, 3600, 'CEST', true), 5400, 189.87).
+flight(lhr, lin, az, 229, date(2023, 7, 10, 6, 45, 0, 0, 'BST', true), date(2023, 7, 10, 9, 40, 0, 3600, 'CEST', true), 6900, 80.05).
+flight(lhr, lin, az, 247, date(2023, 7, 10, 18, 50, 0, 0, 'BST', true), date(2023, 7, 10, 21, 45, 0, 3600, 'CEST', true), 6900, 138.05).
+flight(lgw, fco, ib, 5499, date(2023, 7, 10, 20, 55, 0, 0, 'BST', true), date(2023, 7, 11, 0, 20, 0, 3600, 'CEST', true), 8700, 104.93).
+flight(lhr, fco, az, 209, date(2023, 7, 10, 20, 0, 0, 0, 'BST', true), date(2023, 7, 10, 23, 30, 0, 3600, 'CEST', true), 9000, 113.05).
+flight(lhr, fco, 6x, 9925, date(2023, 7, 10, 9, 0, 0, 0, 'BST', true), date(2023, 7, 10, 11, 0, 0, 3600, 'CEST', true), 3600, 182.05).
+flight(lhr, fco, 6x, 9926, date(2023, 7, 10, 14, 0, 0, 0, 'BST', true), date(2023, 7, 10, 16, 0, 0, 3600, 'CEST', true), 3600, 182.05).
 flight(lhr, bcn, ib, 7486, date(2023, 7, 10, 16, 45, 0, 0, 'BST', true), date(2023, 7, 10, 19, 50, 0, 3600, 'CEST', true), 7500, 116.05).
 flight(lhr, bcn, ib, 7483, date(2023, 7, 10, 19, 25, 0, 0, 'BST', true), date(2023, 7, 10, 22, 30, 0, 3600, 'CEST', true), 7500, 116.05).
 flight(lhr, bcn, ib, 7474, date(2023, 7, 10, 6, 30, 0, 0, 'BST', true), date(2023, 7, 10, 9, 40, 0, 3600, 'CEST', true), 7800, 116.05).
@@ -67,10 +73,6 @@ flight(lhr, mad, ib, 3171, date(2023, 7, 10, 17, 10, 0, 0, 'BST', true), date(20
 flight(lgw, mad, ib, 3717, date(2023, 7, 10, 20, 45, 0, 0, 'BST', true), date(2023, 7, 11, 0, 10, 0, 3600, 'CEST', true), 8700, 132.93).
 flight(lgw, mad, ib, 3715, date(2023, 7, 10, 10, 45, 0, 0, 'BST', true), date(2023, 7, 10, 14, 15, 0, 3600, 'CEST', true), 9000, 191.93).
 flight(lhr, mad, ib, 3169, date(2023, 7, 10, 11, 30, 0, 0, 'BST', true), date(2023, 7, 10, 15, 0, 0, 3600, 'CEST', true), 9000, 192.05).
-flight(lgw, fco, ib, 5499, date(2023, 7, 10, 20, 55, 0, 0, 'BST', true), date(2023, 7, 11, 0, 20, 0, 3600, 'CEST', true), 8700, 104.93).
-flight(lhr, fco, az, 209, date(2023, 7, 10, 20, 0, 0, 0, 'BST', true), date(2023, 7, 10, 23, 30, 0, 3600, 'CEST', true), 9000, 113.05).
-flight(lhr, fco, 6x, 9925, date(2023, 7, 10, 9, 0, 0, 0, 'BST', true), date(2023, 7, 10, 11, 0, 0, 3600, 'CEST', true), 3600, 182.05).
-flight(lhr, fco, 6x, 9926, date(2023, 7, 10, 14, 0, 0, 0, 'BST', true), date(2023, 7, 10, 16, 0, 0, 3600, 'CEST', true), 3600, 182.05).
 flight(lcy, lis, tp, 3415, date(2023, 7, 10, 18, 30, 0, 0, 'BST', true), date(2023, 7, 10, 21, 15, 0, 0, 'WEST', true), 9900, 137.45).
 flight(lgw, lis, tp, 1339, date(2023, 7, 10, 10, 35, 0, 0, 'BST', true), date(2023, 7, 10, 13, 20, 0, 0, 'WEST', true), 9900, 174.65).
 flight(lhr, lis, tp, 1351, date(2023, 7, 10, 8, 0, 0, 0, 'BST', true), date(2023, 7, 10, 10, 40, 0, 0, 'WEST', true), 9600, 179.77).
@@ -79,5 +81,3 @@ flight(lhr, lis, tp, 1359, date(2023, 7, 10, 13, 45, 0, 0, 'BST', true), date(20
 flight(lhr, lis, tp, 1357, date(2023, 7, 10, 18, 45, 0, 0, 'BST', true), date(2023, 7, 10, 21, 25, 0, 0, 'WEST', true), 9600, 179.77).
 flight(lhr, lis, tp, 1369, date(2023, 7, 10, 19, 50, 0, 0, 'BST', true), date(2023, 7, 10, 22, 30, 0, 0, 'WEST', true), 9600, 179.77).
 flight(lhr, lis, tp, 1363, date(2023, 7, 10, 6, 0, 0, 0, 'BST', true), date(2023, 7, 10, 8, 40, 0, 0, 'WEST', true), 9600, 199.77).
-flight(lhr, lin, az, 229, date(2023, 7, 10, 6, 45, 0, 0, 'BST', true), date(2023, 7, 10, 9, 40, 0, 3600, 'CEST', true), 6900, 80.05).
-flight(lhr, lin, az, 247, date(2023, 7, 10, 18, 50, 0, 0, 'BST', true), date(2023, 7, 10, 21, 45, 0, 3600, 'CEST', true), 6900, 138.05).
