@@ -6,16 +6,14 @@ from geopy import Nominatim
 import json
 
 
-# Funzione per ottenere i dati dei voli da file json
+# Function to get the flight offers from json dump
 def flight_from_json(file_path):
     flights = []
     try:
-        # Apri il file JSON in modalità lettura
         with open(file_path, 'r') as file:
-            # Carica il contenuto del file JSON
             data = json.load(file)
 
-        # Assicurati che il file contenga una lista di voli
+        # ensure that the data is a list of flights
         if isinstance(data, list):
             flights = data
         else:
@@ -27,12 +25,10 @@ def flight_from_json(file_path):
     return flights
 
 
-# Funzione per scrivere i voli su file json
+# Function to write the flight offers on a json file
 def write_flights_to_json(flights, file_path):
     try:
-        # Apri il file JSON in modalità scrittura
         with open(file_path, 'w') as file:
-            # Scrivi il contenuto del file JSON
             json.dump(flights, file, indent=4)
     except FileNotFoundError:
         print("File non trovato.")
@@ -40,7 +36,7 @@ def write_flights_to_json(flights, file_path):
         print("Errore durante la decodifica del file JSON.")
 
 
-# Funzione che restituisce flight inspirations
+# Function to get the flight inspirations using flight inspiration search API
 def get_flight_inspirations(_origin):
     url = 'https://test.api.amadeus.com/v1/shopping/flight-destinations'
 
@@ -63,7 +59,7 @@ def get_flight_inspirations(_origin):
         return None
 
 
-# Funzione che restituisce le flight offers
+# Function to get the flight offers using Flight Offer Search API
 def get_flight_offers(_origin, _destination, _departure_date, _return_date, _max_base_price):
     url = "https://test.api.amadeus.com/v2/shopping/flight-offers"
     params = {
@@ -91,7 +87,7 @@ def get_flight_offers(_origin, _destination, _departure_date, _return_date, _max
         return None
 
 
-# Funzione che restituisce il codice iata di una città in base al nome
+# Function used to get the iata code from the name of a city using Airport & City search API
 def get_iata_code(name):
     url = "https://test.api.amadeus.com/v1/reference-data/locations"
     params = {
@@ -113,7 +109,7 @@ def get_iata_code(name):
         return None
 
 
-# Funzione per ottenere le coordinate geografiche a partire dal country name
+# Function used to get the coordinates of the center of a country
 def get_country_center_coordinates(country_name):
     geolocator = Nominatim(user_agent="my_geocoder")
     location = geolocator.geocode(country_name)
@@ -123,7 +119,7 @@ def get_country_center_coordinates(country_name):
         return None
 
 
-# Funzione per ottenere a partire dalle coordinate del centro di una nazione tutti gli aeroporti di quella nazione
+# Function used to get the airports in a certain radius using coordinates using Nearest search API
 def get_airports_from_country_center_coordinates(latitude, longitude):
     url = "https://test.api.amadeus.com/v1/reference-data/locations/airports"
     params = {
@@ -138,21 +134,20 @@ def get_airports_from_country_center_coordinates(latitude, longitude):
             return None
         else:
             data = response.json()
-            # Restituisci i dati delle offerte di volo
             return data['data']
     except requests.exceptions.RequestException as e:
         print(f"Errore durante la richiesta di AIRPORTS: {e}")
         return None
 
 
-# Funzione per comparare ora in input e durata in formato iso
+# Function used to compare two hours expressed in ISO format
 def compare_duration_with_hours(hour, duration_iso):
     duration_timedelta = parse_duration(duration_iso)
     hour_timedelta = timedelta(hours=hour)
     return duration_timedelta < hour_timedelta
 
 
-# funzione per filtrare i voli in base alla durata
+# Function used to filter the flight offers based on the duration
 def filter_flight_offers_by_duration(flight_offers, hour):
     filtered_flight_offers = []
     for flight_offer in flight_offers:
@@ -163,5 +158,5 @@ def filter_flight_offers_by_duration(flight_offers, hour):
                 duration_iso = segment['duration']
                 if compare_duration_with_hours(hour, duration_iso):
                     filtered_flight_offers.append(flight_offer)
-                    break  # Esci dal ciclo interno se almeno un segmento soddisfa la condizione
+                    break  # Exit the inner loop if at least one segment satisfies the condition
     return filtered_flight_offers
