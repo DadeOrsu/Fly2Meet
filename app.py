@@ -8,7 +8,7 @@ import re
 app = Flask(__name__)
 
 
-# Filtro per formattare il prezzo
+# Filter for Jinja to format the price
 def format_price(value):
     return f"{value} €"
 
@@ -16,7 +16,7 @@ def format_price(value):
 app.jinja_env.filters['format_price'] = format_price
 
 
-# Filtro per formattare la durata
+# Filter for Jinja to format the duration of the flights
 def format_duration(value):
     hours_match = re.search(r'(\d+)H', value)
     minutes_match = re.search(r'(\d+)M', value)
@@ -30,7 +30,7 @@ def format_duration(value):
 app.jinja_env.filters['format_duration'] = format_duration
 
 
-# Filtro per formattare la data
+# Filter for Jinja to format the departure and arrival time
 def format_datetime(value):
     date_obj = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S")
     formatted_date = date_obj.strftime("%d/%m/%Y")
@@ -43,7 +43,7 @@ app.jinja_env.filters['format_datetime'] = format_datetime
 
 @app.route('/search_flights', methods=['POST'])
 def search_flights():
-    # dati presi dal form
+    # Collect the data from index.html template
     departure_city_1 = request.form.get('departure_city_1')
     departure_city_2 = request.form.get('departure_city_2')
     departure_date = request.form.get('departure_date')
@@ -56,7 +56,7 @@ def search_flights():
     destination = request.form.get('destination')
     destination_country = request.form.get('destination_country')
     same_airport = request.form.get('same_airport')
-    # scrittura dei dati
+    # Print the collected datas on the console
     print(
         f"departure_city_1: {departure_city_1}\n"
         f"departure_city_2: {departure_city_2}\n"
@@ -69,40 +69,43 @@ def search_flights():
         f"destination_country: {destination_country}\n"
         f"same_airport: {same_airport}\n"
     )
+    # Get the iata code for the first city
     iata_departure_city_1 = get_iata_code(departure_city_1)
     time.sleep(2)
+    # Get the iata code for the second city
     iata_departure_city_2 = get_iata_code(departure_city_2)
     time.sleep(2)
+    # Arrays of the flight offers from the two departure cities
     first_city_offers = []
     second_city_offers = []
+    # the destination city and destination country are not specified, the system chooses the destination
     if destination == "None" and destination_country == "None":
-        print("Destinazione e destinazione country sono None")
-        # richiesta delle flight inspirations per la prima città di partenza
+        # API call to get the flight inspirations for the first city
         flights = get_flight_inspirations(iata_departure_city_1)
-        # richiesta delle flight offers per la prima città di partenza
+        # Array that collects all the offers of the first departure city
         first_city_offers = []
+        # Set of all destinations for the flights of the first departure city
         first_city_destinations = set()
         for flight in flights:
             time.sleep(2)
+            # API call to get all the flight offers using the information of the flight inspiration search
             fo = get_flight_offers(iata_departure_city_1, flight['destination'], departure_date, return_date,
                                    max_base_price)
-            print(fo)
-            # aggiungo la destinazione all'insieme delle destinazioni della prima città di partenza
+            # if there are flights for that destination, add it to the destination set
             if flight['destination'] not in first_city_destinations and len(fo['data']) > 0:
-                print("Aggiungo la destinazione")
                 first_city_destinations.add(flight['destination'])
             first_city_offers.extend(fo['data'])
-        # richiesta delle flight offers per la seconda città di partenza
+        # Search of the flight offers for the second departure city using the destinations set of the first search
         second_city_offers = []
         for destination in first_city_destinations:
             time.sleep(2)
+            # API call to get the flight offers of the second departure city
             fo = get_flight_offers(iata_departure_city_2, destination, departure_date, return_date, max_base_price)
-            print(fo)
             second_city_offers.extend(fo['data'])
 
     else:
+        # if the destination city is specified
         if destination != 'None':
-            print("Destinazione non è None")
             iata_destination = get_iata_code(destination)
             time.sleep(2)
             response = get_flight_offers(iata_departure_city_1, iata_destination, departure_date, return_date,
@@ -113,33 +116,35 @@ def search_flights():
                                          max_base_price)
             second_city_offers.extend(response['data'])
 
+        # if the destination country is specified
         if destination_country != 'None':
-            print("Destinazione country non è None")
+            # get the coordinates of the center of the country
             lat, lon = get_country_center_coordinates(destination_country)
             time.sleep(2)
-            print(lat, lon)
-            time.sleep(2)
+            # get the airports in a certain radius from the center of the country
             target_country_airports = get_airports_from_country_center_coordinates(lat, lon)
-            print(target_country_airports)
+            # get the iata code of the airports found
             target_country_airports_iata = [airport['iataCode'] for airport in target_country_airports]
-
             for iata in target_country_airports_iata:
                 time.sleep(2)
+                # get the flight offers for those airports from the first departure city
                 response = get_flight_offers(iata_departure_city_1, iata, departure_date, return_date, max_base_price)
                 first_city_offers.extend(response['data'])
                 time.sleep(2)
+                # get the flight offers for those airports from the second departure city
                 response = get_flight_offers(iata_departure_city_2, iata, departure_date, return_date, max_base_price)
                 second_city_offers.extend(response['data'])
 
-    # filtro le offerte di volo in base alla durata immessa
+    # filter the flight offers based on the max duration
     first_city_offers = filter_flight_offers_by_duration(first_city_offers, max_duration)
     second_city_offers = filter_flight_offers_by_duration(second_city_offers, max_duration)
 
-    # scrittura dei voli su file json
+    # write the offers on a json dump
     write_flights_to_json(first_city_offers, 'jsonDumps/'+departure_city_1+departure_date+'.json')
     write_flights_to_json(second_city_offers, 'jsonDumps/'+departure_city_2+departure_date+'.json')
-    # scrittura dei fatti prolog su file
+    # convert the flight offers to prolog facts
     prolog_facts = prolog_flight_parser(first_city_offers + second_city_offers)
+    # write the prolog facts on a file
     prolog_file = open('prologFacts/prolog_facts.pl', 'w')
     prolog_file.write('\n'.join(prolog_facts))
     prolog_file.close()
