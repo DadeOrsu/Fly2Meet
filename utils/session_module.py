@@ -41,11 +41,4 @@ class APISession:
             print(f'Errore durante la richiesta di access token: {e}')
             return None
 
-    def make_request(self, url, method='GET', data=None):
-        try:
-            response = self.session.request(method, url, headers=self.session.headers, json=data)
-            response.raise_for_status()
-            return response.json()
-        except requests.exceptions.RequestException as e:
-            print(f'Errore durante la richiesta: {e}')
-            return None
+
