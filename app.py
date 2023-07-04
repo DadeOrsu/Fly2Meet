@@ -95,6 +95,10 @@ def search_flights():
             if flight['destination'] not in first_city_destinations and len(fo['data']) > 0:
                 first_city_destinations.add(flight['destination'])
             first_city_offers.extend(fo['data'])
+        # Add the flight offers for the first city with the second city as destination
+        fo = get_flight_offers(iata_departure_city_1, iata_departure_city_2, departure_date, return_date,
+                               max_base_price)
+        first_city_offers.extend(fo['data'])
         # Search of the flight offers for the second departure city using the destinations set of the first search
         second_city_offers = []
         for destination in first_city_destinations:
@@ -102,6 +106,10 @@ def search_flights():
             # API call to get the flight offers of the second departure city
             fo = get_flight_offers(iata_departure_city_2, destination, departure_date, return_date, max_base_price)
             second_city_offers.extend(fo['data'])
+        # Add the flight offers for the second city with the first city as destination
+        fo = get_flight_offers(iata_departure_city_2, iata_departure_city_1, departure_date, return_date,
+                               max_base_price)
+        second_city_offers.extend(fo['data'])
 
     else:
         # if the destination city is specified
@@ -140,8 +148,8 @@ def search_flights():
     second_city_offers = filter_flight_offers_by_duration(second_city_offers, max_duration)
 
     # write the offers on a json dump
-    write_flights_to_json(first_city_offers, 'jsonDumps/'+departure_city_1+departure_date+'.json')
-    write_flights_to_json(second_city_offers, 'jsonDumps/'+departure_city_2+departure_date+'.json')
+    write_flights_to_json(first_city_offers, 'jsonDumps/' + departure_city_1 + departure_date + '.json')
+    write_flights_to_json(second_city_offers, 'jsonDumps/' + departure_city_2 + departure_date + '.json')
     # convert the flight offers to prolog facts
     prolog_facts = prolog_flight_parser(first_city_offers + second_city_offers)
     # write the prolog facts on a file
