@@ -40,5 +40,3 @@ class APISession:
         except requests.exceptions.RequestException as e:
             print(f'Errore durante la richiesta di access token: {e}')
             return None
-
-
