@@ -26,6 +26,7 @@ class APISession:
         session.mount('https://', adapter)
         return session
 
+    # Function to get the access token using client credentials grant
     def _get_access_token(self, api_key, api_secret):
         url = 'https://test.api.amadeus.com/v1/security/oauth2/token'
         data = {
