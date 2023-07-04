@@ -1,9 +1,15 @@
 from datetime import timedelta
 from isodate import parse_duration
 import requests
-from utils.session_module import session
+from utils.session_module import APISession
 from geopy import Nominatim
 import json
+
+# Create the session
+api_key = 'kMotx0vA8lrM8jQ0P3xZA8mAwgYMQXDS'
+api_secret = '2JatjYoMT1mSeL0i'
+api_session = APISession(api_key, api_secret)
+session = api_session.get_session()
 
 
 # Function to get the flight offers from json dump
@@ -40,11 +46,9 @@ def write_flights_to_json(flights, file_path):
 def get_flight_inspirations(_origin):
     url = 'https://test.api.amadeus.com/v1/shopping/flight-destinations'
 
-    print(session.headers['Authorization'])
     params = {
         'origin': _origin,
     }
-
     try:
         response = session.get(url, params=params)
         if response.status_code == 200:
@@ -95,6 +99,7 @@ def get_iata_code(name):
         "keyword": name,
         "view": "LIGHT"
     }
+
     try:
         response = session.get(url, params=params)
         if response.status_code != 200:
@@ -127,6 +132,7 @@ def get_airports_from_country_center_coordinates(latitude, longitude):
         "longitude": longitude,
         "radius": 200
     }
+
     try:
         response = session.get(url, params=params)
         if response.status_code != 200:
