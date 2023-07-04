@@ -4,13 +4,14 @@ from pyairports.airports import Airports
 from isodate import parse_duration
 
 
-# converte la durata iso in un timestamp in secondi
-def convert_to_prolog_duration(durata_iso):
-    durata = parse_duration(durata_iso)
-    durata_in_secondi = durata.total_seconds()
-    return int(durata_in_secondi)
+# converts iso duration to a timestamp in seconds
+def convert_to_prolog_duration(iso_duration):
+    duration = parse_duration(iso_duration)
+    duration_in_seconds = duration.total_seconds()
+    return int(duration_in_seconds)
 
 
+# get the timezone name (e.g. 'CEST')  from the iana code (e.g. 'Europe/Rome')
 def get_timezone_name_from_iana(_iana_code):
     try:
         _timezone = pytz.timezone(_iana_code)
@@ -21,8 +22,9 @@ def get_timezone_name_from_iana(_iana_code):
         return None
 
 
-# Funzione per ottenere la data in formato prolog date(Y,M,D,H,Mn,S,Off,TZ,DST)
+# Function to get the date in prolog format date(Y,M,D,H,Mn,S,Off,TZ,DST)
 def get_date(date_string, airport_code):
+    # convert the date string to a datetime object
     date = datetime.fromisoformat(date_string)
     airports = Airports()
     airport_info = airports.airport_iata(airport_code)
@@ -34,13 +36,14 @@ def get_date(date_string, airport_code):
            f" '{timezone_name}', {dst})"
 
 
-# Funzione per formattare l'offset in formato UTC
+# format the offset to utc
 def format_offset_to_utc(offset):
     hours, minutes = offset.split(':')
     formatted_offset = f"{hours}{minutes}"
     return formatted_offset
 
 
+# Function to parse the flight offers in prolog facts
 def prolog_flight_parser(all_flight_offers):
     # Array di fatti prolog
     prolog_facts = []
