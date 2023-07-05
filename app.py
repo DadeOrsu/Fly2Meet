@@ -81,12 +81,12 @@ def search_flights():
     # the destination city and destination country are not specified, the system chooses the destination
     if destination == "None" and destination_country == "None":
         # API call to get the flight inspirations for the first city
-        flights = get_flight_inspirations(iata_departure_city_1, departure_date, max_base_price)
+        flight_inspirations = get_flight_inspirations(iata_departure_city_1, departure_date, max_base_price)
         # Array that collects all the offers of the first departure city
         first_city_offers = []
         # Set of all destinations for the flights of the first departure city
         first_city_destinations = set()
-        for flight in flights:
+        for flight in flight_inspirations:
             time.sleep(2)
             # API call to get all the flight offers using the information of the flight inspiration search
             fo = get_flight_offers(iata_departure_city_1, flight['destination'], departure_date, return_date,
