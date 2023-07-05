@@ -42,11 +42,14 @@ def write_flights_to_json(flights, file_path):
 
 
 # Function to get the flight inspirations using flight inspiration search API
-def get_flight_inspirations(_origin):
+def get_flight_inspirations(_origin, _departure_date, _max_price):
     url = 'https://test.api.amadeus.com/v1/shopping/flight-destinations'
 
     params = {
         'origin': _origin,
+        'departureDate': _departure_date,
+        'maxPrice': _max_price,
+        'nonStop': 'true',
     }
     try:
         response = api_session.get(url, params=params)
