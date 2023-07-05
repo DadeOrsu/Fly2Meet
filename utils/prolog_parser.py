@@ -8,12 +8,14 @@ class FlightParser:
     def __init__(self):
         self.airports = Airports()
 
-    def convert_to_prolog_duration(self, iso_duration):
+    @staticmethod
+    def convert_to_prolog_duration(iso_duration):
         duration = parse_duration(iso_duration)
         duration_in_seconds = duration.total_seconds()
         return int(duration_in_seconds)
 
-    def get_timezone_name_from_iana(self, iana_code):
+    @staticmethod
+    def get_timezone_name_from_iana(iana_code):
         try:
             timezone = pytz.timezone(iana_code)
             now = pytz.utc.localize(datetime.utcnow())
