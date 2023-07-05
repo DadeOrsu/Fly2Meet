@@ -9,7 +9,6 @@ import json
 api_key = 'kMotx0vA8lrM8jQ0P3xZA8mAwgYMQXDS'
 api_secret = '2JatjYoMT1mSeL0i'
 api_session = APISession(api_key, api_secret)
-session = api_session.get_session()
 
 
 # Function to get the flight offers from json dump
@@ -50,7 +49,7 @@ def get_flight_inspirations(_origin):
         'origin': _origin,
     }
     try:
-        response = session.get(url, params=params)
+        response = api_session.get(url, params=params)
         if response.status_code == 200:
             data = response.json()
             return data['data']
@@ -78,7 +77,7 @@ def get_flight_offers(_origin, _destination, _departure_date, _return_date, _max
     if _return_date is not None:
         params["returnDate"] = _return_date
     try:
-        response = session.get(url, params=params)
+        response = api_session.get(url, params=params)
         if response.status_code != 200:
             print(f"Errore durante la richiesta di Flight Offers: {response.json()['errors'][0]['detail']}")
             return None
@@ -101,7 +100,7 @@ def get_iata_code(name):
     }
 
     try:
-        response = session.get(url, params=params)
+        response = api_session.get(url, params=params)
         if response.status_code != 200:
             print(f"Errore durante la richiesta di IATA: {response.json()['errors'][0]['detail']}")
             return None
@@ -134,7 +133,7 @@ def get_airports_from_country_center_coordinates(latitude, longitude):
     }
 
     try:
-        response = session.get(url, params=params)
+        response = api_session.get(url, params=params)
         if response.status_code != 200:
             print(f"Errore durante la richiesta di AIRPORTS: {response.json()['errors'][0]['detail']}")
             return None

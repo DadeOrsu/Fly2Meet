@@ -1,3 +1,5 @@
+import time
+
 import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
@@ -7,6 +9,8 @@ class APISession:
     def __init__(self, api_key, api_secret):
         self.session = self._create_session()
         self.access_token = self._get_access_token(api_key, api_secret)
+        self.api_key = api_key
+        self.api_secret = api_secret
         self.session.headers['Authorization'] = f'Bearer {self.access_token}'
         self.session.headers['Content-Type'] = 'application/json'
 
@@ -37,7 +41,23 @@ class APISession:
         try:
             response = self.session.post(url, data=data)
             response.raise_for_status()
+            self.expires_in = int(response.json()['expires_in']) + time.time()
             return response.json()['access_token']
         except requests.exceptions.RequestException as e:
             print(f'Errore durante la richiesta di access token: {e}')
+            return None
+
+    def get(self, url, params=None):
+        try:
+            if time.time() > self.expires_in:
+                self.session.headers.pop('Authorization', None)
+                self.session.headers.pop('Content-Type', None)
+                self.access_token = self._get_access_token(self.api_key, self.api_secret)
+                self.session.headers['Authorization'] = f'Bearer {self.access_token}'
+                self.session.headers['Content-Type'] = 'application/json'
+            response = self.session.get(url, params=params)
+            response.raise_for_status()
+            return response
+        except requests.exceptions.RequestException as e:
+            print(f'Errore durante la richiesta GET: {e}')
             return None
