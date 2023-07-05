@@ -14,9 +14,7 @@ class APISession:
         self.session.headers['Authorization'] = f'Bearer {self.access_token}'
         self.session.headers['Content-Type'] = 'application/json'
 
-    def get_session(self):
-        return self.session
-
+    # method to create a session with retrying
     @staticmethod
     def _create_session():
         retries = Retry(
@@ -30,7 +28,7 @@ class APISession:
         session.mount('https://', adapter)
         return session
 
-    # Function to get the access token using client credentials grant
+    # method to get the access token using client credentials grant
     def _get_access_token(self, api_key, api_secret):
         url = 'https://test.api.amadeus.com/v1/security/oauth2/token'
         data = {
@@ -41,22 +39,27 @@ class APISession:
         try:
             response = self.session.post(url, data=data)
             response.raise_for_status()
+            # save the time when the token expires
             self.expires_in = int(response.json()['expires_in']) + time.time()
             return response.json()['access_token']
         except requests.exceptions.RequestException as e:
             print(f'Errore durante la richiesta di access token: {e}')
             return None
 
+    # method to make a GET request
     def get(self, url, params=None):
         try:
+            # if the access token is expired, get a new one
             if time.time() > self.expires_in:
                 self.session.headers.pop('Authorization', None)
                 self.session.headers.pop('Content-Type', None)
                 self.access_token = self._get_access_token(self.api_key, self.api_secret)
                 self.session.headers['Authorization'] = f'Bearer {self.access_token}'
                 self.session.headers['Content-Type'] = 'application/json'
+            # make the request
             response = self.session.get(url, params=params)
             response.raise_for_status()
+            # if the response is successful, return it
             return response
         except requests.exceptions.RequestException as e:
             print(f'Errore durante la richiesta GET: {e}')
