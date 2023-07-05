@@ -1,7 +1,7 @@
 from datetime import datetime
 from flask import Flask, render_template, request
 from utils.helpers import *
-from utils.prolog_parser import prolog_flight_parser
+from utils.prolog_parser import FlightParser
 import time
 import re
 
@@ -151,7 +151,8 @@ def search_flights():
     write_flights_to_json(first_city_offers, 'jsonDumps/' + departure_city_1 + departure_date + '.json')
     write_flights_to_json(second_city_offers, 'jsonDumps/' + departure_city_2 + departure_date + '.json')
     # convert the flight offers to prolog facts
-    prolog_facts = prolog_flight_parser(first_city_offers + second_city_offers)
+    flight_parser = FlightParser()
+    prolog_facts = flight_parser.prolog_flight_parser(first_city_offers + second_city_offers)
     # write the prolog facts on a file
     prolog_file = open('prologFacts/prolog_facts.pl', 'w')
     prolog_file.write('\n'.join(prolog_facts))
