@@ -19,7 +19,7 @@
         </thead>
         <tbody>
         {% for flight in first_city_offers %}
-        <tr class="{{ color_class }}">
+        <tr>
             <!-- Parte superiore per l'andata -->
             <td id="origin_1a">{{ flight.itineraries[0].segments[0].departure.iataCode }}</td>
             <td id="destination_1a">{{ flight.itineraries[0].segments[0].arrival.iataCode }}</td>
