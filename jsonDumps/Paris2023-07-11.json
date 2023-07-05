@@ -6,8 +6,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -85,7 +85,7 @@
                     {
                         "segmentId": "1",
                         "cabin": "ECONOMY",
-                        "fareBasis": "V14DSC0B",
+                        "fareBasis": "VF0DSC02",
                         "brandedFare": "DISCOUNT",
                         "class": "V",
                         "includedCheckedBags": {
@@ -103,8 +103,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -182,7 +182,7 @@
                     {
                         "segmentId": "2",
                         "cabin": "ECONOMY",
-                        "fareBasis": "V14DSC0B",
+                        "fareBasis": "VF0DSC02",
                         "brandedFare": "DISCOUNT",
                         "class": "V",
                         "includedCheckedBags": {
@@ -200,8 +200,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -279,7 +279,7 @@
                     {
                         "segmentId": "3",
                         "cabin": "ECONOMY",
-                        "fareBasis": "V14DSC0B",
+                        "fareBasis": "VF0DSC02",
                         "brandedFare": "DISCOUNT",
                         "class": "V",
                         "includedCheckedBags": {
@@ -297,8 +297,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -376,7 +376,7 @@
                     {
                         "segmentId": "4",
                         "cabin": "ECONOMY",
-                        "fareBasis": "V14DSC0B",
+                        "fareBasis": "VF0DSC02",
                         "brandedFare": "DISCOUNT",
                         "class": "V",
                         "includedCheckedBags": {
@@ -394,8 +394,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -473,7 +473,7 @@
                     {
                         "segmentId": "5",
                         "cabin": "ECONOMY",
-                        "fareBasis": "V14DSC0B",
+                        "fareBasis": "VF0DSC02",
                         "brandedFare": "DISCOUNT",
                         "class": "V",
                         "includedCheckedBags": {
@@ -491,8 +491,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -570,7 +570,7 @@
                     {
                         "segmentId": "6",
                         "cabin": "ECONOMY",
-                        "fareBasis": "V14DSC0B",
+                        "fareBasis": "VF0DSC02",
                         "brandedFare": "DISCOUNT",
                         "class": "V",
                         "includedCheckedBags": {
@@ -588,8 +588,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -667,7 +667,7 @@
                     {
                         "segmentId": "7",
                         "cabin": "ECONOMY",
-                        "fareBasis": "V14DSC0B",
+                        "fareBasis": "VF0DSC02",
                         "brandedFare": "DISCOUNT",
                         "class": "V",
                         "includedCheckedBags": {
@@ -685,8 +685,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -764,7 +764,7 @@
                     {
                         "segmentId": "8",
                         "cabin": "ECONOMY",
-                        "fareBasis": "V14DSC0B",
+                        "fareBasis": "VF0DSC02",
                         "brandedFare": "DISCOUNT",
                         "class": "V",
                         "includedCheckedBags": {
@@ -782,8 +782,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 3,
         "itineraries": [
             {
@@ -879,8 +879,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -976,8 +976,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 6,
         "itineraries": [
             {
@@ -1073,8 +1073,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -1163,8 +1163,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -1253,8 +1253,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -1343,8 +1343,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -1433,8 +1433,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -1523,8 +1523,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -1620,8 +1620,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 2,
         "itineraries": [
             {
@@ -1717,8 +1717,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 7,
         "itineraries": [
             {
@@ -1814,8 +1814,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -1911,8 +1911,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 1,
         "itineraries": [
             {
@@ -2199,8 +2199,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 5,
         "itineraries": [
             {
@@ -2332,7 +2332,7 @@
         ],
         "price": {
             "currency": "EUR",
-            "total": "185.87",
+            "total": "189.87",
             "base": "134.00",
             "fees": [
                 {
@@ -2344,7 +2344,7 @@
                     "type": "TICKETING"
                 }
             ],
-            "grandTotal": "185.87",
+            "grandTotal": "189.87",
             "additionalServices": [
                 {
                     "amount": "35.00",
@@ -2368,7 +2368,7 @@
                 "travelerType": "ADULT",
                 "price": {
                     "currency": "EUR",
-                    "total": "185.87",
+                    "total": "189.87",
                     "base": "134.00"
                 },
                 "fareDetailsBySegment": [
@@ -2393,8 +2393,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 4,
         "itineraries": [
             {
@@ -2483,8 +2483,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -2561,7 +2561,7 @@
                     {
                         "segmentId": "1",
                         "cabin": "ECONOMY",
-                        "fareBasis": "A14DSC0B",
+                        "fareBasis": "AF0DSC02",
                         "brandedFare": "DISCOUNT",
                         "class": "A",
                         "includedCheckedBags": {
@@ -2579,8 +2579,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -2657,7 +2657,7 @@
                     {
                         "segmentId": "2",
                         "cabin": "ECONOMY",
-                        "fareBasis": "A14DSC0B",
+                        "fareBasis": "AF0DSC02",
                         "brandedFare": "DISCOUNT",
                         "class": "A",
                         "includedCheckedBags": {
@@ -2675,8 +2675,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -2753,7 +2753,7 @@
                     {
                         "segmentId": "3",
                         "cabin": "ECONOMY",
-                        "fareBasis": "A14DSC0B",
+                        "fareBasis": "AF0DSC02",
                         "brandedFare": "DISCOUNT",
                         "class": "A",
                         "includedCheckedBags": {
@@ -2806,7 +2806,7 @@
         ],
         "price": {
             "currency": "EUR",
-            "total": "91.20",
+            "total": "91.19",
             "base": "26.00",
             "fees": [
                 {
@@ -2818,7 +2818,7 @@
                     "type": "TICKETING"
                 }
             ],
-            "grandTotal": "91.20"
+            "grandTotal": "91.19"
         },
         "pricingOptions": {
             "fareType": [
@@ -2836,7 +2836,7 @@
                 "travelerType": "ADULT",
                 "price": {
                     "currency": "EUR",
-                    "total": "91.20",
+                    "total": "91.19",
                     "base": "26.00"
                 },
                 "fareDetailsBySegment": [
@@ -2897,7 +2897,7 @@
         ],
         "price": {
             "currency": "EUR",
-            "total": "91.20",
+            "total": "91.19",
             "base": "26.00",
             "fees": [
                 {
@@ -2909,7 +2909,7 @@
                     "type": "TICKETING"
                 }
             ],
-            "grandTotal": "91.20"
+            "grandTotal": "91.19"
         },
         "pricingOptions": {
             "fareType": [
@@ -2927,7 +2927,7 @@
                 "travelerType": "ADULT",
                 "price": {
                     "currency": "EUR",
-                    "total": "91.20",
+                    "total": "91.19",
                     "base": "26.00"
                 },
                 "fareDetailsBySegment": [
@@ -2953,8 +2953,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 4,
         "itineraries": [
             {
@@ -3080,7 +3080,7 @@
         ],
         "price": {
             "currency": "EUR",
-            "total": "163.87",
+            "total": "167.87",
             "base": "112.00",
             "fees": [
                 {
@@ -3092,7 +3092,7 @@
                     "type": "TICKETING"
                 }
             ],
-            "grandTotal": "163.87",
+            "grandTotal": "167.87",
             "additionalServices": [
                 {
                     "amount": "35.00",
@@ -3116,7 +3116,7 @@
                 "travelerType": "ADULT",
                 "price": {
                     "currency": "EUR",
-                    "total": "163.87",
+                    "total": "167.87",
                     "base": "112.00"
                 },
                 "fareDetailsBySegment": [
@@ -3177,7 +3177,7 @@
         ],
         "price": {
             "currency": "EUR",
-            "total": "163.87",
+            "total": "167.87",
             "base": "112.00",
             "fees": [
                 {
@@ -3189,7 +3189,7 @@
                     "type": "TICKETING"
                 }
             ],
-            "grandTotal": "163.87",
+            "grandTotal": "167.87",
             "additionalServices": [
                 {
                     "amount": "35.00",
@@ -3213,7 +3213,7 @@
                 "travelerType": "ADULT",
                 "price": {
                     "currency": "EUR",
-                    "total": "163.87",
+                    "total": "167.87",
                     "base": "112.00"
                 },
                 "fareDetailsBySegment": [
@@ -3274,7 +3274,7 @@
         ],
         "price": {
             "currency": "EUR",
-            "total": "163.87",
+            "total": "167.87",
             "base": "112.00",
             "fees": [
                 {
@@ -3286,7 +3286,7 @@
                     "type": "TICKETING"
                 }
             ],
-            "grandTotal": "163.87",
+            "grandTotal": "167.87",
             "additionalServices": [
                 {
                     "amount": "35.00",
@@ -3310,7 +3310,7 @@
                 "travelerType": "ADULT",
                 "price": {
                     "currency": "EUR",
-                    "total": "163.87",
+                    "total": "167.87",
                     "base": "112.00"
                 },
                 "fareDetailsBySegment": [
@@ -3335,8 +3335,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 4,
         "itineraries": [
             {
@@ -3426,8 +3426,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -3517,8 +3517,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-04",
-        "lastTicketingDateTime": "2023-07-04",
+        "lastTicketingDate": "2023-07-11",
+        "lastTicketingDateTime": "2023-07-11",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -3553,8 +3553,8 @@
         ],
         "price": {
             "currency": "EUR",
-            "total": "151.59",
-            "base": "58.00",
+            "total": "169.59",
+            "base": "76.00",
             "fees": [
                 {
                     "amount": "0.00",
@@ -3565,7 +3565,7 @@
                     "type": "TICKETING"
                 }
             ],
-            "grandTotal": "151.59",
+            "grandTotal": "169.59",
             "additionalServices": [
                 {
                     "amount": "60.00",
@@ -3589,16 +3589,16 @@
                 "travelerType": "ADULT",
                 "price": {
                     "currency": "EUR",
-                    "total": "151.59",
-                    "base": "58.00"
+                    "total": "169.59",
+                    "base": "76.00"
                 },
                 "fareDetailsBySegment": [
                     {
                         "segmentId": "4",
                         "cabin": "ECONOMY",
-                        "fareBasis": "QOLGFR1",
+                        "fareBasis": "SOLGFR1",
                         "brandedFare": "ECOLIGHT",
-                        "class": "Q",
+                        "class": "S",
                         "includedCheckedBags": {
                             "quantity": 0
                         }
@@ -3614,8 +3614,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-04",
-        "lastTicketingDateTime": "2023-07-04",
+        "lastTicketingDate": "2023-07-11",
+        "lastTicketingDateTime": "2023-07-11",
         "numberOfBookableSeats": 9,
         "itineraries": [
             {
@@ -3650,8 +3650,8 @@
         ],
         "price": {
             "currency": "EUR",
-            "total": "151.59",
-            "base": "58.00",
+            "total": "169.59",
+            "base": "76.00",
             "fees": [
                 {
                     "amount": "0.00",
@@ -3662,7 +3662,7 @@
                     "type": "TICKETING"
                 }
             ],
-            "grandTotal": "151.59",
+            "grandTotal": "169.59",
             "additionalServices": [
                 {
                     "amount": "60.00",
@@ -3686,16 +3686,16 @@
                 "travelerType": "ADULT",
                 "price": {
                     "currency": "EUR",
-                    "total": "151.59",
-                    "base": "58.00"
+                    "total": "169.59",
+                    "base": "76.00"
                 },
                 "fareDetailsBySegment": [
                     {
                         "segmentId": "7",
                         "cabin": "ECONOMY",
-                        "fareBasis": "QOLGFR1",
+                        "fareBasis": "SOLGFR1",
                         "brandedFare": "ECOLIGHT",
-                        "class": "Q",
+                        "class": "S",
                         "includedCheckedBags": {
                             "quantity": 0
                         }
@@ -3711,8 +3711,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 4,
         "itineraries": [
             {
@@ -3899,8 +3899,8 @@
         "instantTicketingRequired": false,
         "nonHomogeneous": false,
         "oneWay": false,
-        "lastTicketingDate": "2023-07-05",
-        "lastTicketingDateTime": "2023-07-05",
+        "lastTicketingDate": "2023-07-06",
+        "lastTicketingDateTime": "2023-07-06",
         "numberOfBookableSeats": 4,
         "itineraries": [
             {
@@ -4505,7 +4505,7 @@
         ],
         "price": {
             "currency": "EUR",
-            "total": "189.87",
+            "total": "193.87",
             "base": "138.00",
             "fees": [
                 {
@@ -4517,7 +4517,7 @@
                     "type": "TICKETING"
                 }
             ],
-            "grandTotal": "189.87",
+            "grandTotal": "193.87",
             "additionalServices": [
                 {
                     "amount": "40.00",
@@ -4541,7 +4541,7 @@
                 "travelerType": "ADULT",
                 "price": {
                     "currency": "EUR",
-                    "total": "189.87",
+                    "total": "193.87",
                     "base": "138.00"
                 },
                 "fareDetailsBySegment": [
@@ -4601,7 +4601,7 @@
         ],
         "price": {
             "currency": "EUR",
-            "total": "189.87",
+            "total": "193.87",
             "base": "138.00",
             "fees": [
                 {
@@ -4613,7 +4613,7 @@
                     "type": "TICKETING"
                 }
             ],
-            "grandTotal": "189.87",
+            "grandTotal": "193.87",
             "additionalServices": [
                 {
                     "amount": "40.00",
@@ -4637,7 +4637,7 @@
                 "travelerType": "ADULT",
                 "price": {
                     "currency": "EUR",
-                    "total": "189.87",
+                    "total": "193.87",
                     "base": "138.00"
                 },
                 "fareDetailsBySegment": [
@@ -4647,6 +4647,491 @@
                         "fareBasis": "TS50BALG",
                         "brandedFare": "LIGHT",
                         "class": "T",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "1",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-07-11",
+        "lastTicketingDateTime": "2023-07-11",
+        "numberOfBookableSeats": 3,
+        "itineraries": [
+            {
+                "duration": "PT1H25M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "CDG",
+                            "terminal": "2E",
+                            "at": "2023-07-11T16:10:00"
+                        },
+                        "arrival": {
+                            "iataCode": "LHR",
+                            "terminal": "3",
+                            "at": "2023-07-11T16:35:00"
+                        },
+                        "carrierCode": "AF",
+                        "number": "1280",
+                        "aircraft": {
+                            "code": "319"
+                        },
+                        "operating": {
+                            "carrierCode": "AF"
+                        },
+                        "duration": "PT1H25M",
+                        "id": "3",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "137.87",
+            "base": "81.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "137.87",
+            "additionalServices": [
+                {
+                    "amount": "35.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "AF"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "137.87",
+                    "base": "81.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "3",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "TS50BALG",
+                        "brandedFare": "LIGHT",
+                        "class": "T",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "2",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-07-11",
+        "lastTicketingDateTime": "2023-07-11",
+        "numberOfBookableSeats": 8,
+        "itineraries": [
+            {
+                "duration": "PT1H25M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "CDG",
+                            "terminal": "2E",
+                            "at": "2023-07-11T20:55:00"
+                        },
+                        "arrival": {
+                            "iataCode": "LHR",
+                            "terminal": "3",
+                            "at": "2023-07-11T21:20:00"
+                        },
+                        "carrierCode": "AF",
+                        "number": "1380",
+                        "aircraft": {
+                            "code": "320"
+                        },
+                        "operating": {
+                            "carrierCode": "AF"
+                        },
+                        "duration": "PT1H25M",
+                        "id": "4",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "137.87",
+            "base": "81.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "137.87",
+            "additionalServices": [
+                {
+                    "amount": "35.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "AF"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "137.87",
+                    "base": "81.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "4",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "TS50BALG",
+                        "brandedFare": "LIGHT",
+                        "class": "T",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "3",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-07-11",
+        "lastTicketingDateTime": "2023-07-11",
+        "numberOfBookableSeats": 2,
+        "itineraries": [
+            {
+                "duration": "PT1H20M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "CDG",
+                            "terminal": "2E",
+                            "at": "2023-07-11T18:15:00"
+                        },
+                        "arrival": {
+                            "iataCode": "LHR",
+                            "terminal": "3",
+                            "at": "2023-07-11T18:35:00"
+                        },
+                        "carrierCode": "AF",
+                        "number": "1180",
+                        "aircraft": {
+                            "code": "320"
+                        },
+                        "operating": {
+                            "carrierCode": "AF"
+                        },
+                        "duration": "PT1H20M",
+                        "id": "1",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "149.87",
+            "base": "93.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "149.87",
+            "additionalServices": [
+                {
+                    "amount": "35.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "AF"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "149.87",
+                    "base": "93.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "1",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "LS50BALG",
+                        "brandedFare": "LIGHT",
+                        "class": "L",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "4",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-07-11",
+        "lastTicketingDateTime": "2023-07-11",
+        "numberOfBookableSeats": 2,
+        "itineraries": [
+            {
+                "duration": "PT1H25M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "CDG",
+                            "terminal": "2E",
+                            "at": "2023-07-11T13:20:00"
+                        },
+                        "arrival": {
+                            "iataCode": "LHR",
+                            "terminal": "3",
+                            "at": "2023-07-11T13:45:00"
+                        },
+                        "carrierCode": "AF",
+                        "number": "1780",
+                        "aircraft": {
+                            "code": "320"
+                        },
+                        "operating": {
+                            "carrierCode": "AF"
+                        },
+                        "duration": "PT1H25M",
+                        "id": "2",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "149.87",
+            "base": "93.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "149.87",
+            "additionalServices": [
+                {
+                    "amount": "35.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "AF"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "149.87",
+                    "base": "93.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "2",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "LS50BALG",
+                        "brandedFare": "LIGHT",
+                        "class": "L",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "5",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-07-11",
+        "lastTicketingDateTime": "2023-07-11",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT1H30M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "CDG",
+                            "terminal": "2E",
+                            "at": "2023-07-11T10:00:00"
+                        },
+                        "arrival": {
+                            "iataCode": "LHR",
+                            "terminal": "3",
+                            "at": "2023-07-11T10:30:00"
+                        },
+                        "carrierCode": "AF",
+                        "number": "1580",
+                        "aircraft": {
+                            "code": "321"
+                        },
+                        "operating": {
+                            "carrierCode": "AF"
+                        },
+                        "duration": "PT1H30M",
+                        "id": "5",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "168.87",
+            "base": "112.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "168.87",
+            "additionalServices": [
+                {
+                    "amount": "35.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "AF"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "168.87",
+                    "base": "112.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "5",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "HS50BALG",
+                        "brandedFare": "LIGHT",
+                        "class": "H",
                         "includedCheckedBags": {
                             "quantity": 0
                         }
