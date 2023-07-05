@@ -18,16 +18,28 @@
             </tr>
         </thead>
         <tbody>
-            {% for flight in first_city_offers %}
-            <tr>
-                <td id="origin">{{ flight.itineraries[0].segments[0].departure.iataCode }}</td>
-                <td id="destination">{{ flight.itineraries[0].segments[0].arrival.iataCode }}</td>
-                <td id="departure-date">{{ flight.itineraries[0].segments[0].departure.at | format_datetime }}</td>
-                <td id="duration">{{ flight.itineraries[0].duration | format_duration }}</td>
-                <td id="price">{{ flight.price.total | format_price }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
+        {% for flight in first_city_offers %}
+        <tr class="{{ color_class }}">
+            <!-- Parte superiore per l'andata -->
+            <td id="origin_1a">{{ flight.itineraries[0].segments[0].departure.iataCode }}</td>
+            <td id="destination_1a">{{ flight.itineraries[0].segments[0].arrival.iataCode }}</td>
+            <td id="departure-date_1a">{{ flight.itineraries[0].segments[0].departure.at | format_datetime }}</td>
+            <td id="duration_1a">{{ flight.itineraries[0].duration | format_duration }}</td>
+            <td id="price_1a">{{ flight.price.total | format_price }}</td>
+        </tr>
+
+        {% if flight.itineraries | length > 1 %}
+        <tr class="{{ color_class }}">
+            <!-- Parte inferiore per il ritorno -->
+            <td id="origin_1b">{{ flight.itineraries[1].segments[0].departure.iataCode }}</td>
+            <td id="destination_1b">{{ flight.itineraries[1].segments[0].arrival.iataCode }}</td>
+            <td id="departure-date_1b">{{ flight.itineraries[1].segments[0].departure.at | format_datetime }}</td>
+            <td id="duration_1b">{{ flight.itineraries[1].duration | format_duration }}</td>
+            <td id="price_1b">{{ flight.price.total | format_price }}</td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+    </tbody>
     </table>
 
     <h2>Offerte per la seconda città</h2>
@@ -42,16 +54,28 @@
             </tr>
         </thead>
         <tbody>
-            {% for flight in second_city_offers %}
-            <tr>
-                <td id="origin_2">{{ flight.itineraries[0].segments[0].departure.iataCode }}</td>
-                <td id="destination_2">{{ flight.itineraries[0].segments[0].arrival.iataCode }}</td>
-                <td id="departure-date_2">{{ flight.itineraries[0].segments[0].departure.at | format_datetime }}</td>
-                <td id="duration_2">{{ flight.itineraries[0].duration | format_duration }}</td>
-                <td id="price_2">{{ flight.price.total | format_price }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
+        {% for flight in second_city_offers %}
+        <tr class="{{ color_class }}">
+            <!-- Parte superiore per l'andata -->
+            <td id="origin_2a">{{ flight.itineraries[0].segments[0].departure.iataCode }}</td>
+            <td id="destination_2a">{{ flight.itineraries[0].segments[0].arrival.iataCode }}</td>
+            <td id="departure-date_2a">{{ flight.itineraries[0].segments[0].departure.at | format_datetime }}</td>
+            <td id="duration_2a">{{ flight.itineraries[0].duration | format_duration }}</td>
+            <td id="price_2a">{{ flight.price.total | format_price }}</td>
+        </tr>
+
+        {% if flight.itineraries | length > 1 %}
+        <tr class="{{ color_class }}">
+            <!-- Parte inferiore per il ritorno -->
+            <td id="origin_2b">{{ flight.itineraries[1].segments[0].departure.iataCode }}</td>
+            <td id="destination_2b">{{ flight.itineraries[1].segments[0].arrival.iataCode }}</td>
+            <td id="departure-date_2b">{{ flight.itineraries[1].segments[0].departure.at | format_datetime }}</td>
+            <td id="duration_2b">{{ flight.itineraries[1].duration | format_duration }}</td>
+            <td id="price_2b">{{ flight.price.total | format_price }}</td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+    </tbody>
     </table>
 </body>
 </html>
