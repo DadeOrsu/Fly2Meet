@@ -4,20 +4,12 @@
     border-collapse: collapse;
 }
 
-/* Stile per le righe pari della tabella */
-#flight-table tr:nth-child(even) {
-    background-color: #EAF2F8; /* Colore freddo più chiaro */
+
+.dark-header {
+    background-color: #03befc; /* Colore di sfondo scuro per l'intestazione */
+    color: #fff; /* Colore del testo per l'intestazione */
 }
 
-/* Stile per le righe dispari della tabella */
-#flight-table tr:nth-child(odd) {
-    background-color: #D4E6F1; /* Colore freddo più scuro */
-}
-
-/* Stile per l'intestazione dei campi */
-#flight-table th {
-    background-color: #2980
-}
 
 /* Stile per la tabella 2 */
 #flight-table-2 {
@@ -25,17 +17,3 @@
     border-collapse: collapse;
 }
 
-/* Stile per le righe pari della tabella */
-#flight-table-2 tr:nth-child(even) {
-    background-color: #EAF2F8; /* Colore freddo più chiaro */
-}
-
-/* Stile per le righe dispari della tabella */
-#flight-table-2 tr:nth-child(odd) {
-    background-color: #D4E6F1; /* Colore freddo più scuro */
-}
-
-/* Stile per l'intestazione dei campi */
-#flight-table-2 th {
-    background-color: #2980
-}

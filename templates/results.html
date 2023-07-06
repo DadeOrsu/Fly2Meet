@@ -8,17 +8,18 @@
     <h1>Offerte di volo</h1>
     <h2>Offerte per la prima città</h2>
     <table id="flight-table">
-        <thead>
+        {% for flight in first_city_offers %}
+        <thead class="dark-header">
             <tr>
-                <th id="origin-header">Origine</th>
-                <th id="destination-header">Destinazione</th>
-                <th id="departure-date-header">Data di partenza</th>
-                <th id="duration-header">Durata</th>
-                <th id="price-header">Prezzo</th>
+                <th id="origin-header-1">Origine</th>
+                <th id="destination-header-1">Destinazione</th>
+                <th id="departure-date-header-1">Data di partenza</th>
+                <th id="duration-header-1">Durata</th>
+                <th id="price-header-1">Prezzo</th>
             </tr>
         </thead>
         <tbody>
-        {% for flight in first_city_offers %}
+
         <tr>
             <!-- Parte superiore per l'andata -->
             <td id="origin_1a">{{ flight.itineraries[0].segments[0].departure.iataCode }}</td>
@@ -38,13 +39,15 @@
             <td id="price_1b">{{ flight.price.total | format_price }}</td>
         </tr>
         {% endif %}
-        {% endfor %}
+
     </tbody>
+        {% endfor %}
     </table>
 
     <h2>Offerte per la seconda città</h2>
     <table id="flight-table-2">
-        <thead>
+        {% for flight in first_city_offers %}
+        <thead class = "dark-header">
             <tr>
                 <th id="origin-header-2">Origine</th>
                 <th id="destination-header-2">Destinazione</th>
@@ -54,7 +57,6 @@
             </tr>
         </thead>
         <tbody>
-        {% for flight in second_city_offers %}
         <tr class="{{ color_class }}">
             <!-- Parte superiore per l'andata -->
             <td id="origin_2a">{{ flight.itineraries[0].segments[0].departure.iataCode }}</td>
