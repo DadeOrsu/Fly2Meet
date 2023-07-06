@@ -1,3 +1,15 @@
+h1 {
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    font-family: "Lato", sans-serif;
+    margin: 20px;
+}
+h2 {
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    font-family: "Lato", sans-serif;
+    margin: 20px;
+}
 /* Stile per la tabella 1 */
 #flight-table {
     width: 100%;
