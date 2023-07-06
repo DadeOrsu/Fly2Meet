@@ -146,11 +146,13 @@ def search_flights():
                 for iata in target_country_airports_iata:
                     time.sleep(2)
                     # get the flight offers for those airports from the first departure city
-                    response = get_flight_offers(iata_departure_city_1, iata, departure_date, return_date, max_base_price)
+                    response = get_flight_offers(iata_departure_city_1, iata, departure_date, return_date,
+                                                 max_base_price)
                     first_city_offers.extend(response['data'])
                     time.sleep(2)
                     # get the flight offers for those airports from the second departure city
-                    response = get_flight_offers(iata_departure_city_2, iata, departure_date, return_date, max_base_price)
+                    response = get_flight_offers(iata_departure_city_2, iata, departure_date, return_date,
+                                                 max_base_price)
                     second_city_offers.extend(response['data'])
 
     # filter the flight offers based on the max duration
