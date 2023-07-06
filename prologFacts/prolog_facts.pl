@@ -60,3 +60,5 @@ flight(lgw, mad, ib, 3717, date(2023, 7, 12, 20, 45, 0, 0, 'BST', true), date(20
 flight(lgw, mad, ib, 3717, date(2023, 7, 12, 20, 45, 0, 0, 'BST', true), date(2023, 7, 13, 0, 10, 0, 3600, 'CEST', true), 8700, 188.23).
 flight(lgw, mad, ib, 3717, date(2023, 7, 12, 20, 45, 0, 0, 'BST', true), date(2023, 7, 13, 0, 10, 0, 3600, 'CEST', true), 8700, 188.23).
 flight(lgw, mad, ib, 3717, date(2023, 7, 12, 20, 45, 0, 0, 'BST', true), date(2023, 7, 13, 0, 10, 0, 3600, 'CEST', true), 8700, 188.23).
+flight(lgw, mad, ib, 3717, date(2023, 7, 12, 20, 45, 0, 0, 'BST', true), date(2023, 7, 13, 0, 10, 0, 3600, 'CEST', true), 8700, 188.23).
+flight(lgw, mad, ib, 3717, date(2023, 7, 12, 20, 45, 0, 0, 'BST', true), date(2023, 7, 13, 0, 10, 0, 3600, 'CEST', true), 8700, 188.23).

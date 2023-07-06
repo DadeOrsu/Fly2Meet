@@ -110,7 +110,11 @@ def get_iata_code(name):
         else:
             data = response.json()
             # Restituisci i dati delle offerte di volo
-            return data['data'][0]['iataCode']
+            print(data)
+            if data['meta']['count'] == 0:
+                return None
+            else:
+                return data['data'][0]['iataCode']
     except requests.exceptions.RequestException as e:
         print(f"Errore durante la richiesta di IATA: {e}")
         return None

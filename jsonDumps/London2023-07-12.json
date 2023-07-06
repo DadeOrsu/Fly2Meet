@@ -62,7 +62,7 @@
                             "carrierCode": "UX"
                         },
                         "duration": "PT2H25M",
-                        "id": "9",
+                        "id": "10",
                         "numberOfStops": 0,
                         "blacklistedInEU": false
                     }
@@ -122,7 +122,7 @@
                         }
                     },
                     {
-                        "segmentId": "9",
+                        "segmentId": "10",
                         "cabin": "ECONOMY",
                         "fareBasis": "AYYR5L",
                         "brandedFare": "LITE",
@@ -198,7 +198,7 @@
                             "carrierCode": "UX"
                         },
                         "duration": "PT2H25M",
-                        "id": "9",
+                        "id": "10",
                         "numberOfStops": 0,
                         "blacklistedInEU": false
                     }
@@ -258,7 +258,7 @@
                         }
                     },
                     {
-                        "segmentId": "9",
+                        "segmentId": "10",
                         "cabin": "ECONOMY",
                         "fareBasis": "AYYR5L",
                         "brandedFare": "LITE",
@@ -1118,7 +1118,7 @@
                             "carrierCode": "UX"
                         },
                         "duration": "PT2H25M",
-                        "id": "9",
+                        "id": "10",
                         "numberOfStops": 0,
                         "blacklistedInEU": false
                     }
@@ -1178,7 +1178,7 @@
                         }
                     },
                     {
-                        "segmentId": "9",
+                        "segmentId": "10",
                         "cabin": "ECONOMY",
                         "fareBasis": "AYYR5L",
                         "brandedFare": "LITE",
@@ -1254,7 +1254,7 @@
                             "carrierCode": "UX"
                         },
                         "duration": "PT2H25M",
-                        "id": "9",
+                        "id": "10",
                         "numberOfStops": 0,
                         "blacklistedInEU": false
                     }
@@ -1314,7 +1314,7 @@
                         }
                     },
                     {
-                        "segmentId": "9",
+                        "segmentId": "10",
                         "cabin": "ECONOMY",
                         "fareBasis": "AYYR5L",
                         "brandedFare": "LITE",
@@ -1374,15 +1374,15 @@
                         "departure": {
                             "iataCode": "MAD",
                             "terminal": "4S",
-                            "at": "2023-07-15T14:55:00"
+                            "at": "2023-07-15T09:10:00"
                         },
                         "arrival": {
                             "iataCode": "LHR",
                             "terminal": "5",
-                            "at": "2023-07-15T16:20:00"
+                            "at": "2023-07-15T10:35:00"
                         },
                         "carrierCode": "IB",
-                        "number": "3172",
+                        "number": "3160",
                         "aircraft": {
                             "code": "320"
                         },
@@ -1510,15 +1510,15 @@
                         "departure": {
                             "iataCode": "MAD",
                             "terminal": "4S",
-                            "at": "2023-07-15T14:55:00"
+                            "at": "2023-07-15T09:10:00"
                         },
                         "arrival": {
                             "iataCode": "LHR",
                             "terminal": "5",
-                            "at": "2023-07-15T16:20:00"
+                            "at": "2023-07-15T10:35:00"
                         },
                         "carrierCode": "IB",
-                        "number": "3172",
+                        "number": "3160",
                         "aircraft": {
                             "code": "320"
                         },
@@ -1646,15 +1646,15 @@
                         "departure": {
                             "iataCode": "MAD",
                             "terminal": "4S",
-                            "at": "2023-07-15T16:50:00"
+                            "at": "2023-07-15T14:55:00"
                         },
                         "arrival": {
                             "iataCode": "LHR",
                             "terminal": "5",
-                            "at": "2023-07-15T18:15:00"
+                            "at": "2023-07-15T16:20:00"
                         },
                         "carrierCode": "IB",
-                        "number": "3180",
+                        "number": "3172",
                         "aircraft": {
                             "code": "320"
                         },
@@ -1662,7 +1662,7 @@
                             "carrierCode": "IB"
                         },
                         "duration": "PT2H25M",
-                        "id": "10",
+                        "id": "9",
                         "numberOfStops": 0,
                         "blacklistedInEU": false
                     }
@@ -1722,7 +1722,7 @@
                         }
                     },
                     {
-                        "segmentId": "10",
+                        "segmentId": "9",
                         "cabin": "ECONOMY",
                         "fareBasis": "ODNNANB6",
                         "brandedFare": "BASIC",
@@ -1782,6 +1782,142 @@
                         "departure": {
                             "iataCode": "MAD",
                             "terminal": "4S",
+                            "at": "2023-07-15T14:55:00"
+                        },
+                        "arrival": {
+                            "iataCode": "LHR",
+                            "terminal": "5",
+                            "at": "2023-07-15T16:20:00"
+                        },
+                        "carrierCode": "IB",
+                        "number": "3172",
+                        "aircraft": {
+                            "code": "320"
+                        },
+                        "operating": {
+                            "carrierCode": "IB"
+                        },
+                        "duration": "PT2H25M",
+                        "id": "9",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "188.23",
+            "base": "133.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "188.23",
+            "additionalServices": [
+                {
+                    "amount": "100.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "IB"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "188.23",
+                    "base": "133.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "1",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "NDNNENB2",
+                        "brandedFare": "BASIC",
+                        "class": "N",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    },
+                    {
+                        "segmentId": "9",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "ODNNANB6",
+                        "brandedFare": "BASIC",
+                        "class": "O",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "8",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-07-07",
+        "lastTicketingDateTime": "2023-07-07",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT2H25M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "LGW",
+                            "terminal": "S",
+                            "at": "2023-07-12T20:45:00"
+                        },
+                        "arrival": {
+                            "iataCode": "MAD",
+                            "terminal": "4S",
+                            "at": "2023-07-13T00:10:00"
+                        },
+                        "carrierCode": "IB",
+                        "number": "3717",
+                        "aircraft": {
+                            "code": "32A"
+                        },
+                        "operating": {
+                            "carrierCode": "I2"
+                        },
+                        "duration": "PT2H25M",
+                        "id": "1",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            },
+            {
+                "duration": "PT2H25M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "MAD",
+                            "terminal": "4S",
                             "at": "2023-07-15T16:50:00"
                         },
                         "arrival": {
@@ -1798,142 +1934,6 @@
                             "carrierCode": "IB"
                         },
                         "duration": "PT2H25M",
-                        "id": "10",
-                        "numberOfStops": 0,
-                        "blacklistedInEU": false
-                    }
-                ]
-            }
-        ],
-        "price": {
-            "currency": "EUR",
-            "total": "188.23",
-            "base": "133.00",
-            "fees": [
-                {
-                    "amount": "0.00",
-                    "type": "SUPPLIER"
-                },
-                {
-                    "amount": "0.00",
-                    "type": "TICKETING"
-                }
-            ],
-            "grandTotal": "188.23",
-            "additionalServices": [
-                {
-                    "amount": "100.00",
-                    "type": "CHECKED_BAGS"
-                }
-            ]
-        },
-        "pricingOptions": {
-            "fareType": [
-                "PUBLISHED"
-            ],
-            "includedCheckedBagsOnly": false
-        },
-        "validatingAirlineCodes": [
-            "IB"
-        ],
-        "travelerPricings": [
-            {
-                "travelerId": "1",
-                "fareOption": "STANDARD",
-                "travelerType": "ADULT",
-                "price": {
-                    "currency": "EUR",
-                    "total": "188.23",
-                    "base": "133.00"
-                },
-                "fareDetailsBySegment": [
-                    {
-                        "segmentId": "1",
-                        "cabin": "ECONOMY",
-                        "fareBasis": "NDNNENB2",
-                        "brandedFare": "BASIC",
-                        "class": "N",
-                        "includedCheckedBags": {
-                            "quantity": 0
-                        }
-                    },
-                    {
-                        "segmentId": "10",
-                        "cabin": "ECONOMY",
-                        "fareBasis": "ODNNANB6",
-                        "brandedFare": "BASIC",
-                        "class": "O",
-                        "includedCheckedBags": {
-                            "quantity": 0
-                        }
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "type": "flight-offer",
-        "id": "8",
-        "source": "GDS",
-        "instantTicketingRequired": false,
-        "nonHomogeneous": false,
-        "oneWay": false,
-        "lastTicketingDate": "2023-07-07",
-        "lastTicketingDateTime": "2023-07-07",
-        "numberOfBookableSeats": 9,
-        "itineraries": [
-            {
-                "duration": "PT2H25M",
-                "segments": [
-                    {
-                        "departure": {
-                            "iataCode": "LGW",
-                            "terminal": "S",
-                            "at": "2023-07-12T20:45:00"
-                        },
-                        "arrival": {
-                            "iataCode": "MAD",
-                            "terminal": "4S",
-                            "at": "2023-07-13T00:10:00"
-                        },
-                        "carrierCode": "IB",
-                        "number": "3717",
-                        "aircraft": {
-                            "code": "32A"
-                        },
-                        "operating": {
-                            "carrierCode": "I2"
-                        },
-                        "duration": "PT2H25M",
-                        "id": "1",
-                        "numberOfStops": 0,
-                        "blacklistedInEU": false
-                    }
-                ]
-            },
-            {
-                "duration": "PT2H30M",
-                "segments": [
-                    {
-                        "departure": {
-                            "iataCode": "MAD",
-                            "terminal": "4S",
-                            "at": "2023-07-15T08:00:00"
-                        },
-                        "arrival": {
-                            "iataCode": "LHR",
-                            "terminal": "5",
-                            "at": "2023-07-15T09:30:00"
-                        },
-                        "carrierCode": "IB",
-                        "number": "3162",
-                        "aircraft": {
-                            "code": "330"
-                        },
-                        "operating": {
-                            "carrierCode": "IB"
-                        },
-                        "duration": "PT2H30M",
                         "id": "11",
                         "numberOfStops": 0,
                         "blacklistedInEU": false
@@ -2048,28 +2048,28 @@
                 ]
             },
             {
-                "duration": "PT2H30M",
+                "duration": "PT2H25M",
                 "segments": [
                     {
                         "departure": {
                             "iataCode": "MAD",
                             "terminal": "4S",
-                            "at": "2023-07-15T08:00:00"
+                            "at": "2023-07-15T16:50:00"
                         },
                         "arrival": {
                             "iataCode": "LHR",
                             "terminal": "5",
-                            "at": "2023-07-15T09:30:00"
+                            "at": "2023-07-15T18:15:00"
                         },
                         "carrierCode": "IB",
-                        "number": "3162",
+                        "number": "3180",
                         "aircraft": {
-                            "code": "330"
+                            "code": "320"
                         },
                         "operating": {
                             "carrierCode": "IB"
                         },
-                        "duration": "PT2H30M",
+                        "duration": "PT2H25M",
                         "id": "11",
                         "numberOfStops": 0,
                         "blacklistedInEU": false
@@ -2131,6 +2131,278 @@
                     },
                     {
                         "segmentId": "11",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "ODNNANB6",
+                        "brandedFare": "BASIC",
+                        "class": "O",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "9",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-07-07",
+        "lastTicketingDateTime": "2023-07-07",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT2H25M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "LGW",
+                            "terminal": "S",
+                            "at": "2023-07-12T20:45:00"
+                        },
+                        "arrival": {
+                            "iataCode": "MAD",
+                            "terminal": "4S",
+                            "at": "2023-07-13T00:10:00"
+                        },
+                        "carrierCode": "IB",
+                        "number": "3717",
+                        "aircraft": {
+                            "code": "32A"
+                        },
+                        "operating": {
+                            "carrierCode": "I2"
+                        },
+                        "duration": "PT2H25M",
+                        "id": "1",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            },
+            {
+                "duration": "PT2H30M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "MAD",
+                            "terminal": "4S",
+                            "at": "2023-07-15T08:00:00"
+                        },
+                        "arrival": {
+                            "iataCode": "LHR",
+                            "terminal": "5",
+                            "at": "2023-07-15T09:30:00"
+                        },
+                        "carrierCode": "IB",
+                        "number": "3162",
+                        "aircraft": {
+                            "code": "330"
+                        },
+                        "operating": {
+                            "carrierCode": "IB"
+                        },
+                        "duration": "PT2H30M",
+                        "id": "12",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "188.23",
+            "base": "133.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "188.23",
+            "additionalServices": [
+                {
+                    "amount": "100.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "IB"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "188.23",
+                    "base": "133.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "1",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "NDNNENB2",
+                        "brandedFare": "BASIC",
+                        "class": "N",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    },
+                    {
+                        "segmentId": "12",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "ODNNANB6",
+                        "brandedFare": "BASIC",
+                        "class": "O",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "9",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "lastTicketingDate": "2023-07-07",
+        "lastTicketingDateTime": "2023-07-07",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT2H25M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "LGW",
+                            "terminal": "S",
+                            "at": "2023-07-12T20:45:00"
+                        },
+                        "arrival": {
+                            "iataCode": "MAD",
+                            "terminal": "4S",
+                            "at": "2023-07-13T00:10:00"
+                        },
+                        "carrierCode": "IB",
+                        "number": "3717",
+                        "aircraft": {
+                            "code": "32A"
+                        },
+                        "operating": {
+                            "carrierCode": "I2"
+                        },
+                        "duration": "PT2H25M",
+                        "id": "1",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            },
+            {
+                "duration": "PT2H30M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "MAD",
+                            "terminal": "4S",
+                            "at": "2023-07-15T08:00:00"
+                        },
+                        "arrival": {
+                            "iataCode": "LHR",
+                            "terminal": "5",
+                            "at": "2023-07-15T09:30:00"
+                        },
+                        "carrierCode": "IB",
+                        "number": "3162",
+                        "aircraft": {
+                            "code": "330"
+                        },
+                        "operating": {
+                            "carrierCode": "IB"
+                        },
+                        "duration": "PT2H30M",
+                        "id": "12",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "188.23",
+            "base": "133.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "188.23",
+            "additionalServices": [
+                {
+                    "amount": "100.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "IB"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "188.23",
+                    "base": "133.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "1",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "NDNNENB2",
+                        "brandedFare": "BASIC",
+                        "class": "N",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        }
+                    },
+                    {
+                        "segmentId": "12",
                         "cabin": "ECONOMY",
                         "fareBasis": "ODNNANB6",
                         "brandedFare": "BASIC",

@@ -114,15 +114,23 @@ def search_flights():
     else:
         # if the destination city is specified
         if destination != 'None':
-            iata_destination = get_iata_code(destination)
-            time.sleep(2)
-            response = get_flight_offers(iata_departure_city_1, iata_destination, departure_date, return_date,
-                                         max_base_price)
-            first_city_offers.extend(response['data'])
-            time.sleep(2)
-            response = get_flight_offers(iata_departure_city_2, iata_destination, departure_date, return_date,
-                                         max_base_price)
-            second_city_offers.extend(response['data'])
+            destinations = destination.split(", ")
+
+            for dest in destinations:
+                time.sleep(2)
+                print(dest)
+                iata_destination = get_iata_code(dest)
+                # if no iata found for the destination, continue with the next destination
+                if iata_destination is None:
+                    continue
+                time.sleep(2)
+                response = get_flight_offers(iata_departure_city_1, iata_destination, departure_date, return_date,
+                                             max_base_price)
+                first_city_offers.extend(response['data'])
+                time.sleep(2)
+                response = get_flight_offers(iata_departure_city_2, iata_destination, departure_date, return_date,
+                                             max_base_price)
+                second_city_offers.extend(response['data'])
 
         # if the destination country is specified
         if destination_country != 'None':
