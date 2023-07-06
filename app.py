@@ -134,22 +134,24 @@ def search_flights():
 
         # if the destination country is specified
         if destination_country != 'None':
-            # get the coordinates of the center of the country
-            lat, lon = get_country_center_coordinates(destination_country)
-            time.sleep(2)
-            # get the airports in a certain radius from the center of the country
-            target_country_airports = get_airports_from_country_center_coordinates(lat, lon)
-            # get the iata code of the airports found
-            target_country_airports_iata = [airport['iataCode'] for airport in target_country_airports]
-            for iata in target_country_airports_iata:
+            destinations = destination.split(", ")
+            for dest in destinations:
+                # get the coordinates of the center of the country
+                lat, lon = get_country_center_coordinates(dest)
                 time.sleep(2)
-                # get the flight offers for those airports from the first departure city
-                response = get_flight_offers(iata_departure_city_1, iata, departure_date, return_date, max_base_price)
-                first_city_offers.extend(response['data'])
-                time.sleep(2)
-                # get the flight offers for those airports from the second departure city
-                response = get_flight_offers(iata_departure_city_2, iata, departure_date, return_date, max_base_price)
-                second_city_offers.extend(response['data'])
+                # get the airports in a certain radius from the center of the country
+                target_country_airports = get_airports_from_country_center_coordinates(lat, lon)
+                # get the iata code of the airports found
+                target_country_airports_iata = [airport['iataCode'] for airport in target_country_airports]
+                for iata in target_country_airports_iata:
+                    time.sleep(2)
+                    # get the flight offers for those airports from the first departure city
+                    response = get_flight_offers(iata_departure_city_1, iata, departure_date, return_date, max_base_price)
+                    first_city_offers.extend(response['data'])
+                    time.sleep(2)
+                    # get the flight offers for those airports from the second departure city
+                    response = get_flight_offers(iata_departure_city_2, iata, departure_date, return_date, max_base_price)
+                    second_city_offers.extend(response['data'])
 
     # filter the flight offers based on the max duration
     first_city_offers = filter_flight_offers_by_duration(first_city_offers, max_duration)
