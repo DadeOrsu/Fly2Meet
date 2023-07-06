@@ -110,7 +110,6 @@ def get_iata_code(name):
         else:
             data = response.json()
             # Restituisci i dati delle offerte di volo
-            print(data)
             if data['meta']['count'] == 0:
                 return None
             else:
@@ -136,7 +135,7 @@ def get_airports_from_country_center_coordinates(latitude, longitude):
     params = {
         "latitude": latitude,
         "longitude": longitude,
-        "radius": 200
+        "radius": 500
     }
 
     try:
