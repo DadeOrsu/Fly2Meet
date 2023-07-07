@@ -5,8 +5,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='results.css') }}">
 </head>
 <body>
-    <h1>Offerte di volo</h1>
-    <h2>Offerte per la prima città</h2>
+    <h1>Flight offers</h1>
+    <h2>Offers for the first city</h2>
     <table class="flight-table">
         {% for flight in first_city_offers %}
         <thead class="dark-header">
@@ -44,7 +44,7 @@
         {% endfor %}
     </table>
 
-    <h2>Offerte per la seconda città</h2>
+    <h2>Offers for the second city</h2>
     <table class="flight-table">
         {% for flight in first_city_offers %}
         <thead class = "dark-header">
