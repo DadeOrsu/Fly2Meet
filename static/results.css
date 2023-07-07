@@ -1,3 +1,12 @@
+body {
+  background-image: url("airport.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+}
 h1 {
     color: white;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
@@ -11,9 +20,13 @@ h2 {
     margin: 20px;
 }
 /* Stile per la tabella 1 */
-#flight-table {
-    width: 100%;
+.flight-table {
+    width: 90%;
     border-collapse: collapse;
+    background-color: white;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 
@@ -23,9 +36,5 @@ h2 {
 }
 
 
-/* Stile per la tabella 2 */
-#flight-table-2 {
-    width: 100%;
-    border-collapse: collapse;
-}
+
 
