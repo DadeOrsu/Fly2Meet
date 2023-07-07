@@ -137,8 +137,7 @@ def search_flights():
 
         # if the destination country is specified
         if destination_country is not None:
-            print(destination_country)
-            destinations = destination.split(", ")
+            destinations = destination_country.split(", ")
             for dest in destinations:
                 # get the coordinates of the center of the country
                 lat, lon = get_country_center_coordinates(dest)
