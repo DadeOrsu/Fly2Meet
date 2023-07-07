@@ -21,7 +21,6 @@
         <tbody>
 
         <tr>
-            <!-- Parte superiore per l'andata -->
             <td id="origin_1a">{{ flight.itineraries[0].segments[0].departure.iataCode }}</td>
             <td id="destination_1a">{{ flight.itineraries[0].segments[0].arrival.iataCode }}</td>
             <td id="departure-date_1a">{{ flight.itineraries[0].segments[0].departure.at | format_datetime }}</td>
@@ -31,7 +30,6 @@
 
         {% if flight.itineraries | length > 1 %}
         <tr class="{{ color_class }}">
-            <!-- Parte inferiore per il ritorno -->
             <td id="origin_1b">{{ flight.itineraries[1].segments[0].departure.iataCode }}</td>
             <td id="destination_1b">{{ flight.itineraries[1].segments[0].arrival.iataCode }}</td>
             <td id="departure-date_1b">{{ flight.itineraries[1].segments[0].departure.at | format_datetime }}</td>
