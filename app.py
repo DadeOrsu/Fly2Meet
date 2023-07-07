@@ -54,7 +54,11 @@ def search_flights():
     max_duration = int(request.form.get('max_duration'))
     max_wait_time = request.form.get('max_wait_time')
     destination = request.form.get('destination')
+    if destination == '':
+        destination = None
     destination_country = request.form.get('destination_country')
+    if destination_country == '':
+        destination_country = None
     same_airport = request.form.get('same_airport')
     # Print the collected datas on the console
     print(
@@ -79,7 +83,7 @@ def search_flights():
     first_city_offers = []
     second_city_offers = []
     # the destination city and destination country are not specified, the system chooses the destination
-    if destination == "None" and destination_country == "None":
+    if destination is None and destination_country is None:
         # API call to get the flight inspirations for the first city
         flight_inspirations = get_flight_inspirations(iata_departure_city_1, departure_date, max_base_price)
         # Array that collects all the offers of the first departure city
@@ -113,7 +117,7 @@ def search_flights():
 
     else:
         # if the destination city is specified
-        if destination != 'None':
+        if destination is not None:
             destinations = destination.split(", ")
 
             for dest in destinations:
@@ -132,7 +136,8 @@ def search_flights():
                 second_city_offers.extend(response['data'])
 
         # if the destination country is specified
-        if destination_country != 'None':
+        if destination_country is not None:
+            print(destination_country)
             destinations = destination.split(", ")
             for dest in destinations:
                 # get the coordinates of the center of the country
