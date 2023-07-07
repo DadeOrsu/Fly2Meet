@@ -13,31 +13,30 @@
 
     <form method="POST" action="{{ url_for('search_flights') }}">
         <label for="departure_city_1">Departure City 1:</label>
-        <input type="text" id="departure_city_1" name="departure_city_1" value="{{ request.form.get('departure_city_1') }}" required>
-
+        <input type="text" id="departure_city_1" name="departure_city_1" placeholder="e.g. Paris" required>
         <label for="departure_city_2">Departure City 2:</label>
-        <input type="text" id="departure_city_2" name="departure_city_2" value="{{ request.form.get('departure_city_2') }}" required>
+        <input type="text" id="departure_city_2" name="departure_city_2" placeholder="e.g. London" required>
 
         <label for="departure_date">Departure Date:</label>
-        <input type="date" id="departure_date" name="departure_date" value="{{ request.form.get('departure_date') }}" required>
+        <input type="date" id="departure_date" name="departure_date" required>
 
         <label for="return_date">Return Date:</label>
-        <input type="date" id="return_date" name="return_date" value="{{ request.form.get('return_date', '') }}">
+        <input type="date" id="return_date" name="return_date">
 
         <label for="max_base_price">Max Base Price:</label>
-        <input type="number" id="max_base_price" name="max_base_price" value="{{ request.form.get('max_base_price') }}" required min="0">
+        <input type="number" id="max_base_price" name="max_base_price" placeholder="e.g. 200" required min="0">
 
-        <label for="max_duration">Max Duration:</label>
-        <input type="number" id="max_duration" name="max_duration" value="{{ request.form.get('max_duration') }}" required min="0">
+        <label for="max_duration">Max Duration (in hours):</label>
+        <input type="number" id="max_duration" name="max_duration" placeholder="e.g. 3" required min="0">
 
-        <label for="max_wait_time">Max Wait Time:</label>
-        <input type="number" id="max_wait_time" name="max_wait_time" value="{{ request.form.get('max_wait_time') }}" required min="0">
+        <label for="max_wait_time">Max Wait Time (in minutes):</label>
+        <input type="number" id="max_wait_time" name="max_wait_time" placeholder="e.g. 40" required min="0">
 
         <label for="destination">Destination City:</label>
-        <input type="text" id="destination" name="destination" value="{{ request.form.get('destination') }}">
+        <input type="text" id="destination" name="destination" placeholder="e.g. Madrid">
 
         <label for="destination_country">Destination Country:</label>
-        <input type="text" id="destination_country" name="destination_country" value="{{ request.form.get('destination_country')}}" >
+        <input type="text" id="destination_country" name="destination_country" placeholder="e.g. Italy" >
 
         <div class="checkbox">
             <input type="checkbox" id="same_airport" name="same_airport">
