@@ -53,12 +53,12 @@ def search_flights():
     max_base_price = request.form.get('max_base_price')
     max_duration = int(request.form.get('max_duration'))
     max_wait_time = request.form.get('max_wait_time')
-    destination = request.form.get('destination')
-    if destination == '':
-        destination = None
-    destination_country = request.form.get('destination_country')
-    if destination_country == '':
-        destination_country = None
+    target_cities = request.form.get('target_cities')
+    if target_cities == '':
+        target_cities = None
+    target_countries = request.form.get('target_countries')
+    if target_countries == '':
+        target_countries = None
     same_airport = request.form.get('same_airport')
     # Print the collected datas on the console
     print(
@@ -69,8 +69,8 @@ def search_flights():
         f"max_base_price: {max_base_price}\n"
         f"max_duration: {max_duration}\n"
         f"max_wait_time: {max_wait_time}\n"
-        f"destination: {destination}\n"
-        f"destination_country: {destination_country}\n"
+        f"destination: {target_cities}\n"
+        f"destination_country: {target_countries}\n"
         f"same_airport: {same_airport}\n"
     )
     # Get the iata code for the first city
@@ -83,7 +83,7 @@ def search_flights():
     first_city_offers = []
     second_city_offers = []
     # the destination city and destination country are not specified, the system chooses the destination
-    if destination is None and destination_country is None:
+    if target_cities is None and target_countries is None:
         # API call to get the flight inspirations for the first city
         flight_inspirations = get_flight_inspirations(iata_departure_city_1, departure_date, max_base_price)
         # Array that collects all the offers of the first departure city
@@ -105,10 +105,10 @@ def search_flights():
         first_city_offers.extend(fo['data'])
         # Search of the flight offers for the second departure city using the destinations set of the first search
         second_city_offers = []
-        for destination in first_city_destinations:
+        for target_cities in first_city_destinations:
             time.sleep(2)
             # API call to get the flight offers of the second departure city
-            fo = get_flight_offers(iata_departure_city_2, destination, departure_date, return_date, max_base_price)
+            fo = get_flight_offers(iata_departure_city_2, target_cities, departure_date, return_date, max_base_price)
             second_city_offers.extend(fo['data'])
         # Add the flight offers for the second city with the first city as destination
         fo = get_flight_offers(iata_departure_city_2, iata_departure_city_1, departure_date, return_date,
@@ -117,8 +117,8 @@ def search_flights():
 
     else:
         # if the destination city is specified
-        if destination is not None:
-            destinations = destination.split(", ")
+        if target_cities is not None:
+            destinations = target_cities.split(", ")
 
             for dest in destinations:
                 time.sleep(2)
@@ -136,8 +136,8 @@ def search_flights():
                 second_city_offers.extend(response['data'])
 
         # if the destination country is specified
-        if destination_country is not None:
-            destinations = destination_country.split(", ")
+        if target_countries is not None:
+            destinations = target_countries.split(", ")
             for dest in destinations:
                 # get the coordinates of the center of the country
                 lat, lon = get_country_center_coordinates(dest)
