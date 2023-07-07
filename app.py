@@ -118,7 +118,6 @@ def search_flights():
 
             for dest in destinations:
                 time.sleep(2)
-                print(dest)
                 iata_destination = get_iata_code(dest)
                 # if no iata found for the destination, continue with the next destination
                 if iata_destination is None:
