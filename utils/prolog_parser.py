@@ -8,12 +8,14 @@ class FlightParser:
     def __init__(self):
         self.airports = Airports()
 
+    # method to convert the duration from ISO 8601 format to seconds
     @staticmethod
     def convert_to_prolog_duration(iso_duration):
         duration = parse_duration(iso_duration)
         duration_in_seconds = duration.total_seconds()
         return int(duration_in_seconds)
 
+    # method to get the timezone name from the IANA code
     @staticmethod
     def get_timezone_name_from_iana(iana_code):
         try:
@@ -24,6 +26,7 @@ class FlightParser:
         except pytz.UnknownTimeZoneError:
             return None
 
+    # method to get the date in prolog format
     def get_date(self, date_string, airport_code):
         date = datetime.fromisoformat(date_string)
         airport_info = self.airports.airport_iata(airport_code)
@@ -33,6 +36,7 @@ class FlightParser:
         return f"date({date.year}, {date.month}, {date.day}, {date.hour}, {date.minute}, {date.second}, {offset}, " \
                f"'{timezone_name}', {dst})"
 
+    # method to parse the flight offers in prolog facts
     def prolog_flight_parser(self, all_flight_offers):
         prolog_facts = []
         for flight in all_flight_offers:
