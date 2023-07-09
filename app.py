@@ -116,6 +116,7 @@ def search_flights():
         second_city_offers.extend(fo['data'])
 
     else:
+        iata_codes = []
         # if the destination city is specified
         if target_cities is not None:
             destinations = target_cities.split(", ")
@@ -134,18 +135,21 @@ def search_flights():
                 response = get_flight_offers(iata_departure_city_2, iata_destination, departure_date, return_date,
                                              max_base_price)
                 second_city_offers.extend(response['data'])
+                # add the destination to the cities array
+                iata_codes.append(response['data'][0]['itineraries'][0]['segments'][0]['arrival']['iataCode'])
 
         # if the destination country is specified
         if target_countries is not None:
-            destinations = target_countries.split(", ")
-            for dest in destinations:
+            countries = target_countries.split(", ")
+            for dest in countries:
                 # get the coordinates of the center of the country
                 lat, lon = get_country_center_coordinates(dest)
                 time.sleep(2)
                 # get the airports in a certain radius from the center of the country
                 target_country_airports = get_airports_from_country_center_coordinates(lat, lon)
-                # get the iata code of the airports found
-                target_country_airports_iata = [airport['iataCode'] for airport in target_country_airports]
+                # get the iata code of the airports found, if the airport is already in the iata_codes array, skip it
+                target_country_airports_iata = [airport['iataCode'] for airport in target_country_airports
+                                                if airport['iataCode'] not in iata_codes]
                 for iata in target_country_airports_iata:
                     time.sleep(2)
                     # get the flight offers for those airports from the first departure city
