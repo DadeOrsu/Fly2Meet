@@ -1,5 +1,6 @@
 from datetime import datetime
 import pytz
+import pycountry
 from isodate import parse_duration
 from pyairports.airports import Airports
 
@@ -53,3 +54,15 @@ class FlightParser:
                 f" {arrival_date}, {duration}, {price})."
             )
         return prolog_facts
+
+    # method to parse the airport information in prolog facts
+    def prolog_airport_parser(self, all_airports):
+        prolog_facts = []
+        for airport in all_airports:
+            data = self.airports.airport_iata(airport)
+            country = pycountry.countries.get(name=data.country).alpha_2
+            prolog_facts.append("airport(" + str(data.iata).lower() + ").")
+            prolog_facts.append("\tin(" + str(data.iata).lower() + ", " + country.lower() + ").")
+            prolog_facts.append("\tcity(" + str(data.iata.lower()) + ", " + data.city.lower() + ").")
+        return prolog_facts
+
