@@ -171,3 +171,13 @@ def filter_flight_offers_by_duration(flight_offers, hour):
                     filtered_flight_offers.append(flight_offer)
                     break  # Exit the inner loop if at least one segment satisfies the condition
     return filtered_flight_offers
+
+
+# get flight offers and update the iata codes
+def get_flight_offers_and_update_iata_codes(origin, destination, departure_date, return_date, max_base_price,
+                                            iata_codes):
+    fo = get_flight_offers(origin, destination, departure_date, return_date, max_base_price)
+    for tmp in fo['data']:
+        iata_codes.add(tmp['itineraries'][0]['segments'][0]['departure']['iataCode'])
+        iata_codes.add(tmp['itineraries'][0]['segments'][0]['arrival']['iataCode'])
+    return fo['data']

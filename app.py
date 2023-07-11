@@ -41,16 +41,6 @@ def format_datetime(value):
 app.jinja_env.filters['format_datetime'] = format_datetime
 
 
-# get flight offers and update the iata codes
-def get_flight_offers_and_update_iata_codes(origin, destination, departure_date, return_date, max_base_price,
-                                            iata_codes):
-    fo = get_flight_offers(origin, destination, departure_date, return_date, max_base_price)
-    for tmp in fo['data']:
-        iata_codes.add(tmp['itineraries'][0]['segments'][0]['departure']['iataCode'])
-        iata_codes.add(tmp['itineraries'][0]['segments'][0]['arrival']['iataCode'])
-    return fo['data']
-
-
 @app.route('/search_flights', methods=['POST'])
 def search_flights():
     # Collect the data from index.html template
