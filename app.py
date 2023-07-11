@@ -41,7 +41,7 @@ def format_datetime(value):
 app.jinja_env.filters['format_datetime'] = format_datetime
 
 
-# get flight offers from the Amadeus API and update the iata codes
+# get flight offers and update the iata codes
 def get_flight_offers_and_update_iata_codes(origin, destination, departure_date, return_date, max_base_price,
                                             iata_codes):
     fo = get_flight_offers(origin, destination, departure_date, return_date, max_base_price)
