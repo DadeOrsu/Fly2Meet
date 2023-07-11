@@ -146,11 +146,11 @@ def get_airports_from_country_center_coordinates(latitude, longitude, country_na
             return None
         else:
             data = response.json()
-            # return data filtered by country code
+            # return data filtered data by country code
             country_data = pycountry.countries.get(name=country_name)
-            data['data'] = [airport for airport in data['data']
-                            if airport['address']['countryCode'] == country_data.alpha_2]
-            return data['data']
+            filtered_data = [airport for airport in data['data']
+                             if airport['address']['countryCode'] == country_data.alpha_2]
+            return filtered_data
     except requests.exceptions.RequestException as e:
         print(f"Errore durante la richiesta di AIRPORTS: {e}")
         return None
