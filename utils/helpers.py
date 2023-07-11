@@ -4,6 +4,7 @@ import requests
 from utils.session_module import APISession
 from geopy import Nominatim
 import json
+import pycountry
 
 # Create the session
 api_key = 'kMotx0vA8lrM8jQ0P3xZA8mAwgYMQXDS'
@@ -130,7 +131,7 @@ def get_country_center_coordinates(country_name):
 
 
 # Function used to get the airports in a certain radius using coordinates using Nearest search API
-def get_airports_from_country_center_coordinates(latitude, longitude):
+def get_airports_from_country_center_coordinates(latitude, longitude, country_name):
     url = "https://test.api.amadeus.com/v1/reference-data/locations/airports"
     params = {
         "latitude": latitude,
@@ -145,6 +146,10 @@ def get_airports_from_country_center_coordinates(latitude, longitude):
             return None
         else:
             data = response.json()
+            # return data filtered by country code
+            country_data = pycountry.countries.get(name=country_name)
+            data['data'] = [airport for airport in data['data']
+                            if airport['address']['countryCode'] == country_data.alpha_2]
             return data['data']
     except requests.exceptions.RequestException as e:
         print(f"Errore durante la richiesta di AIRPORTS: {e}")

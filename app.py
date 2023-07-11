@@ -149,7 +149,7 @@ def search_flights():
                 lat, lon = get_country_center_coordinates(dest)
                 time.sleep(2)
                 # get the airports in a certain radius from the center of the country
-                target_country_airports = get_airports_from_country_center_coordinates(lat, lon)
+                target_country_airports = get_airports_from_country_center_coordinates(lat, lon, dest)
                 # get the iata code of the airports found, if the airport is already in the iata_codes array, skip it
                 target_country_airports_iata = [airport['iataCode'] for airport in target_country_airports
                                                 if airport['iataCode'] not in iata_codes]
