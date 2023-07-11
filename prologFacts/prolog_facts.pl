@@ -1,21 +1,21 @@
-airport(fra).
-	in(fra, de).
-	city(fra, frankfurt).
 airport(ham).
 	in(ham, de).
 	city(ham, hamburg).
-airport(lgw).
-	in(lgw, gb).
-	city(lgw, london).
-airport(cdg).
-	in(cdg, fr).
-	city(cdg, paris).
 airport(str).
 	in(str, de).
 	city(str, stuttgart).
+airport(cdg).
+	in(cdg, fr).
+	city(cdg, paris).
 airport(muc).
 	in(muc, de).
 	city(muc, munich).
+airport(lgw).
+	in(lgw, gb).
+	city(lgw, london).
+airport(fra).
+	in(fra, de).
+	city(fra, frankfurt).
 airport(lhr).
 	in(lhr, gb).
 	city(lhr, london).
