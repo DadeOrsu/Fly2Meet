@@ -73,6 +73,7 @@ def search_flights():
         f"destination_country: {target_countries}\n"
         f"same_airport: {same_airport}\n"
     )
+
     # Get the iata code for the first city
     iata_departure_city_1 = get_iata_code(departure_city_1)
     time.sleep(2)
@@ -82,6 +83,8 @@ def search_flights():
     # Arrays of the flight offers from the two departure cities
     first_city_offers = []
     second_city_offers = []
+    # set of the iata codes of the airports
+    iata_codes = set()
     # the destination city and destination country are not specified, the system chooses the destination
     if target_cities is None and target_countries is None:
         # API call to get the flight inspirations for the first city
@@ -95,6 +98,9 @@ def search_flights():
             # API call to get all the flight offers using the information of the flight inspiration search
             fo = get_flight_offers(iata_departure_city_1, flight['destination'], departure_date, return_date,
                                    max_base_price)
+            for tmp in fo['data']:
+                iata_codes.add(tmp['itineraries'][0]['segments'][0]['departure']['iataCode'])
+                iata_codes.add(tmp['itineraries'][0]['segments'][0]['arrival']['iataCode'])
             # if there are flights for that destination, add it to the destination set
             if flight['destination'] not in first_city_destinations and len(fo['data']) > 0:
                 first_city_destinations.add(flight['destination'])
@@ -102,6 +108,9 @@ def search_flights():
         # Add the flight offers for the first city with the second city as destination
         fo = get_flight_offers(iata_departure_city_1, iata_departure_city_2, departure_date, return_date,
                                max_base_price)
+        for tmp in fo['data']:
+            iata_codes.add(tmp['itineraries'][0]['segments'][0]['departure']['iataCode'])
+            iata_codes.add(tmp['itineraries'][0]['segments'][0]['arrival']['iataCode'])
         first_city_offers.extend(fo['data'])
         # Search of the flight offers for the second departure city using the destinations set of the first search
         second_city_offers = []
@@ -109,14 +118,19 @@ def search_flights():
             time.sleep(2)
             # API call to get the flight offers of the second departure city
             fo = get_flight_offers(iata_departure_city_2, target_cities, departure_date, return_date, max_base_price)
+            for tmp in fo['data']:
+                iata_codes.add(tmp['itineraries'][0]['segments'][0]['departure']['iataCode'])
+                iata_codes.add(tmp['itineraries'][0]['segments'][0]['arrival']['iataCode'])
             second_city_offers.extend(fo['data'])
         # Add the flight offers for the second city with the first city as destination
         fo = get_flight_offers(iata_departure_city_2, iata_departure_city_1, departure_date, return_date,
                                max_base_price)
+        for tmp in fo['data']:
+            iata_codes.add(tmp['itineraries'][0]['segments'][0]['departure']['iataCode'])
+            iata_codes.add(tmp['itineraries'][0]['segments'][0]['arrival']['iataCode'])
         second_city_offers.extend(fo['data'])
 
     else:
-        iata_codes = []
         # if the destination city is specified
         if target_cities is not None:
             destinations = target_cities.split(", ")
@@ -131,12 +145,18 @@ def search_flights():
                 response = get_flight_offers(iata_departure_city_1, iata_destination, departure_date, return_date,
                                              max_base_price)
                 first_city_offers.extend(response['data'])
+                # add iata to the cities set
+                for tmp in response['data']:
+                    iata_codes.add(tmp['itineraries'][0]['segments'][0]['departure']['iataCode'])
+                    iata_codes.add(tmp['itineraries'][0]['segments'][0]['arrival']['iataCode'])
                 time.sleep(2)
                 response = get_flight_offers(iata_departure_city_2, iata_destination, departure_date, return_date,
                                              max_base_price)
                 second_city_offers.extend(response['data'])
-                # add the destination to the cities array
-                iata_codes.append(response['data'][0]['itineraries'][0]['segments'][0]['arrival']['iataCode'])
+                # add iata to the cities set
+                for tmp in response['data']:
+                    iata_codes.add(tmp['itineraries'][0]['segments'][0]['departure']['iataCode'])
+                    iata_codes.add(tmp['itineraries'][0]['segments'][0]['arrival']['iataCode'])
 
         # if the destination country is specified
         if target_countries is not None:
@@ -155,11 +175,17 @@ def search_flights():
                     # get the flight offers for those airports from the first departure city
                     response = get_flight_offers(iata_departure_city_1, iata, departure_date, return_date,
                                                  max_base_price)
+                    for tmp in response['data']:
+                        iata_codes.add(tmp['itineraries'][0]['segments'][0]['departure']['iataCode'])
+                        iata_codes.add(tmp['itineraries'][0]['segments'][0]['arrival']['iataCode'])
                     first_city_offers.extend(response['data'])
                     time.sleep(2)
                     # get the flight offers for those airports from the second departure city
                     response = get_flight_offers(iata_departure_city_2, iata, departure_date, return_date,
                                                  max_base_price)
+                    for tmp in response['data']:
+                        iata_codes.add(tmp['itineraries'][0]['segments'][0]['departure']['iataCode'])
+                        iata_codes.add(tmp['itineraries'][0]['segments'][0]['arrival']['iataCode'])
                     second_city_offers.extend(response['data'])
 
     # filter the flight offers based on the max duration
@@ -171,10 +197,11 @@ def search_flights():
     write_flights_to_json(second_city_offers, 'jsonDumps/' + departure_city_2 + departure_date + '.json')
     # convert the flight offers to prolog facts
     flight_parser = FlightParser()
+    airport_facts = flight_parser.prolog_airport_parser(iata_codes)
     prolog_facts = flight_parser.prolog_flight_parser(first_city_offers + second_city_offers)
     # write the prolog facts on a file
     prolog_file = open('prologFacts/prolog_facts.pl', 'w')
-    prolog_file.write('\n'.join(prolog_facts))
+    prolog_file.write('\n'.join(airport_facts + prolog_facts))
     prolog_file.close()
     return render_template("results.html", first_city_offers=first_city_offers, second_city_offers=second_city_offers)
 
