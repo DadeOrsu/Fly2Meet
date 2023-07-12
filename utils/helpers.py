@@ -183,6 +183,8 @@ def get_flight_offers_and_update_iata_codes(origin, destination, departure_date,
                                             iata_codes):
     fo = get_flight_offers(origin, destination, departure_date, return_date, max_base_price)
     for tmp in fo['data']:
-        iata_codes.add(tmp['itineraries'][0]['segments'][0]['departure']['iataCode'])
-        iata_codes.add(tmp['itineraries'][0]['segments'][0]['arrival']['iataCode'])
+        for itinerary in tmp['itineraries']:
+            for segment in itinerary['segments']:
+                iata_codes.add(segment['departure']['iataCode'])
+                iata_codes.add(segment['arrival']['iataCode'])
     return fo['data']
