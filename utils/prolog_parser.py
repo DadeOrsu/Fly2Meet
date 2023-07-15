@@ -35,7 +35,7 @@ class FlightParser:
         offset = int(float(airport_info.tz) * 3600)
         dst = 'true' if airport_info.dst == 'E' else 'false'
         return f"date({date.year}, {date.month}, {date.day}, {date.hour}, {date.minute}, {date.second}, {offset}, " \
-               f"'{timezone_name}', {dst})"
+               f"{timezone_name.lower()}, {dst})"
 
     # method to parse the flight offers in prolog facts
     def prolog_flight_parser(self, all_flight_offers):
