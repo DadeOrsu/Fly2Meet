@@ -65,4 +65,3 @@ class FlightParser:
             prolog_facts.append("\tin(" + str(data.iata).lower() + ", " + country.lower() + ").")
             prolog_facts.append("\tcity(" + str(data.iata.lower()) + ", " + data.city.lower() + ").")
         return prolog_facts
-
