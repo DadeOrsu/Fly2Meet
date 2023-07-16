@@ -45,8 +45,7 @@ findFlights(Airport1, Airport2, sol(AvgPrice, AvgDuration, WaitingTime, Rank, Fl
     Flight1Info = f(Airport1, Airport3, CarrierNo13, FlightNo13, DepDate13, ArrDate13, Duration13, Price13),
     Flight2Info = f(Airport2, Airport3, CarrierNo23, FlightNo23, DepDate23, ArrDate23, Duration23, Price23).
 
-sortByStrategy(L, price, SortedL) :- sort(6, @=<, L, SortedL).
-sortByStrategy(L, duration, SortedL) :- sort(7, @=<, L, SortedL).
-sortByStrategy(L, waitingtime, SortedL) :- sort(5, @=<, L, SortedL).
+sortByStrategy(L, price, SortedL) :- sort(1, @=<, L, SortedL).
+sortByStrategy(L, duration, SortedL) :- sort(2, @=<, L, SortedL).
+sortByStrategy(L, waitingtime, SortedL) :- sort(3, @=<, L, SortedL).
 sortByStrategy(L, bestsolution, SortedL) :- sort(4, @=<, L, SortedL).
-
