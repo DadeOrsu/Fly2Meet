@@ -2,11 +2,11 @@
 
 fly2Meet(Airport1, Airport2, SortStrategy, Flights) :-
     airport(Airport1), airport(Airport2), dif(Airport1, Airport2),
-    % trovo i valori massimi per normalizzare i valori
+    % find max price, duration, waiting time
     find_max_flight_price(MaxPrice),
     find_max_flight_duration(MaxDuration),
     find_max_waiting_time(MaxWaitingTime),
-    % trovo tutti i voli disponibili
+    % find all possible flights
     findall(FCombo, findFlights(Airport1, Airport2, MaxPrice, MaxDuration, MaxWaitingTime, FCombo), TmpFlights),
     sortByStrategy(TmpFlights, SortStrategy, Flights),
     printFlights(Flights).
