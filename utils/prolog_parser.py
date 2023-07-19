@@ -41,18 +41,22 @@ class FlightParser:
     def prolog_flight_parser(self, all_flight_offers):
         prolog_facts = []
         for flight in all_flight_offers:
-            origin = flight['itineraries'][0]['segments'][0]['departure']['iataCode']
-            destination = flight['itineraries'][0]['segments'][0]['arrival']['iataCode']
-            carrier_code = flight['itineraries'][0]['segments'][0]['carrierCode'].lower()
-            flight_number = flight['itineraries'][0]['segments'][0]['number']
-            departure_date = self.get_date(flight['itineraries'][0]['segments'][0]['departure']['at'], origin)
-            arrival_date = self.get_date(flight['itineraries'][0]['segments'][0]['arrival']['at'], destination)
-            duration = self.convert_to_prolog_duration(flight['itineraries'][0]['segments'][0]['duration'])
-            price = flight['price']['total']
-            prolog_facts.append(
-                f"flight({origin.lower()}, {destination.lower()}, {carrier_code}, {flight_number}, {departure_date},"
-                f" {arrival_date}, {duration}, {price})."
-            )
+            itineraries = flight['itineraries']
+            for itinerary in itineraries:
+                segments = itinerary['segments']
+                for segment in segments:
+                    origin = segment['departure']['iataCode']
+                    destination = segment['arrival']['iataCode']
+                    carrier_code = segment['carrierCode'].lower()
+                    flight_number = segment['number']
+                    departure_date = self.get_date(segment['departure']['at'], origin)
+                    arrival_date = self.get_date(segment['arrival']['at'], destination)
+                    duration = self.convert_to_prolog_duration(segment['duration'])
+                    price = flight['price']['total']
+                    prolog_facts.append(
+                        f"flight({origin.lower()}, {destination.lower()}, {carrier_code}, {flight_number}, {departure_date},"
+                        f" {arrival_date}, {duration}, {price})."
+                    )
         return prolog_facts
 
     # method to parse the airport information in prolog facts
