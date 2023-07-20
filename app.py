@@ -5,7 +5,7 @@ from utils.prolog_parser import FlightParser
 import time
 import re
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static', template_folder='templates')
 
 
 # Filter for Jinja to format the price
