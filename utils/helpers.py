@@ -49,9 +49,10 @@ def get_flight_inspirations(_origin, _departure_date, _max_price):
     params = {
         'origin': _origin,
         'departureDate': _departure_date,
-        'maxPrice': _max_price,
         'nonStop': 'true',
     }
+    if _max_price is not None:
+        params['maxPrice'] = _max_price
     try:
         response = api_session.get(url, params=params)
         if response.status_code == 200:
@@ -73,13 +74,14 @@ def get_flight_offers(_origin, _destination, _departure_date, _return_date, _max
         "originLocationCode": _origin,
         "destinationLocationCode": _destination,
         "departureDate": _departure_date,
-        "maxPrice": _max_base_price,
         "currencyCode": "EUR",
         "nonStop": "true",
         "adults": 1
     }
     if _return_date is not None:
         params["returnDate"] = _return_date
+    if _max_base_price is not None:
+        params["maxPrice"] = _max_base_price
     try:
         response = api_session.get(url, params=params)
         if response.status_code != 200:
