@@ -51,8 +51,14 @@ def search_flights():
     if return_date == '':
         return_date = None
     max_base_price = request.form.get('max_base_price')
-    max_duration = int(request.form.get('max_duration'))
+    if max_base_price == '':
+        max_base_price = None
+    max_duration = request.form.get('max_duration')
+    if max_duration == '':
+        max_duration = None
     max_wait_time = request.form.get('max_wait_time')
+    if max_wait_time == '':
+        max_wait_time = None
     target_cities = request.form.get('target_cities')
     if target_cities == '':
         target_cities = None
@@ -166,8 +172,9 @@ def search_flights():
                     second_city_offers.extend(response)
 
     # filter the flight offers based on the max duration
-    first_city_offers = filter_flight_offers_by_duration(first_city_offers, max_duration)
-    second_city_offers = filter_flight_offers_by_duration(second_city_offers, max_duration)
+    if max_duration is not None:
+        first_city_offers = filter_flight_offers_by_duration(first_city_offers, int(max_duration))
+        second_city_offers = filter_flight_offers_by_duration(second_city_offers, int(max_duration))
 
     # write the offers on a json dump
     write_flights_to_json(first_city_offers, 'jsonDumps/' + departure_city_1 + departure_date + '.json')
