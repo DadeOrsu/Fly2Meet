@@ -66,6 +66,15 @@ def search_flights():
     if target_countries == '':
         target_countries = None
     same_airport = request.form.get('same_airport')
+    if same_airport is None:
+        same_airport = False
+    else:
+        same_airport = True
+    different_city = request.form.get('different_city')
+    if different_city is None:
+        different_city = False
+    else:
+        different_city = True
     # Print the collected datas on the console
     print(
         f"departure_city_1: {departure_city_1}\n"
@@ -78,6 +87,7 @@ def search_flights():
         f"destination: {target_cities}\n"
         f"destination_country: {target_countries}\n"
         f"same_airport: {same_airport}\n"
+        f"different_city: {different_city}\n"
     )
 
     # Get the iata code for the first city
@@ -187,6 +197,11 @@ def search_flights():
     prolog_file = open('prologFacts/prolog_facts.pl', 'w')
     prolog_file.write('\n'.join(airport_facts + prolog_facts))
     prolog_file.close()
+    # TODO: aggiungere opzione "città diversa" (per evitare voli diretti) e esplorare posti nuovi
+    # TODO: rivedere la ricerca per country usando tabella codici iata
+    # TODO: gestire waiting times e same airport
+    # TODO: controllare interfaccia con prolog (ciao prolog o pyswip?)
+    # TODO: aggiungere unità di test con pytest
     return render_template("results.html", first_city_offers=first_city_offers, second_city_offers=second_city_offers)
 
 
