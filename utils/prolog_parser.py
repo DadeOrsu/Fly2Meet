@@ -54,8 +54,8 @@ class FlightParser:
                     duration = self.convert_to_prolog_duration(segment['duration'])
                     price = flight['price']['total']
                     prolog_facts.append(
-                        f"flight({origin.lower()}, {destination.lower()}, {carrier_code}, {flight_number}, {departure_date},"
-                        f" {arrival_date}, {duration}, {price})."
+                        f"flight({origin.lower()}, {destination.lower()}, {carrier_code}, {flight_number}, "
+                        f"{departure_date}, {arrival_date}, {duration}, {price})."
                     )
         return prolog_facts
 
