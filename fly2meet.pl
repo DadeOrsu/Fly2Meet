@@ -24,7 +24,7 @@ findFlights(Airport1, Airport2, MaxPrice, MinPrice, MaxDuration, MinDuration, Ma
     % normalize the values to get a score between 0 - 1
     NormalizedPrice is (AvgPrice - MinPrice) / (MaxPrice - MinPrice),
     NormalizedDuration is (AvgDuration - MinDuration) / (MaxDuration - MinDuration),
-    NormalizedWaitingTime is WaitingTime / MaxWaitingTime,
+    NormalizedWaitingTime is (WaitingTime - MinWaitingTime) / (MaxWaitingTime - MinWaitingTime),
     % calculate the rank as the sum of the normalized values
     Rank is NormalizedPrice + NormalizedDuration + NormalizedWaitingTime,
     Flight1Info = f(Airport1, Airport3, CarrierNo13, FlightNo13, DepDate13, ArrDate13, Duration13, Price13),
