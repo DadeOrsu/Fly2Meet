@@ -16,8 +16,6 @@ fly2meet(Airport1, Airport2, SortStrategy, Flights) :-
 findFlights(Airport1, Airport2, MaxPrice, MinPrice, MaxDuration, MinDuration, MaxWaitingTime, MinWaitingTime, sol(AvgPrice, AvgDuration, WaitingTime, Rank, Flight1Info, Flight2Info)) :-
     flight(Airport1, Airport3, CarrierNo13, FlightNo13, DepDate13, ArrDate13, Duration13, Price13),
     flight(Airport2, Airport3, CarrierNo23, FlightNo23, DepDate23, ArrDate23, Duration23, Price23),
-    AvgPrice is (Price13 + Price23) / 2,
-    AvgDuration is (Duration13 + Duration23) / 2,
     date_time_stamp(ArrDate13, ArrDate13ts),
     date_time_stamp(ArrDate23, ArrDate23ts),
     WaitingTime is abs(ArrDate23ts - ArrDate13ts),
