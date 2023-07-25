@@ -194,7 +194,10 @@ def search_flights():
     # convert the flight offers to prolog facts
     flight_parser = FlightParser()
     airport_facts = flight_parser.prolog_airport_parser(iata_codes)
-    prolog_facts = flight_parser.prolog_flight_parser(first_city_offers + second_city_offers)
+    all_flight_offers = first_city_offers + second_city_offers
+    for i, item in enumerate(all_flight_offers):
+        item['id'] = i
+    prolog_facts = flight_parser.prolog_flight_parser(all_flight_offers)
     # write the prolog facts on a file
     prolog_file = open('prologFacts/prolog_facts.pl', 'w')
     prolog_file.write('\n'.join(airport_facts + prolog_facts))
