@@ -21,9 +21,9 @@ class FlightParser:
     def get_timezone_name_from_iana(iana_code):
         try:
             timezone = pytz.timezone(iana_code)
-            now = pytz.utc.localize(datetime.utcnow())
+            now = datetime.now(pytz.utc)
             timezone_name = now.astimezone(timezone).tzname()
-            return timezone_name
+            return "'" + timezone_name + "'"
         except pytz.UnknownTimeZoneError:
             return None
 
@@ -47,7 +47,7 @@ class FlightParser:
                 for segment in segments:
                     origin = segment['departure']['iataCode']
                     destination = segment['arrival']['iataCode']
-                    carrier_code = segment['carrierCode'].lower()
+                    carrier_code = "'" + segment['carrierCode'].lower() + "'"
                     flight_number = segment['number']
                     departure_date = self.get_date(segment['departure']['at'], origin)
                     arrival_date = self.get_date(segment['arrival']['at'], destination)
@@ -68,5 +68,5 @@ class FlightParser:
             country = pycountry.countries.get(name=data.country).alpha_2
             prolog_facts.append("airport(" + str(data.iata).lower() + ").")
             prolog_facts.append("\tin(" + str(data.iata).lower() + ", " + country.lower() + ").")
-            prolog_facts.append("\tcity(" + str(data.iata.lower()) + ", " + data.city.lower() + ").")
+            prolog_facts.append("\tcity(" + str(data.iata.lower()) + ", " + data.city.lower().replace(' ', '_') + ").")
         return prolog_facts
