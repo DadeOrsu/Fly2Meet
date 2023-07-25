@@ -1,3 +1,6 @@
+:- discontiguous airport/1.
+:- discontiguous in/2.
+:- discontiguous city/2.
 :- consult('prologFacts/prolog_facts.pl').
 
 fly2meet(Airport1, Airport2, SortStrategy, Flights) :-
