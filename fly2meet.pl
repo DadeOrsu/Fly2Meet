@@ -13,18 +13,16 @@ wPrice(AP) :- AP is 1/3.
 wDuration(AD) :- AD is 1/3.
 wWaitingTime(AWT) :- AWT is 1/3.
 
-fly2meet(Airport1, Airport2, SortStrategy, Return, Flights) :-
-    fly2meet(Airport1, Airport2, SortStrategy, Return, inf, Flights).
 
-fly2meet(Airport1, Airport2, SortStrategy, Return, CapWT, Flights) :-
-    airport(Airport1), airport(Airport2), dif(Airport1, Airport2),
+fly2meet(Airport1, Airport2, SortStrategy, Return, CapWT, SameAirport, Flights) :-
+    airport(Airport1, _, _), airport(Airport2, _, _), dif(Airport1, Airport2),
     minAndMax(price,MaxP, MinP),
     minAndMax(duration,MaxD, MinD),
     minAndMax(waitingtimes,MaxWT, MinWT),
-    setof(FCombo, eligibleFlights(Airport1, Airport2, MaxP, MinP, MaxD, MinD, MaxWT, MinWT, Return, CapWT, FCombo), TmpFlights),
+    setof(FCombo, eligibleFlights(Airport1, Airport2, MaxP, MinP, MaxD, MinD, MaxWT, MinWT, Return, CapWT, SameAirport, FCombo), TmpFlights),
     sortByStrategy(TmpFlights, SortStrategy, Flights).
 
-eligibleFlights(Airport1, Airport2, MaxP, MinP, MaxD, MinD, MaxWT, MinWT, no, CapWT, Solution) :-
+eligibleFlights(Airport1, Airport2, MaxP, MinP, MaxD, MinD, MaxWT, MinWT, no, CapWT, yes, Solution) :-
     flight(Airport1, Airport3, CarrierNo13, FlightNo13, DepDate13, ArrDate13, Duration13, Price13),
     Flight1Info=f(Airport1, Airport3, CarrierNo13, FlightNo13, DepDate13, ArrDate13, Duration13, Price13),
     flight(Airport2, Airport3, CarrierNo23, FlightNo23, DepDate23, ArrDate23, Duration23, Price23),
@@ -35,9 +33,19 @@ eligibleFlights(Airport1, Airport2, MaxP, MinP, MaxD, MinD, MaxWT, MinWT, no, Ca
     travelScore(AvgPrice,AvgDuration,WaitingTime,MinP,MaxP,MinD,MaxD,MinWT,MaxWT,Rank),
     Solution=sol(AvgPrice, AvgDuration, WaitingTime, Rank, Flight1Info, Flight2Info).
 
+eligibleFlights(Airport1, Airport2, MaxP, MinP, MaxD, MinD, MaxWT, MinWT, no, CapWT, no, Solution) :-
+    airport(Airport3, City, _), airport(Airport4, City, _),
+    flight(Airport1, Airport3, CarrierNo13, FlightNo13, DepDate13, ArrDate13, Duration13, Price13),
+    Flight1Info=f(Airport1, Airport3, CarrierNo13, FlightNo13, DepDate13, ArrDate13, Duration13, Price13),
+    flight(Airport2, Airport4, CarrierNo23, FlightNo23, DepDate23, ArrDate23, Duration23, Price23),
+    Flight2Info=f(Airport2, Airport4, CarrierNo23, FlightNo23, DepDate23, ArrDate23, Duration23, Price23),
+    avg(Price13,Price23,AvgPrice),
+    avg(Duration13,Duration23,AvgDuration),
+    waitingTime(ArrDate13, DepDate23, WaitingTime), WaitingTime =< CapWT,
+    travelScore(AvgPrice,AvgDuration,WaitingTime,MinP,MaxP,MinD,MaxD,MinWT,MaxWT,Rank),
+    Solution=sol(AvgPrice, AvgDuration, WaitingTime, Rank, Flight1Info, Flight2Info).
 
-
-eligibleFlights(Airport1, Airport2, MaxP, MinP, MaxD, MinD, MaxWT, MinWT, yes, CapWT, Solution) :-
+eligibleFlights(Airport1, Airport2, MaxP, MinP, MaxD, MinD, MaxWT, MinWT, yes, CapWT, yes, Solution) :-
     flight(Airport1, Airport3, CarrierNo13, FlightNo13, DepDate13, ArrDate13, Duration13, Price13),
     Flight1Info=f(Airport1, Airport3, CarrierNo13, FlightNo13, DepDate13, ArrDate13, Duration13, Price13),
     flight(Airport2, Airport3, CarrierNo23, FlightNo23, DepDate23, ArrDate23, Duration23, Price23),
@@ -52,6 +60,24 @@ eligibleFlights(Airport1, Airport2, MaxP, MinP, MaxD, MinD, MaxWT, MinWT, yes, C
     Flight2Info = f(Airport2, Airport3, CarrierNo23, FlightNo23, DepDate23, ArrDate23, Duration23, Price23),
     Flight2ReturnInfo = f(Airport3, Airport2, CarrierNo32, FlightNo32, DepDate32, ArrDate32, Duration32, Price23),
     flight(Airport3, Airport2, CarrierNo32, FlightNo32, DepDate32, ArrDate32, Duration32, Price23),
+    Solution=sol(AvgPrice, AvgDuration, WaitingTime, Rank, Flight1Info, Flight1ReturnInfo, Flight2Info, Flight2ReturnInfo).
+
+eligibleFlights(Airport1, Airport2, MaxP, MinP, MaxD, MinD, MaxWT, MinWT, yes, CapWT, no, Solution) :-
+    airport(Airport3, City, _), airport(Airport4, City, _),
+    flight(Airport1, Airport3, CarrierNo13, FlightNo13, DepDate13, ArrDate13, Duration13, Price13),
+    Flight1Info=f(Airport1, Airport3, CarrierNo13, FlightNo13, DepDate13, ArrDate13, Duration13, Price13),
+    flight(Airport2, Airport4, CarrierNo23, FlightNo23, DepDate23, ArrDate23, Duration23, Price23),
+    Flight2Info=f(Airport2, Airport4, CarrierNo23, FlightNo23, DepDate23, ArrDate23, Duration23, Price23),
+    avg(Price13, Price23, AvgPrice),
+    avg(Duration13, Duration23, AvgDuration),
+    waitingTime(ArrDate13, DepDate23, WaitingTime), WaitingTime =< CapWT,
+    travelScore(AvgPrice,AvgDuration,WaitingTime,MinP,MaxP,MinD,MaxD,MinWT,MaxWT,Rank),
+    Flight1Info = f(Airport1, Airport3, CarrierNo13, FlightNo13, DepDate13, ArrDate13, Duration13, Price13),
+    Flight1ReturnInfo = f(Airport3, Airport1, CarrierNo31, FlightNo31, DepDate31, ArrDate31, Duration31, Price13),
+    flight(Airport3, Airport1, CarrierNo31, FlightNo31, DepDate31, ArrDate31, Duration31, Price13),
+    Flight2Info = f(Airport2, Airport4, CarrierNo23, FlightNo23, DepDate23, ArrDate23, Duration23, Price23),
+    Flight2ReturnInfo = f(Airport4, Airport2, CarrierNo32, FlightNo32, DepDate32, ArrDate32, Duration32, Price23),
+    flight(Airport4, Airport2, CarrierNo32, FlightNo32, DepDate32, ArrDate32, Duration32, Price23),
     Solution=sol(AvgPrice, AvgDuration, WaitingTime, Rank, Flight1Info, Flight1ReturnInfo, Flight2Info, Flight2ReturnInfo).
 
 % normalize the values to get a travelScore between 0 - 1
