@@ -118,6 +118,7 @@ def search_flights():
             # if there are flights for that destination, add it to the destination set
             if flight['destination'] not in first_city_destinations and len(fo) > 0:
                 first_city_destinations.add(flight['destination'])
+            time.sleep(2)
         if not different_city:
             # Add the flight offers for the first city with the second city as destination
             fo = get_flight_offers_and_update_iata_codes(iata_departure_city_1, iata_departure_city_2, departure_date,
@@ -131,6 +132,7 @@ def search_flights():
             fo = get_flight_offers_and_update_iata_codes(iata_departure_city_2, target_cities, departure_date,
                                                          return_date, max_base_price, iata_codes)
             second_city_offers.extend(fo)
+            time.sleep(2)
         if not different_city:
             # Add the flight offers for the second city with the first city as destination
             fo = get_flight_offers_and_update_iata_codes(iata_departure_city_2, iata_departure_city_1, departure_date,
