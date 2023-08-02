@@ -92,10 +92,10 @@ def search_flights():
 
     # Get the iata code for the first city
     iata_departure_city_1 = get_iata_code(departure_city_1)
-    time.sleep(0.3)
+    time.sleep(2)
     # Get the iata code for the second city
     iata_departure_city_2 = get_iata_code(departure_city_2)
-    time.sleep(0.3)
+    time.sleep(2)
     # Arrays of the flight offers from the two departure cities
     first_city_offers = []
     second_city_offers = []
@@ -110,7 +110,7 @@ def search_flights():
         # Set of all destinations for the flights of the first departure city
         first_city_destinations = set()
         for flight in flight_inspirations:
-            time.sleep(0.3)
+            time.sleep(2)
             # API call to get all the flight offers using the information of the flight inspiration search
             fo = get_flight_offers_and_update_iata_codes(iata_departure_city_1, flight['destination'], departure_date,
                                                          return_date, max_base_price, iata_codes)
@@ -118,7 +118,7 @@ def search_flights():
             # if there are flights for that destination, add it to the destination set
             if flight['destination'] not in first_city_destinations and len(fo) > 0:
                 first_city_destinations.add(flight['destination'])
-            time.sleep(0.3)
+            time.sleep(2)
         if not different_city:
             # Add the flight offers for the first city with the second city as destination
             fo = get_flight_offers_and_update_iata_codes(iata_departure_city_1, iata_departure_city_2, departure_date,
@@ -127,12 +127,12 @@ def search_flights():
         # Search of the flight offers for the second departure city using the destinations set of the first search
         second_city_offers = []
         for target_cities in first_city_destinations:
-            time.sleep(0.3)
+            time.sleep(2)
             # API call to get the flight offers of the second departure city
             fo = get_flight_offers_and_update_iata_codes(iata_departure_city_2, target_cities, departure_date,
                                                          return_date, max_base_price, iata_codes)
             second_city_offers.extend(fo)
-            time.sleep(0.3)
+            time.sleep(2)
         if not different_city:
             # Add the flight offers for the second city with the first city as destination
             fo = get_flight_offers_and_update_iata_codes(iata_departure_city_2, iata_departure_city_1, departure_date,
@@ -145,17 +145,17 @@ def search_flights():
             destinations = target_cities.split(", ")
 
             for dest in destinations:
-                time.sleep(0.3)
+                time.sleep(2)
                 iata_destination = get_iata_code(dest)
                 # if no iata found for the destination, continue with the next destination
                 if iata_destination is None:
                     continue
-                time.sleep(0.3)
+                time.sleep(2)
                 response = get_flight_offers_and_update_iata_codes(iata_departure_city_1, iata_destination,
                                                                    departure_date, return_date, max_base_price,
                                                                    iata_codes)
                 first_city_offers.extend(response)
-                time.sleep(0.3)
+                time.sleep(2)
                 response = get_flight_offers_and_update_iata_codes(iata_departure_city_2, iata_destination,
                                                                    departure_date, return_date, max_base_price,
                                                                    iata_codes)
@@ -167,19 +167,19 @@ def search_flights():
             for dest in countries:
                 # get the coordinates of the center of the country
                 lat, lon = get_country_center_coordinates(dest)
-                time.sleep(0.3)
+                time.sleep(2)
                 # get the airports in a certain radius from the center of the country
                 target_country_airports = get_airports_from_country_center_coordinates(lat, lon, dest)
                 # get the iata code of the airports found, if the airport is already in the iata_codes array, skip it
                 target_country_airports_iata = [airport['iataCode'] for airport in target_country_airports
                                                 if airport['iataCode'] not in iata_codes]
                 for iata in target_country_airports_iata:
-                    time.sleep(0.3)
+                    time.sleep(2)
                     # get the flight offers for those airports from the first departure city
                     response = get_flight_offers_and_update_iata_codes(iata_departure_city_1, iata, departure_date,
                                                                        return_date, max_base_price, iata_codes)
                     first_city_offers.extend(response)
-                    time.sleep(0.3)
+                    time.sleep(2)
                     # get the flight offers for those airports from the second departure city
                     response = get_flight_offers_and_update_iata_codes(iata_departure_city_2, iata, departure_date,
                                                                        return_date, max_base_price, iata_codes)
