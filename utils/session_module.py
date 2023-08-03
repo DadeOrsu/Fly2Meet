@@ -42,7 +42,7 @@ class APISession:
             self.expires_in = int(response.json()['expires_in']) + time.time()
             return response.json()['access_token']
         except requests.exceptions.RequestException as e:
-            print(f'Errore durante la richiesta di access token: {e}')
+            print(f'Error requesting access token: {e}')
             return None
 
     # method to make a GET request
@@ -61,5 +61,5 @@ class APISession:
             # if the response is successful, return it
             return response
         except requests.exceptions.RequestException as e:
-            print(f'Errore durante la richiesta GET: {e}')
+            print(f'Error during GET request: {e}')
             return None
