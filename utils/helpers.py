@@ -1,8 +1,8 @@
+import csv
 from datetime import timedelta
 from isodate import parse_duration
 import requests
 from utils.session_module import APISession
-from geopy import Nominatim
 import json
 import pycountry
 
@@ -84,8 +84,8 @@ def get_flight_offers(_origin, _destination, _departure_date, _return_date, _max
         params["maxPrice"] = _max_base_price
     try:
         response = api_session.get(url, params=params)
-        if response.status_code != 200:
-            print(f"Errore durante la richiesta di Flight Offers: {response.json()['errors'][0]['detail']}")
+        if response is None:
+            print(f"Errore durante la richiesta di Flight Offers: ")
             return None
         else:
             data = response.json()
@@ -122,40 +122,23 @@ def get_iata_code(name):
         return None
 
 
-# Function used to get the coordinates of the center of a country
-def get_country_center_coordinates(country_name):
-    geolocator = Nominatim(user_agent="my_geocoder")
-    location = geolocator.geocode(country_name)
-    if location:
-        return location.latitude, location.longitude
-    else:
-        return None
-
-
-# Function used to get the airports in a certain radius using coordinates using Nearest search API
-def get_airports_from_country_center_coordinates(latitude, longitude, country_name):
-    url = "https://test.api.amadeus.com/v1/reference-data/locations/airports"
-    params = {
-        "latitude": latitude,
-        "longitude": longitude,
-        "radius": 500
-    }
-
-    try:
-        response = api_session.get(url, params=params)
-        if response.status_code != 200:
-            print(f"Errore durante la richiesta di AIRPORTS: {response.json()['errors'][0]['detail']}")
-            return None
-        else:
-            data = response.json()
-            # return data filtered data by country code
-            country_data = pycountry.countries.get(name=country_name)
-            filtered_data = [airport for airport in data['data']
-                             if airport['address']['countryCode'] == country_data.alpha_2]
-            return filtered_data
-    except requests.exceptions.RequestException as e:
-        print(f"Errore durante la richiesta di AIRPORTS: {e}")
-        return None
+def get_airports_from_country_name(country_name):
+    country_data = pycountry.countries.get(name=country_name)
+    if country_data:
+        filename = "utils/airport-codes.csv"
+        with open(filename, newline="", encoding="utf-8") as csvfile:
+            reader = csv.reader(csvfile)
+            # Skip the header
+            next(reader, None)
+            iata_codes = set()
+            for row in reader:
+                atype = row[1]
+                iso_country = row[5]
+                iata_code = row[9]
+                # Puoi elaborare i dati come preferisci per ogni riga
+                if iata_code != "" and iso_country == country_data.alpha_2 and atype == "large_airport":
+                    iata_codes.add(iata_code)
+            return iata_codes
 
 
 # Function used to compare two hours expressed in ISO format
@@ -184,9 +167,12 @@ def filter_flight_offers_by_duration(flight_offers, hour):
 def get_flight_offers_and_update_iata_codes(origin, destination, departure_date, return_date, max_base_price,
                                             iata_codes):
     fo = get_flight_offers(origin, destination, departure_date, return_date, max_base_price)
-    for tmp in fo['data']:
-        for itinerary in tmp['itineraries']:
-            for segment in itinerary['segments']:
-                iata_codes.add(segment['departure']['iataCode'])
-                iata_codes.add(segment['arrival']['iataCode'])
-    return fo['data']
+    if fo is None:
+        return None
+    else:
+        for tmp in fo['data']:
+            for itinerary in tmp['itineraries']:
+                for segment in itinerary['segments']:
+                    iata_codes.add(segment['departure']['iataCode'])
+                    iata_codes.add(segment['arrival']['iataCode'])
+        return fo['data']
