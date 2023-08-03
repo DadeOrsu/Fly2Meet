@@ -92,9 +92,13 @@ def search_flights():
 
     # Get the iata code for the first city
     iata_departure_city_1 = get_iata_code(departure_city_1)
+    if iata_departure_city_1 is None:
+        return render_template('results.html', error="First departure city not found.")
     time.sleep(1)
     # Get the iata code for the second city
     iata_departure_city_2 = get_iata_code(departure_city_2)
+    if iata_departure_city_2 is None:
+        return render_template('results.html', error="Second departure city not found.")
     time.sleep(1)
     # Arrays of the flight offers from the two departure cities
     first_city_offers = []
