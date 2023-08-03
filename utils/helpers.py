@@ -23,11 +23,11 @@ def flight_from_json(file_path):
         if isinstance(data, list):
             flights = data
         else:
-            print("Il file JSON non contiene una lista di voli.")
+            print("The JSON file does not contain a flight list.")
     except FileNotFoundError:
-        print("File non trovato.")
+        print("File not found.")
     except json.JSONDecodeError:
-        print("Errore durante la decodifica del file JSON.")
+        print("Error decoding JSON file.")
     return flights
 
 
@@ -37,9 +37,9 @@ def write_flights_to_json(flights, file_path):
         with open(file_path, 'w') as file:
             json.dump(flights, file, indent=4)
     except FileNotFoundError:
-        print("File non trovato.")
+        print("File not found.")
     except json.JSONDecodeError:
-        print("Errore durante la decodifica del file JSON.")
+        print("Error decoding JSON file.")
 
 
 # Function to get the flight inspirations using flight inspiration search API
@@ -60,10 +60,10 @@ def get_flight_inspirations(_origin, _departure_date, _max_price):
             return data['data']
         else:
             error_message = response.json()['errors'][0]['detail']
-            print(f'Errore durante la richiesta di Flight Inspirations: {error_message}')
+            print(f'Error requesting Flight Inspirations: {error_message}')
             return None
     except requests.exceptions.RequestException as e:
-        print(f'Errore durante la richiesta di Flight Inspirations: {e}')
+        print(f'Error requesting Flight Inspirations: {e}')
         return None
 
 
@@ -85,14 +85,14 @@ def get_flight_offers(_origin, _destination, _departure_date, _return_date, _max
     try:
         response = api_session.get(url, params=params)
         if response is None:
-            print(f"Errore durante la richiesta di Flight Offers: ")
+            print(f"Error requesting Flight Offers")
             return None
         else:
             data = response.json()
             # Restituisci i dati delle offerte di volo
             return data
     except requests.exceptions.RequestException as e:
-        print(f"Errore durante la richiesta di Flight Offers: {e}")
+        print(f"Error requesting Flight Offers: {e}")
         return None
 
 
@@ -108,7 +108,7 @@ def get_iata_code(name):
     try:
         response = api_session.get(url, params=params)
         if response.status_code != 200:
-            print(f"Errore durante la richiesta di IATA: {response.json()['errors'][0]['detail']}")
+            print(f"Error requesting IATA: {response.json()['errors'][0]['detail']}")
             return None
         else:
             data = response.json()
@@ -118,7 +118,7 @@ def get_iata_code(name):
             else:
                 return data['data'][0]['iataCode']
     except requests.exceptions.RequestException as e:
-        print(f"Errore durante la richiesta di IATA: {e}")
+        print(f"Error requesting IATA: {e}")
         return None
 
 
