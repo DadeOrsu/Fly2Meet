@@ -1,7 +1,6 @@
 import csv
 from datetime import timedelta
 from isodate import parse_duration
-import requests
 from utils.session_module import APISession
 import json
 import pycountry
@@ -53,17 +52,12 @@ def get_flight_inspirations(_origin, _departure_date, _max_price):
     }
     if _max_price is not None:
         params['maxPrice'] = _max_price
-    try:
-        response = api_session.get(url, params=params)
-        if response.status_code == 200:
-            data = response.json()
-            return data['data']
-        else:
-            error_message = response.json()['errors'][0]['detail']
-            print(f'Error requesting Flight Inspirations: {error_message}')
-            return None
-    except requests.exceptions.RequestException as e:
-        print(f'Error requesting Flight Inspirations: {e}')
+    response = api_session.get(url, params=params)
+    if response is not None:
+        data = response.json()
+        return data['data']
+    else:
+        print("Error requesting Flight Inspirations")
         return None
 
 
@@ -82,18 +76,15 @@ def get_flight_offers(_origin, _destination, _departure_date, _return_date, _max
         params["returnDate"] = _return_date
     if _max_base_price is not None:
         params["maxPrice"] = _max_base_price
-    try:
-        response = api_session.get(url, params=params)
-        if response is None:
-            print(f"Error requesting Flight Offers")
-            return None
-        else:
-            data = response.json()
-            # Restituisci i dati delle offerte di volo
-            return data
-    except requests.exceptions.RequestException as e:
-        print(f"Error requesting Flight Offers: {e}")
+
+    response = api_session.get(url, params=params)
+    if response is None:
+        print("Error requesting Flight Offers")
         return None
+    else:
+        data = response.json()
+        # Restituisci i dati delle offerte di volo
+        return data
 
 
 # Function used to get the iata code from the name of a city using Airport & City search API
@@ -104,22 +95,17 @@ def get_iata_code(name):
         "keyword": name,
         "view": "LIGHT"
     }
-
-    try:
-        response = api_session.get(url, params=params)
-        if response.status_code != 200:
-            print(f"Error requesting IATA: {response.json()['errors'][0]['detail']}")
+    response = api_session.get(url, params=params)
+    if response is None:
+        print("Error requesting IATA")
+        return None
+    else:
+        data = response.json()
+        if data['meta']['count'] == 0:
+            print(f"No IATA code found for {name}")
             return None
         else:
-            data = response.json()
-            # Restituisci i dati delle offerte di volo
-            if data['meta']['count'] == 0:
-                return None
-            else:
-                return data['data'][0]['iataCode']
-    except requests.exceptions.RequestException as e:
-        print(f"Error requesting IATA: {e}")
-        return None
+            return data['data'][0]['iataCode']
 
 
 def get_airports_from_country_name(country_name):
