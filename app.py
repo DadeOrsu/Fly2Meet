@@ -1,7 +1,6 @@
 from datetime import datetime
 from flask import Flask, render_template, request
 from swiplserver import PrologMQI
-
 from utils.helpers import *
 from utils.prolog_parser import FlightParser
 import time
@@ -255,6 +254,7 @@ def search_flights():
     # TODO: controllare che i dati passati alla query prolog siano corretti
     # TODO: aggiungere la possibilità di mostrare messaggi di errore
     # TODO: aggiungere la possibilità di mostrare i risultati in ordine di prezzo, durata, o ranking.
+    # TODO: aggiungere un filtro jinja per mostrare al posto del codice iata il nome dell'aeroporto
     return render_template("display_results.html", prolog_results=results, include_return=include_return)
 
 
