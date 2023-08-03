@@ -5,6 +5,9 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='results.css') }}">
 </head>
 <body>
+    {% if error %}
+        <p>{{ error }}</p>
+    {% else %}
     <h1>Flight offers</h1>
     <h2>Offers for the first city</h2>
     <table class="flight-table">
@@ -61,5 +64,6 @@
         </tbody>
         {% endfor %}
     </table>
+    {% endif %}
 </body>
 </html>
