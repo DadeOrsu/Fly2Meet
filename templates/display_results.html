@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tabella Sol</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .even-row {
+            background-color: #f2f2f2;
+        }
+
+        .odd-row {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabella Sol</h1>
+    <table>
+        <tr>
+            <th>departure at</th>
+            <th>arrival at</th>
+            <th>Carrier code</th>
+            <th>duration</th>
+            <th>price</th>
+        </tr>
+        {% for item in prolog_results %}
+            {% if loop.index is divisibleby 2 %}
+                {% set row_class = 'even-row' %}
+            {% else %}
+                {% set row_class = 'odd-row' %}
+            {% endif %}
+            <tr class="{{ row_class }}">
+                <td>{{ item['args'][4]['args'][0] }}</td>
+                <td>{{ item['args'][4]['args'][1] }}</td>
+                <td>{{ item['args'][4]['args'][2] }} {{ item['args'][4]['args'][3] }}</td>
+                <td>{{ item['args'][4]['args'][6] | format_duration }}</td>
+                <td>{{ item['args'][4]['args'][7] | format_price }}</td>
+            </tr>
+            <tr class="{{ row_class }}">
+                <td>{{ item['args'][5]['args'][0] }}</td>
+                <td>{{ item['args'][5]['args'][1] }}</td>
+                <td>{{ item['args'][5]['args'][2] }} {{ item['args'][5]['args'][3] }}</td>
+                <td>{{ item['args'][5]['args'][6] | format_duration }}</td>
+                <td>{{ item['args'][5]['args'][7] | format_price }}</td>
+            </tr>
+            {% if include_return %}
+                <tr class="{{ row_class }}">
+                    <td>{{ item['args'][6]['args'][0] }}</td>
+                    <td>{{ item['args'][6]['args'][1] }}</td>
+                    <td>{{ item['args'][6]['args'][2] }} {{ item['args'][6]['args'][3] }}</td>
+                    <td>{{ item['args'][6]['args'][6] | format_duration }}</td>
+                    <td>{{ item['args'][6]['args'][7] | format_price }}</td>
+                </tr>
+                <tr class="{{ row_class }}">
+                    <td>{{ item['args'][7]['args'][0] }}</td>
+                    <td>{{ item['args'][7]['args'][1] }}</td>
+                    <td>{{ item['args'][7]['args'][2] }} {{ item['args'][7]['args'][3] }}</td>
+                    <td>{{ item['args'][7]['args'][6] | format_duration }}</td>
+                    <td>{{ item['args'][7]['args'][7] | format_price }}</td>
+                </tr>
+            {% endif %}
+        {% endfor %}
+    </table>
+</body>
+</html>
