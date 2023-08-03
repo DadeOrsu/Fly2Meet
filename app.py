@@ -1,9 +1,10 @@
 from datetime import datetime
 from flask import Flask, render_template, request
+from swiplserver import PrologMQI
+
 from utils.helpers import *
 from utils.prolog_parser import FlightParser
 import time
-import re
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
 
@@ -16,14 +17,11 @@ def format_price(value):
 app.jinja_env.filters['format_price'] = format_price
 
 
-# Filter for Jinja to format the duration of the flights
+# Filter for Jinja to format the duration from seconds to hours and minutes
 def format_duration(value):
-    hours_match = re.search(r'(\d+)H', value)
-    minutes_match = re.search(r'(\d+)M', value)
-
-    hours = int(hours_match.group(1)) if hours_match else 0
-    minutes = int(minutes_match.group(1)) if minutes_match else 0
-
+    # convert the duration from seconds to hours and minutes
+    hours = value // 3600
+    minutes = (value % 3600) // 60
     return f"{hours}h {minutes}m"
 
 
@@ -202,7 +200,9 @@ def search_flights():
     # convert the flight offers to prolog facts
     flight_parser = FlightParser()
     airport_facts = flight_parser.prolog_airport_parser(iata_codes)
-    all_flight_offers = first_city_offers + second_city_offers
+    first_city_offers = sorted(first_city_offers, key=lambda x: float(x["price"]["total"]))
+    second_city_offers = sorted(second_city_offers, key=lambda x: float(x["price"]["total"]))
+    all_flight_offers = first_city_offers[0:100] + second_city_offers[0:100]
     for i, item in enumerate(all_flight_offers):
         item['id'] = i
     prolog_facts = flight_parser.prolog_flight_parser(all_flight_offers)
@@ -210,12 +210,52 @@ def search_flights():
     prolog_file = open('prologFacts/prolog_facts.pl', 'w')
     prolog_file.write('\n'.join(airport_facts + prolog_facts))
     prolog_file.close()
-    # TODO: aggiungere opzione "città diversa" (per evitare voli diretti) e esplorare posti nuovi
-    # TODO: rivedere la ricerca per country usando tabella codici iata
-    # TODO: gestire waiting times e same airport
-    # TODO: controllare interfaccia con prolog (ciao prolog o pyswip?)
+    # collect the iata codes of the first city
+    first_city_iata_codes = set()
+    for tmp in first_city_offers[0:100]:
+        first_city_iata_codes.add(tmp['itineraries'][0]['segments'][0]['departure']['iataCode'].lower())
+
+    # collect the iata codes of the second city
+    second_city_iata_codes = set()
+    for tmp in second_city_offers[0:100]:
+        second_city_iata_codes.add(tmp['itineraries'][0]['segments'][0]['departure']['iataCode'].lower())
+    print(first_city_iata_codes)
+    print(second_city_iata_codes)
+    # array for the results of the query
+    results = []
+    # flag to check if return flights are included
+    if return_date is not None:
+        include_return = True
+    else:
+        include_return = False
+    # create the prolog server
+    with PrologMQI() as mqi:
+        with mqi.create_thread() as prolog_thread:
+            # Query the file
+            prolog_thread.query('consult(fly2meet)')
+            # Query the prolog file
+            for iata_code1 in first_city_iata_codes:
+                for iata_code2 in second_city_iata_codes:
+                    return_flag = 'yes' if include_return else 'no'
+                    same_airport_flag = 'yes' if same_airport else 'no'
+                    waiting_time = str(max_wait_time) if max_wait_time is not None else 'inf'
+                    query = (f'fly2meet({iata_code1}, {iata_code2}, bestsolution, {return_flag}, {waiting_time}, '
+                             f'{same_airport_flag}, Flights).')
+                    result = prolog_thread.query(query)
+                    if result:
+                        results.extend(result[0]['Flights'])
+
+    # sort the results by ranking
+    def sort_key(x):
+        return x['args'][3]
+
+    results.sort(key=sort_key)
+
     # TODO: aggiungere unità di test con pytest
-    return render_template("results.html", first_city_offers=first_city_offers, second_city_offers=second_city_offers)
+    # TODO: controllare che i dati passati alla query prolog siano corretti
+    # TODO: aggiungere la possibilità di mostrare messaggi di errore
+    # TODO: aggiungere la possibilità di mostrare i risultati in ordine di prezzo, durata, o ranking.
+    return render_template("display_results.html", prolog_results=results, include_return=include_return)
 
 
 @app.route('/')
