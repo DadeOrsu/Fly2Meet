@@ -250,9 +250,7 @@ def search_flights():
         return x['args'][3]
 
     results.sort(key=sort_key)
-
     # TODO: aggiungere unità di test con pytest
-    # TODO: aggiungere la possibilità di mostrare messaggi di errore
     # TODO: aggiungere la possibilità di mostrare i risultati in ordine di prezzo, durata, o ranking.
     # TODO: aggiungere un filtro jinja per mostrare al posto del codice iata il nome dell'aeroporto
     return render_template("display_results.html", prolog_results=results, include_return=include_return)
