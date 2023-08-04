@@ -233,11 +233,11 @@ def search_flights():
             # Query the file
             prolog_thread.query('consult(fly2meet)')
             # Query the prolog file
+            return_flag = 'yes' if include_return else 'no'
+            same_airport_flag = 'yes' if same_airport else 'no'
+            waiting_time = str(max_wait_time * 60) if max_wait_time is not None else 'inf'
             for iata_code1 in first_city_iata_codes:
                 for iata_code2 in second_city_iata_codes:
-                    return_flag = 'yes' if include_return else 'no'
-                    same_airport_flag = 'yes' if same_airport else 'no'
-                    waiting_time = str(max_wait_time) if max_wait_time is not None else 'inf'
                     query = (f'fly2meet({iata_code1}, {iata_code2}, bestsolution, {return_flag}, {waiting_time}, '
                              f'{same_airport_flag}, Flights).')
                     result = prolog_thread.query(query)
@@ -251,7 +251,6 @@ def search_flights():
     results.sort(key=sort_key)
 
     # TODO: aggiungere unità di test con pytest
-    # TODO: controllare che i dati passati alla query prolog siano corretti
     # TODO: aggiungere la possibilità di mostrare messaggi di errore
     # TODO: aggiungere la possibilità di mostrare i risultati in ordine di prezzo, durata, o ranking.
     # TODO: aggiungere un filtro jinja per mostrare al posto del codice iata il nome dell'aeroporto
