@@ -139,13 +139,14 @@ def filter_flight_offers_by_duration(flight_offers, hour):
     filtered_flight_offers = []
     for flight_offer in flight_offers:
         itineraries = flight_offer['itineraries']
-        for itinerary in itineraries:
-            segments = itinerary['segments']
-            for segment in segments:
-                duration_iso = segment['duration']
+        if itineraries:
+            first_itinerary = itineraries[0]
+            segments = first_itinerary['segments']
+            if segments:
+                first_segment = segments[0]
+                duration_iso = first_segment['duration']
                 if compare_duration_with_hours(hour, duration_iso):
                     filtered_flight_offers.append(flight_offer)
-                    break  # Exit the inner loop if at least one segment satisfies the condition
     return filtered_flight_offers
 
 
