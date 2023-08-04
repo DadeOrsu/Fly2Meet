@@ -2,32 +2,14 @@
 <html lang="en">
 <head>
     <title>Tabella Sol</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-        .even-row {
-            background-color: #f2f2f2;
-        }
-
-        .odd-row {
-            background-color: #ffffff;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='display_results.css') }}">
 </head>
 <body>
+    {% if error %}
+        <div class="error-box">
+        {{ error }}
+        </div>
+    {% else %}
     <h1>Tabella Sol</h1>
     <table>
         <tr>
@@ -75,5 +57,6 @@
             {% endif %}
         {% endfor %}
     </table>
+    {% endif %}
 </body>
 </html>
