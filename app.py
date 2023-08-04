@@ -145,7 +145,6 @@ def search_flights():
                                                          return_date, max_base_price, iata_codes)
             if fo is not None:
                 second_city_offers.extend(fo)
-
     else:
         # if the destination city is specified
         if target_cities is not None:
