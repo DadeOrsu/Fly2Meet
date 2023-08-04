@@ -1,0 +1,37 @@
+body {
+    background-image: url("airport.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.even-row {
+    background-color: #f2f2f2;
+}
+
+.odd-row {
+    background-color: #ffffff;
+}
+
+.error-box {
+    background-color: #ffdddd;
+    border: 1px solid #ff0000;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #ff0000;
+}
