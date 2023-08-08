@@ -1,62 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Tabella Sol</title>
+    <title>results</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='display_results.css') }}">
 </head>
 <body>
-    {% if error %}
-        <div class="error-box">
-        {{ error }}
-        </div>
-    {% else %}
-    <h1>Tabella Sol</h1>
-    <table>
-        <tr>
-            <th>departure at</th>
-            <th>arrival at</th>
-            <th>Carrier code</th>
-            <th>duration</th>
-            <th>price</th>
-        </tr>
-        {% for item in prolog_results %}
-            {% if loop.index is divisibleby 2 %}
-                {% set row_class = 'even-row' %}
-            {% else %}
-                {% set row_class = 'odd-row' %}
-            {% endif %}
-            <tr class="{{ row_class }}">
-                <td>{{ item['args'][4]['args'][0] }}</td>
-                <td>{{ item['args'][4]['args'][1] }}</td>
-                <td>{{ item['args'][4]['args'][2] }} {{ item['args'][4]['args'][3] }}</td>
-                <td>{{ item['args'][4]['args'][6] | format_duration }}</td>
-                <td>{{ item['args'][4]['args'][7] | format_price }}</td>
-            </tr>
-            <tr class="{{ row_class }}">
-                <td>{{ item['args'][5]['args'][0] }}</td>
-                <td>{{ item['args'][5]['args'][1] }}</td>
-                <td>{{ item['args'][5]['args'][2] }} {{ item['args'][5]['args'][3] }}</td>
-                <td>{{ item['args'][5]['args'][6] | format_duration }}</td>
-                <td>{{ item['args'][5]['args'][7] | format_price }}</td>
-            </tr>
-            {% if include_return %}
-                <tr class="{{ row_class }}">
-                    <td>{{ item['args'][6]['args'][0] }}</td>
-                    <td>{{ item['args'][6]['args'][1] }}</td>
-                    <td>{{ item['args'][6]['args'][2] }} {{ item['args'][6]['args'][3] }}</td>
-                    <td>{{ item['args'][6]['args'][6] | format_duration }}</td>
-                    <td>{{ item['args'][6]['args'][7] | format_price }}</td>
-                </tr>
-                <tr class="{{ row_class }}">
-                    <td>{{ item['args'][7]['args'][0] }}</td>
-                    <td>{{ item['args'][7]['args'][1] }}</td>
-                    <td>{{ item['args'][7]['args'][2] }} {{ item['args'][7]['args'][3] }}</td>
-                    <td>{{ item['args'][7]['args'][6] | format_duration }}</td>
-                    <td>{{ item['args'][7]['args'][7] | format_price }}</td>
-                </tr>
-            {% endif %}
+    <h1>
+        fly<span class="colored-character">2</span>meet
+    </h1>
+    <div class="button-container">
+        <button id="sort-arg-0">sort by AvgPrice</button>
+        <button id="sort-arg-1">sort by AvgDuration</button>
+        <button id="sort-arg-2">sort by WaitingTime</button>
+        <button id="sort-arg-3">sort by Rank</button>
+    </div>
+    <div id="results-container">
+        {% for item in prolog_results[:10] %}
+            <div class="container">
+                <!-- Il codice HTML per visualizzare i dati rimane invariato -->
+            </div>
         {% endfor %}
-    </table>
-    {% endif %}
+    </div>
+    <button class="view-more-button" id="view-more-button">show more</button>
+
+    <script>
+        const prologResults = {{ prolog_results | tojson | safe }};
+        const resultsContainer = document.getElementById("results-container");
+        const viewMoreButton = document.getElementById("view-more-button");
+        let displayedResults = 10;
+        // Filter in JavaScript to format the price
+        function formatPrice(value) {
+            return `${value} €`;
+        }
+
+        // Filter in JavaScript to format the duration from seconds to hours and minutes
+        function formatDuration(value) {
+            const hours = Math.floor(value / 3600);
+            const minutes = Math.floor((value % 3600) / 60);
+            return `${hours}h ${minutes}m`;
+        }
+
+        // Filter in JavaScript to format the departure and arrival time
+        function formatDatetime(value) {
+            const dateObj = new Date(value);
+            const formattedDate = dateObj.toLocaleDateString('it-IT');
+            const formattedTime = dateObj.toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' });
+            return `${formattedDate} alle ${formattedTime}`;
+        }
+
+        function generateResultHtml(item) {
+            return `<div class="container">
+                <div class="center-1"> ✈︎
+                    <div class="stick"></div><div class="arrow"></div>
+                </div>
+                <div class="left-top-1">${item['args'][4]['args'][2].toUpperCase()} ${item['args'][4]['args'][3]}</div>
+                <div class="center-top-1">${formatDuration(item['args'][4]['args'][6])}</div>
+                <div class="center-left-1">${item['args'][4]['args'][0].toUpperCase()}</div>
+                <div class="center-right-1">${item['args'][4]['args'][1].toUpperCase()}</div>
+                <div class="bottom-left-1">${item['args'][4]['args'][4]['args'][3]}:${item['args'][4]['args'][4]['args'][4]}</div>
+                <div class="bottom-right-1">${item['args'][4]['args'][5]['args'][3]}:${item['args'][4]['args'][5]['args'][4]}</div>
+                <div class="center-2"> ✈︎
+                    <div class="stick"></div><div class="arrow"></div>
+                </div>
+                <div class="left-top-2">${item['args'][5]['args'][2].toUpperCase()} ${item['args'][5]['args'][3]}</div>
+                <div class="center-top-2">${formatDuration(item['args'][5]['args'][6])}</div>
+                <div class="center-left-2">${item['args'][5]['args'][0].toUpperCase()}</div>
+                <div class="center-right-2">${item['args'][5]['args'][1].toUpperCase()}</div>
+                <div class="bottom-left-2">${item['args'][5]['args'][4]['args'][3]}:${item['args'][5]['args'][4]['args'][4]}</div>
+                <div class="bottom-right-2">${item['args'][5]['args'][5]['args'][3]}:${item['args'][5]['args'][5]['args'][4]}</div>
+            {% if include_return %}
+                <div class="center-3"> ✈
+                    <div class="stick"></div><div class="arrow"></div>
+                </div>
+                <div class="left-top-3">${item['args'][6]['args'][2].toUpperCase()} ${item['args'][6]['args'][3]}</div>
+                <div class="center-top-3">${formatDuration(item['args'][6]['args'][6])}</div>
+                <div class="center-left-3">${item['args'][6]['args'][0].toUpperCase()}</div>
+                <div class="center-right-3">${item['args'][6]['args'][1].toUpperCase()}</div>
+                <div class="bottom-left-3">${item['args'][6]['args'][4]['args'][3]}:${item['args'][6]['args'][4]['args'][4]}</div>
+                <div class="bottom-right-3">${item['args'][6]['args'][5]['args'][3]}:${item['args'][6]['args'][5]['args'][4]}</div>
+                <div class="center-4"> ✈
+                    <div class="stick"></div><div class="arrow"></div>
+                </div>
+                <div class="left-top-4">${item['args'][7]['args'][2].toUpperCase()} ${item['args'][7]['args'][3]}</div>
+                <div class="center-top-4">${formatDuration(item['args'][7]['args'][6])}</div>
+                <div class="center-left-4">${item['args'][7]['args'][0].toUpperCase()}</div>
+                <div class="center-right-4">${item['args'][7]['args'][1].toUpperCase()}</div>
+                <div class="bottom-left-4">${item['args'][7]['args'][4]['args'][3]}:${item['args'][7]['args'][4]['args'][4]}</div>
+                <div class="bottom-right-4">${item['args'][7]['args'][5]['args'][3]}:${item['args'][7]['args'][5]['args'][4]}</div>
+            {% endif %}`
+        }
+
+        function displayResults(resultsToDisplay) {
+            resultsContainer.innerHTML = "";
+            for (const result of resultsToDisplay) {
+                const resultHtml = generateResultHtml(result);
+                resultsContainer.insertAdjacentHTML("beforeend", resultHtml);
+            }
+        }
+
+        function sortResults(argIndex) {
+            const sortedResults = [...prologResults].sort((a, b) => a['args'][argIndex] - b['args'][argIndex]);
+            displayedResults = 10;
+            displayResults(sortedResults.slice(0, displayedResults));
+        }
+
+        document.getElementById("sort-arg-0").addEventListener("click", () => sortResults(0));
+        document.getElementById("sort-arg-1").addEventListener("click", () => sortResults(1));
+        document.getElementById("sort-arg-2").addEventListener("click", () => sortResults(2));
+        document.getElementById("sort-arg-3").addEventListener("click", () => sortResults(3));
+
+        function loadMoreResults() {
+            displayedResults += 10;
+            const resultsToDisplay = prologResults.slice(0, displayedResults);
+            displayResults(resultsToDisplay);
+
+            if (displayedResults >= prologResults.length) {
+                viewMoreButton.style.display = "none";
+            }
+        }
+
+        viewMoreButton.addEventListener("click", loadMoreResults);
+        displayResults(prologResults.slice(0, displayedResults));
+    </script>
 </body>
 </html>
