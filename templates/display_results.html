@@ -15,16 +15,13 @@
         <button id="sort-arg-3">sort by Rank</button>
     </div>
     <div id="results-container">
-        {% for item in prolog_results[:10] %}
-            <div class="container">
-                <!-- Il codice HTML per visualizzare i dati rimane invariato -->
-            </div>
-        {% endfor %}
+        <! -- results will be inserted here -->
     </div>
     <button class="view-more-button" id="view-more-button">show more</button>
 
     <script>
         const prologResults = {{ prolog_results | tojson | safe }};
+        const includeReturn = {{ include_return | lower }};
         const resultsContainer = document.getElementById("results-container");
         const viewMoreButton = document.getElementById("view-more-button");
         let displayedResults = 10;
@@ -49,7 +46,7 @@
         }
 
         function generateResultHtml(item) {
-            return `<div class="container">
+            let result = `<div class="container">
                 <div class="center-1"> ✈︎
                     <div class="stick"></div><div class="arrow"></div>
                 </div>
@@ -67,9 +64,9 @@
                 <div class="center-left-2">${item['args'][5]['args'][0].toUpperCase()}</div>
                 <div class="center-right-2">${item['args'][5]['args'][1].toUpperCase()}</div>
                 <div class="bottom-left-2">${item['args'][5]['args'][4]['args'][3]}:${item['args'][5]['args'][4]['args'][4]}</div>
-                <div class="bottom-right-2">${item['args'][5]['args'][5]['args'][3]}:${item['args'][5]['args'][5]['args'][4]}</div>
-            {% if include_return %}
-                <div class="center-3"> ✈
+                <div class="bottom-right-2">${item['args'][5]['args'][5]['args'][3]}:${item['args'][5]['args'][5]['args'][4]}</div>`
+            if (includeReturn) {
+                result += `<div class="center-3"> ✈
                     <div class="stick"></div><div class="arrow"></div>
                 </div>
                 <div class="left-top-3">${item['args'][6]['args'][2].toUpperCase()} ${item['args'][6]['args'][3]}</div>
@@ -86,8 +83,10 @@
                 <div class="center-left-4">${item['args'][7]['args'][0].toUpperCase()}</div>
                 <div class="center-right-4">${item['args'][7]['args'][1].toUpperCase()}</div>
                 <div class="bottom-left-4">${item['args'][7]['args'][4]['args'][3]}:${item['args'][7]['args'][4]['args'][4]}</div>
-                <div class="bottom-right-4">${item['args'][7]['args'][5]['args'][3]}:${item['args'][7]['args'][5]['args'][4]}</div>
-            {% endif %}`
+                <div class="bottom-right-4">${item['args'][7]['args'][5]['args'][3]}:${item['args'][7]['args'][5]['args'][4]}</div>`
+            }
+            result += `</div>`
+            return result;
         }
 
         function displayResults(resultsToDisplay) {
@@ -121,6 +120,9 @@
 
         viewMoreButton.addEventListener("click", loadMoreResults);
         displayResults(prologResults.slice(0, displayedResults));
+        if (displayedResults >= prologResults.length) {
+            viewMoreButton.style.display = "none";
+        }
     </script>
 </body>
 </html>
