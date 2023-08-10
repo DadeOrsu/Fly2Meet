@@ -20,8 +20,18 @@
     <button class="view-more-button" id="view-more-button">show more</button>
 
     <script>
-        const prologResults = {{ prolog_results | tojson | safe }};
-        const includeReturn = {{ include_return | lower }};
+        let prologResults = [];
+        {% if prolog_results is defined %}
+            prologResults = {{ prolog_results | tojson | safe }};
+        {% endif %}
+        let includeReturn = false;
+        {% if include_return is defined %}
+            includeReturn = {{ include_return | lower }};
+        {% endif %}
+        let errorMsg = null;
+        {% if error_msg is defined %}
+            errorMsg = {{ error_msg | tojson | safe }};
+        {% endif %}
         const resultsContainer = document.getElementById("results-container");
         const viewMoreButton = document.getElementById("view-more-button");
         let displayedResults = 10;
@@ -97,6 +107,10 @@
             }
         }
 
+        function displayErrorMSG(errorMsg){
+            resultsContainer.innerHTML = "";
+            resultsContainer.insertAdjacentHTML("beforeend", `<div class="error-box">${errorMsg}</div>`);
+        }
         function sortResults(argIndex) {
             const sortedResults = [...prologResults].sort((a, b) => a['args'][argIndex] - b['args'][argIndex]);
             displayedResults = 10;
@@ -118,10 +132,20 @@
             }
         }
 
-        viewMoreButton.addEventListener("click", loadMoreResults);
-        displayResults(prologResults.slice(0, displayedResults));
-        if (displayedResults >= prologResults.length) {
+        if (errorMsg){
+            document.getElementById("sort-arg-0").style.display = "none";
+            document.getElementById("sort-arg-1").style.display = "none";
+            document.getElementById("sort-arg-2").style.display = "none";
+            document.getElementById("sort-arg-3").style.display = "none";
             viewMoreButton.style.display = "none";
+            displayErrorMSG(errorMsg);
+        }
+        else {
+            viewMoreButton.addEventListener("click", loadMoreResults);
+            displayResults(prologResults.slice(0, displayedResults));
+            if (displayedResults >= prologResults.length) {
+                viewMoreButton.style.display = "none";
+            }
         }
     </script>
 </body>
