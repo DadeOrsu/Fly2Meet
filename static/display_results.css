@@ -24,16 +24,16 @@ h1 {
   gap: 0 0;
   grid-auto-flow: row;
   grid-template-areas:
-    "left-top-1 center-top-1 ."
+    "left-top-1 center-top-1 right-top-1"
     "center-left-1 center-1 center-right-1"
     "bottom-left-1 . bottom-right-1"
-    "left-top-2 center-top-2 ."
+    "left-top-2 center-top-2 right-top-2"
     "center-left-2 center-2 center-right-2"
     "bottom-left-2 . bottom-right-2"
-    "left-top-3 center-top-3 ."
+    "left-top-3 center-top-3 right-top-3"
     "center-left-3 center-3 center-right-3"
     "bottom-left-3 . bottom-right-3"
-    "left-top-4 center-top-4 ."
+    "left-top-4 center-top-4 right-top-4"
     "center-left-4 center-4 center-right-4"
     "bottom-left-4 . bottom-right-4";
     text-align: center;
@@ -69,6 +69,8 @@ h1 {
 
 .left-top{color: gray; text-align: left}
 
+.right-top{color: gray; text-align: right}
+
 .center-top { display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -91,6 +93,7 @@ h1 {
 .center-right-1 { grid-area: center-right-1; }
 .bottom-left-1 { grid-area: bottom-left-1; }
 .bottom-right-1 { grid-area: bottom-right-1; }
+.right-top-1 { grid-area: right-top-1; }
 
 .left-top-2 { grid-area: left-top-2; }
 .center-top-2 { grid-area: center-top-2; }
@@ -99,6 +102,7 @@ h1 {
 .center-right-2 { grid-area: center-right-2; }
 .bottom-left-2 { grid-area: bottom-left-2; }
 .bottom-right-2 { grid-area: bottom-right-2; }
+.right-top-2 { grid-area: right-top-2; }
 
 .left-top-3 { grid-area: left-top-3; }
 .center-top-3 { grid-area: center-top-3; }
@@ -107,6 +111,7 @@ h1 {
 .center-right-3 { grid-area: center-right-3; }
 .bottom-left-3 { grid-area: bottom-left-3; }
 .bottom-right-3 { grid-area: bottom-right-3; }
+.right-top-3 { grid-area: right-top-3; }
 
 .left-top-4 { grid-area: left-top-4; }
 .center-top-4 { grid-area: center-top-4; }
@@ -115,7 +120,7 @@ h1 {
 .center-right-4 { grid-area: center-right-4; }
 .bottom-left-4 { grid-area: bottom-left-4; }
 .bottom-right-4 { grid-area: bottom-right-4; }
-
+.right-top-4 { grid-area: right-top-4; }
 
 .button-container {
     margin: auto;
