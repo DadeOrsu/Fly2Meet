@@ -1,9 +1,9 @@
 body {
   background-image: url("airport.jpg");
-  background-size: cover;
+  background-color: #b0cbea;
+  background-repeat: repeat;
   background-position: center;
   height: 100vh;
-  margin: 0;
   font-family: Arial, sans-serif;
 
 }
