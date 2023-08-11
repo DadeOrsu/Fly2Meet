@@ -62,6 +62,7 @@
                 </div>
                 <div class="left-top left-top-1">${item['args'][4]['args'][2].toUpperCase()} ${item['args'][4]['args'][3]}</div>
                 <div class="center-top center-top-1">${formatDuration(item['args'][4]['args'][6])}</div>
+                <div class="right-top right-top-1">${formatPrice(item['args'][4]['args'][7])}</div>
                 <div class="center-left center-left-1">${item['args'][4]['args'][0].toUpperCase()}</div>
                 <div class="center-right center-right-1">${item['args'][4]['args'][1].toUpperCase()}</div>
                 <div class="bottom-left bottom-left-1">${item['args'][4]['args'][4]['args'][3]}:${item['args'][4]['args'][4]['args'][4]}</div>
@@ -70,7 +71,15 @@
                     <div class="stick"></div><div class="arrow"></div>
                 </div>
                 <div class="left-top left-top-2">${item['args'][5]['args'][2].toUpperCase()} ${item['args'][5]['args'][3]}</div>
-                <div class="center-top center-top-2">${formatDuration(item['args'][5]['args'][6])}</div>
+                <div class="center-top center-top-2">${formatDuration(item['args'][5]['args'][6])}</div>`
+            if (includeReturn) {
+                result += `<div class="right-top right-top-2"></div>`;
+
+            }
+            else {
+                result += `<div class="right-top right-top-2">${formatPrice(item['args'][5]['args'][7])}</div>`;
+            }
+            result += `
                 <div class="center-left center-left-2">${item['args'][5]['args'][0].toUpperCase()}</div>
                 <div class="center-right center-right-2">${item['args'][5]['args'][1].toUpperCase()}</div>
                 <div class="bottom-left bottom-left-2">${item['args'][5]['args'][4]['args'][3]}:${item['args'][5]['args'][4]['args'][4]}</div>
@@ -81,6 +90,7 @@
                 </div>
                 <div class="left-top left-top-3">${item['args'][6]['args'][2].toUpperCase()} ${item['args'][6]['args'][3]}</div>
                 <div class="center-top center-top-3">${formatDuration(item['args'][6]['args'][6])}</div>
+                <div class="right-top right-top-3">${formatPrice(item['args'][6]['args'][7])}</div>
                 <div class="center-left center-left-3">${item['args'][6]['args'][0].toUpperCase()}</div>
                 <div class="center-right center-right-3">${item['args'][6]['args'][1].toUpperCase()}</div>
                 <div class="bottom-left bottom-left-3">${item['args'][6]['args'][4]['args'][3]}:${item['args'][6]['args'][4]['args'][4]}</div>
@@ -90,6 +100,7 @@
                 </div>
                 <div class="left-top left-top-4">${item['args'][7]['args'][2].toUpperCase()} ${item['args'][7]['args'][3]}</div>
                 <div class="center-top center-top-4">${formatDuration(item['args'][7]['args'][6])}</div>
+                <div class="right-top right-top-4"></div>
                 <div class="center-left center-left-4">${item['args'][7]['args'][0].toUpperCase()}</div>
                 <div class="center-right center-right-4">${item['args'][7]['args'][1].toUpperCase()}</div>
                 <div class="bottom-left bottom-left-4">${item['args'][7]['args'][4]['args'][3]}:${item['args'][7]['args'][4]['args'][4]}</div>
