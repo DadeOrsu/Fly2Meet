@@ -23,14 +23,14 @@ def test_search_flights():
         response = client.post('/search_flights', data={
             'departure_city_1': 'Paris',
             'departure_city_2': 'London',
-            'departure_date': '2023-08-10',
+            'departure_date': '2023-08-14',
             'return_date': '2023-08-20',
             'max_base_price': '500',
             'max_duration': '6',
             'max_wait_time': '3',
             'target_cities': 'Madrid, Barcelona',
             'target_countries': 'Italy, France',
-            'same_airport': 'on',
+            'different_city': 'on',
         })
 
         # check that the request was successful
@@ -44,13 +44,14 @@ def test_search_flights_simple():
         response = client.post('/search_flights', data={
             'departure_city_1': 'Paris',
             'departure_city_2': 'London',
-            'departure_date': '2023-08-10',
+            'departure_date': '2023-08-14',
             'return_date': '',
             'max_base_price': '',
             'max_duration': '',
             'max_wait_time': '',
             'target_cities': '',
             'target_countries': '',
+            'different_city': 'on',
         })
 
         # check that the request was successful
@@ -64,14 +65,14 @@ def test_search_flights_invalid_city_1():
         response = client.post('/search_flights', data={
             'departure_city_1': 'NonExistingCity1',
             'departure_city_2': 'London',
-            'departure_date': '2023-08-10',
+            'departure_date': '2023-08-14',
             'return_date': '2023-08-20',
             'max_base_price': '500',
             'max_duration': '6',
             'max_wait_time': '3',
             'target_cities': 'Madrid, Barcelona',
             'target_countries': 'Italy, France',
-            'same_airport': 'on',
+            'different_city': 'on',
         })
 
         # check that the request was successful
@@ -85,14 +86,14 @@ def test_search_flights_invalid_city_2():
         response = client.post('/search_flights', data={
             'departure_city_1': 'London',
             'departure_city_2': 'NonExistingCity2',
-            'departure_date': '2023-08-10',
+            'departure_date': '2023-08-14',
             'return_date': '2023-08-20',
             'max_base_price': '500',
             'max_duration': '6',
             'max_wait_time': '3',
             'target_cities': 'Madrid, Barcelona',
             'target_countries': 'Italy, France',
-            'same_airport': 'on',
+            'different_city': 'on',
         })
 
         # check that the request was successful
