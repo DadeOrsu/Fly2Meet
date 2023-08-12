@@ -30,8 +30,7 @@ def test_search_flights():
             'max_wait_time': '3',
             'target_cities': 'Madrid, Barcelona',
             'target_countries': 'Italy, France',
-            'same_airport': 'true',
-            'different_city': 'false'
+            'same_airport': 'on',
         })
 
         # check that the request was successful
@@ -52,7 +51,6 @@ def test_search_flights_simple():
             'max_wait_time': '',
             'target_cities': '',
             'target_countries': '',
-            'same_airport': '',
         })
 
         # check that the request was successful
@@ -73,8 +71,7 @@ def test_search_flights_invalid_city_1():
             'max_wait_time': '3',
             'target_cities': 'Madrid, Barcelona',
             'target_countries': 'Italy, France',
-            'same_airport': 'true',
-            'different_city': 'false'
+            'same_airport': 'on',
         })
 
         # check that the request was successful
@@ -95,8 +92,7 @@ def test_search_flights_invalid_city_2():
             'max_wait_time': '3',
             'target_cities': 'Madrid, Barcelona',
             'target_countries': 'Italy, France',
-            'same_airport': 'true',
-            'different_city': 'false'
+            'same_airport': 'on',
         })
 
         # check that the request was successful
