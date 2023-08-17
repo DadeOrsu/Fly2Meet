@@ -66,25 +66,27 @@
                 <div class="center-left center-left-1">${item['args'][4]['args'][0].toUpperCase()}</div>
                 <div class="center-right center-right-1">${item['args'][4]['args'][1].toUpperCase()}</div>
                 <div class="bottom-left bottom-left-1">${item['args'][4]['args'][4]['args'][3]}:${item['args'][4]['args'][4]['args'][4]}</div>
-                <div class="bottom-right bottom-right-1">${item['args'][4]['args'][5]['args'][3]}:${item['args'][4]['args'][5]['args'][4]}</div>
-                <div class="center center-2"> ✈︎
-                    <div class="stick"></div><div class="arrow"></div>
-                </div>
-                <div class="left-top left-top-2">${item['args'][5]['args'][2].toUpperCase()} ${item['args'][5]['args'][3]}</div>
-                <div class="center-top center-top-2">${formatDuration(item['args'][5]['args'][6])}</div>`
-            if (includeReturn) {
-                result += `<div class="right-top right-top-2"></div>`;
+                <div class="bottom-right bottom-right-1">${item['args'][4]['args'][5]['args'][3]}:${item['args'][4]['args'][5]['args'][4]}</div>`
+                if(item['args'][5] != "_"){
+                    result += `<div class="center center-2"> ✈︎
+                        <div class="stick"></div><div class="arrow"></div>
+                    </div>
+                    <div class="left-top left-top-2">${item['args'][5]['args'][2].toUpperCase()} ${item['args'][5]['args'][3]}</div>
+                    <div class="center-top center-top-2">${formatDuration(item['args'][5]['args'][6])}</div>`
 
-            }
-            else {
-                result += `<div class="right-top right-top-2">${formatPrice(item['args'][5]['args'][7])}</div>`;
-            }
-            result += `
-                <div class="center-left center-left-2">${item['args'][5]['args'][0].toUpperCase()}</div>
-                <div class="center-right center-right-2">${item['args'][5]['args'][1].toUpperCase()}</div>
-                <div class="bottom-left bottom-left-2">${item['args'][5]['args'][4]['args'][3]}:${item['args'][5]['args'][4]['args'][4]}</div>
-                <div class="bottom-right bottom-right-2">${item['args'][5]['args'][5]['args'][3]}:${item['args'][5]['args'][5]['args'][4]}</div>`
-            if (includeReturn) {
+                    if (includeReturn) {
+                        result += `<div class="right-top right-top-2"></div>`;
+
+                    } else {
+                        result += `<div class="right-top right-top-2">${formatPrice(item['args'][5]['args'][7])}</div>`;
+                    }
+                    result += `
+                    <div class="center-left center-left-2">${item['args'][5]['args'][0].toUpperCase()}</div>
+                    <div class="center-right center-right-2">${item['args'][5]['args'][1].toUpperCase()}</div>
+                    <div class="bottom-left bottom-left-2">${item['args'][5]['args'][4]['args'][3]}:${item['args'][5]['args'][4]['args'][4]}</div>
+                    <div class="bottom-right bottom-right-2">${item['args'][5]['args'][5]['args'][3]}:${item['args'][5]['args'][5]['args'][4]}</div>`
+                }
+            if (includeReturn && item['args'][6] != "_") {
                 result += `<div class="center center-3"> ✈
                     <div class="stick"></div><div class="arrow"></div>
                 </div>
