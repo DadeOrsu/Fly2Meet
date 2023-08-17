@@ -56,6 +56,8 @@ def search_flights():
     max_wait_time = request.form.get('max_wait_time')
     if max_wait_time == '':
         max_wait_time = None
+    else:
+        max_wait_time = int(max_wait_time) * 60
     target_cities = request.form.get('target_cities')
     if target_cities == '':
         target_cities = None
@@ -236,11 +238,14 @@ def search_flights():
             # Query the prolog file
             return_flag = 'yes' if include_return else 'no'
             same_airport_flag = 'yes' if same_airport else 'no'
-            waiting_time = str(max_wait_time * 60) if max_wait_time is not None else 'inf'
+            different_city_flag = 'yes' if different_city else 'no'
+            waiting_time = max_wait_time if max_wait_time is not None else 'inf'
             for iata_code1 in first_city_iata_codes:
                 for iata_code2 in second_city_iata_codes:
+                    print(f'fly2meet({iata_code1}, {iata_code2}, bestsolution, {return_flag}, {waiting_time}, '
+                          f'{same_airport_flag},{different_city_flag}, Flights).')
                     query = (f'fly2meet({iata_code1}, {iata_code2}, bestsolution, {return_flag}, {waiting_time}, '
-                             f'{same_airport_flag}, Flights).')
+                             f'{same_airport_flag},{different_city_flag}, Flights).')
                     result = prolog_thread.query(query)
                     if result:
                         results.extend(result[0]['Flights'])
