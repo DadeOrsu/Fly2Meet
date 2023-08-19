@@ -3,22 +3,30 @@
 
 :- begin_tests(fly2meet).
 
-:- consult(fly2meet).
-:- consult('prologFacts/prolog_facts.pl').
+:- dynamic(airport/3).
+:- dynamic(flight/8).
+setup :-
+    consult('prologFacts/prolog_facts.pl').
 
-test(fly2meet_case1) :-
+teardown :-
+    retractall(airport(_, _, _)),
+    retractall(flight(_, _, _, _, _, _, _, _)).
+
+:- consult(fly2meet).
+
+test(fly2meet_case1, [setup(setup), cleanup(teardown)]) :-
     fly2meet(cdg, lhr, bestsolution, no, 4000, yes, yes, Flights),
     assertion(nonvar(Flights)).
 
-test(fly2meet_case2) :-
+test(fly2meet_case2, [setup(setup), cleanup(teardown)]) :-
     fly2meet(cdg, lhr, bestsolution, no, 4000, yes, no, Flights),
     assertion(nonvar(Flights)).
 
-test(fly2meet_case3) :-
+test(fly2meet_case3, [setup(setup), cleanup(teardown)]) :-
     fly2meet(cdg, lhr, bestsolution, no, 4000, no, yes, Flights),
     assertion(nonvar(Flights)).
 
-test(fly2meet_case4) :-
+test(fly2meet_case4, [setup(setup), cleanup(teardown)]) :-
     fly2meet(cdg, lhr, bestsolution, no, 4000, no, no, Flights),
     assertion(nonvar(Flights)).
 
