@@ -234,6 +234,7 @@ def search_flights():
     with PrologMQI() as mqi:
         with mqi.create_thread() as prolog_thread:
             # Query the file
+            prolog_thread.query('consult(prologFacts/prolog_facts)')
             prolog_thread.query('consult(fly2meet)')
             # Query the prolog file
             return_flag = 'yes' if include_return else 'no'
