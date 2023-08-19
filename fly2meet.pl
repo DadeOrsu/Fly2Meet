@@ -1,5 +1,3 @@
-:- consult('prologFacts/prolog_facts.pl').
-
 wPrice(AP) :- AP is 1/3.
 wDuration(AD) :- AD is 1/3.
 wWaitingTime(AWT) :- AWT is 1/3.
