@@ -1,8 +1,10 @@
-:- consult(fly2meet).
-
-:- consult('prologFacts/prolog_facts.pl').
+% TODO: aggiungere tests per voli con ritorno e raffinare i test esistenti.
+% TODO: guardare come fare cleanup tra un test e altro. Ogni test deve essere indipendente dagli altri.
 
 :- begin_tests(fly2meet).
+
+:- consult(fly2meet).
+:- consult('prologFacts/prolog_facts.pl').
 
 test(fly2meet_case1) :-
     fly2meet(cdg, lhr, bestsolution, no, 4000, yes, yes, Flights),
