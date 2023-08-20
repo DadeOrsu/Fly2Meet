@@ -6,7 +6,7 @@
 :- dynamic(airport/3).
 :- dynamic(flight/8).
 setup :-
-    consult('prologFacts/prolog_facts.pl').
+    consult('prologFacts/test1.pl').
 
 teardown :-
     retractall(airport(_, _, _)),
