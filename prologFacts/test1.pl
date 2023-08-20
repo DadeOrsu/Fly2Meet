@@ -1,5 +1,3 @@
-:- dynamic(airport/3).
-
 airport(mad, 'Madrid', es).
 airport(ory, 'Paris', fr).
 airport(lgw, 'London', gb).
