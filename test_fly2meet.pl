@@ -5,33 +5,62 @@
 
 :- dynamic(airport/3).
 :- dynamic(flight/8).
-setup :-
-    consult('prologFacts/test1.pl').
+:- dynamic(itinerary/5).
 
-teardown :-
+setup1 :-
+    copy_file('prologFacts/test1.pl', 'prologFacts/prolog_facts.pl'),
+    consult('prologFacts/prolog_facts.pl').
+
+setup2 :-
+    copy_file('prologFacts/test2.pl', 'prologFacts/prolog_facts.pl'),
+    consult('prologFacts/prolog_facts.pl').
+
+teardown1 :-
     retractall(airport(_, _, _)),
     retractall(flight(_, _, _, _, _, _, _, _)).
 
+teardown2 :-
+    retractall(airport(_, _, _)),
+    retractall(itinerary(_, _, _, _, _)).
 
-test(fly2meet_case1, [setup(setup), cleanup(teardown)]) :-
+test(fly2meet_case1, [setup(setup1), cleanup(teardown1)]) :-
     consult(fly2meet),
     fly2meet(cdg, lhr, bestsolution, no, 4000, yes, yes, Flights),
     assertion(nonvar(Flights)).
 
-test(fly2meet_case2, [setup(setup), cleanup(teardown)]) :-
+test(fly2meet_case2, [setup(setup1), cleanup(teardown1)]) :-
     consult(fly2meet),
     fly2meet(cdg, lhr, bestsolution, no, 4000, yes, no, Flights),
     assertion(nonvar(Flights)).
 
-test(fly2meet_case3, [setup(setup), cleanup(teardown)]) :-
+test(fly2meet_case3, [setup(setup1), cleanup(teardown1)]) :-
     consult(fly2meet),
     fly2meet(cdg, lhr, bestsolution, no, 4000, no, yes, Flights),
     assertion(nonvar(Flights)).
 
-test(fly2meet_case4, [setup(setup), cleanup(teardown)]) :-
+test(fly2meet_case4, [setup(setup1), cleanup(teardown1)]) :-
     consult(fly2meet),
     fly2meet(cdg, lhr, bestsolution, no, 4000, no, no, Flights),
     assertion(nonvar(Flights)).
 
+test(fly2meet_case5, [setup(setup2), cleanup(teardown2)]) :-
+    consult(fly2meet),
+    fly2meet(cdg, lhr, bestsolution, yes, 4000, yes, yes, Flights),
+    assertion(nonvar(Flights)).
+
+test(fly2meet_case6, [setup(setup2), cleanup(teardown2)]) :-
+    consult(fly2meet),
+    fly2meet(cdg, lhr, bestsolution, yes, 4000, yes, no, Flights),
+    assertion(nonvar(Flights)).
+
+test(fly2meet_case7, [setup(setup2), cleanup(teardown2)]) :-
+    consult(fly2meet),
+    fly2meet(cdg, lhr, bestsolution, yes, 4000, no, yes, Flights),
+    assertion(nonvar(Flights)).
+
+test(fly2meet_case8, [setup(setup2), cleanup(teardown2)]) :-
+    consult(fly2meet),
+    fly2meet(cdg, lhr, bestsolution, yes, 4000, no, no, Flights),
+    assertion(nonvar(Flights)).
 :- end_tests(fly2meet).
 
