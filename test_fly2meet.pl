@@ -8,12 +8,10 @@
 :- dynamic(itinerary/5).
 
 setup1 :-
-    copy_file('prologFacts/test1.pl', 'prologFacts/prolog_facts.pl'),
-    consult('prologFacts/prolog_facts.pl').
+    consult('prologFacts/test1.pl').
 
 setup2 :-
-    copy_file('prologFacts/test2.pl', 'prologFacts/prolog_facts.pl'),
-    consult('prologFacts/prolog_facts.pl').
+    consult('prologFacts/test2.pl').
 
 teardown1 :-
     retractall(airport(_, _, _)),
