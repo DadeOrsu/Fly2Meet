@@ -24,35 +24,35 @@ teardown2 :-
     retractall(itinerary(_, _, _, _, _)).
 
 test(fly2meet_case1, [setup(setup1), cleanup(teardown1)]) :-
-    fly2meet(cdg, lhr, bestsolution, no, 4000, yes, yes, Flights),
+    once(fly2meet(cdg, lhr, bestsolution, no, 4000, yes, yes, Flights)),
     assertion(nonvar(Flights)).
 
 test(fly2meet_case2, [setup(setup1), cleanup(teardown1)]) :-
-    fly2meet(cdg, lhr, bestsolution, no, 4000, yes, no, Flights),
+    once(fly2meet(cdg, lhr, bestsolution, no, 4000, yes, no, Flights)),
     assertion(nonvar(Flights)).
 
 test(fly2meet_case3, [setup(setup1), cleanup(teardown1)]) :-
-    fly2meet(cdg, lhr, bestsolution, no, 4000, no, yes, Flights),
+    once(fly2meet(cdg, lhr, bestsolution, no, 4000, no, yes, Flights)),
     assertion(nonvar(Flights)).
 
 test(fly2meet_case4, [setup(setup1), cleanup(teardown1)]) :-
-    fly2meet(cdg, lhr, bestsolution, no, 4000, no, no, Flights),
+    once(fly2meet(cdg, lhr, bestsolution, no, 4000, no, no, Flights)),
     assertion(nonvar(Flights)).
 
 test(fly2meet_case5, [setup(setup2), cleanup(teardown2)]) :-
-    fly2meet(cdg, lhr, bestsolution, yes, 4000, yes, yes, Flights),
+    once(fly2meet(cdg, lhr, bestsolution, yes, 4000, yes, yes, Flights)),
     assertion(nonvar(Flights)).
 
 test(fly2meet_case6, [setup(setup2), cleanup(teardown2)]) :-
-    fly2meet(cdg, lhr, bestsolution, yes, 4000, yes, no, Flights),
+    once(fly2meet(cdg, lhr, bestsolution, yes, 4000, yes, no, Flights)),
     assertion(nonvar(Flights)).
 
 test(fly2meet_case7, [setup(setup2), cleanup(teardown2)]) :-
-    fly2meet(cdg, lhr, bestsolution, yes, 4000, no, yes, Flights),
+    once(fly2meet(cdg, lhr, bestsolution, yes, 4000, no, yes, Flights)),
     assertion(nonvar(Flights)).
 
 test(fly2meet_case8, [setup(setup2), cleanup(teardown2)]) :-
-    fly2meet(cdg, lhr, bestsolution, yes, 4000, no, no, Flights),
+    once(fly2meet(cdg, lhr, bestsolution, yes, 4000, no, no, Flights)),
     assertion(nonvar(Flights)).
 
 :- end_tests(fly2meet).
