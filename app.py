@@ -256,8 +256,6 @@ def search_flights():
         return x['args'][3]
 
     results.sort(key=sort_key)
-    # TODO: aggiungere unità di test con pytest
-    # TODO: aggiungere possibilità di visualizzare messaggio di errore nel nuovo template
     return render_template("display_results.html", prolog_results=results, include_return=include_return)
 
 
