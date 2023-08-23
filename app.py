@@ -221,8 +221,6 @@ def search_flights():
     second_city_iata_codes = set()
     for tmp in second_city_offers[0:100]:
         second_city_iata_codes.add(tmp['itineraries'][0]['segments'][0]['departure']['iataCode'].lower())
-    print(first_city_iata_codes)
-    print(second_city_iata_codes)
     # array for the results of the query
     results = []
     # flag to check if return flights are included
@@ -243,10 +241,8 @@ def search_flights():
             waiting_time = max_wait_time if max_wait_time is not None else 'inf'
             for iata_code1 in first_city_iata_codes:
                 for iata_code2 in second_city_iata_codes:
-                    print(f'fly2meet({iata_code1}, {iata_code2}, bestsolution, {return_flag}, {waiting_time}, '
-                          f'{same_airport_flag},{different_city_flag}, Flights).')
-                    query = (f'fly2meet({iata_code1}, {iata_code2}, bestsolution, {return_flag}, {waiting_time}, '
-                             f'{same_airport_flag},{different_city_flag}, Flights).')
+                    query = (f'fly2meet({iata_code1},{iata_code2}, bestsolution,{return_flag},{waiting_time},'
+                             f'{same_airport_flag},{different_city_flag},Flights).')
                     result = prolog_thread.query(query)
                     if result:
                         results.extend(result[0]['Flights'])
