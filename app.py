@@ -204,7 +204,7 @@ def search_flights():
     airport_facts = flight_parser.prolog_airport_parser(iata_codes)
     first_city_offers = sorted(first_city_offers, key=lambda x: float(x["price"]["total"]))
     second_city_offers = sorted(second_city_offers, key=lambda x: float(x["price"]["total"]))
-    all_flight_offers = first_city_offers[0:100] + second_city_offers[0:100]
+    all_flight_offers = first_city_offers + second_city_offers
     for i, item in enumerate(all_flight_offers):
         item['id'] = i
     prolog_facts = flight_parser.prolog_flight_parser(all_flight_offers)
@@ -214,12 +214,12 @@ def search_flights():
     prolog_file.close()
     # collect the iata codes of the first city
     first_city_iata_codes = set()
-    for tmp in first_city_offers[0:100]:
+    for tmp in first_city_offers:
         first_city_iata_codes.add(tmp['itineraries'][0]['segments'][0]['departure']['iataCode'].lower())
 
     # collect the iata codes of the second city
     second_city_iata_codes = set()
-    for tmp in second_city_offers[0:100]:
+    for tmp in second_city_offers:
         second_city_iata_codes.add(tmp['itineraries'][0]['segments'][0]['departure']['iataCode'].lower())
     # array for the results of the query
     results = []
