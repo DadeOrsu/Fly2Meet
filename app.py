@@ -129,8 +129,7 @@ def search_flights():
                                                          return_date, max_base_price, iata_codes)
             if fo is not None:
                 first_city_offers.extend(fo)
-        # Search of the flight offers for the second departure city using the destinations set of the first search
-        second_city_offers = []
+
         for target_cities in first_city_destinations:
             time.sleep(1)
             # API call to get the flight offers of the second departure city
