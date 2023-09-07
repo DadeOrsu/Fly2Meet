@@ -121,7 +121,6 @@ def get_airports_from_country_name(country_name):
                 atype = row[1]
                 iso_country = row[5]
                 iata_code = row[9]
-                # Puoi elaborare i dati come preferisci per ogni riga
                 if iata_code != "" and iso_country == country_data.alpha_2 and atype == "large_airport":
                     iata_codes.add(iata_code)
             return iata_codes
