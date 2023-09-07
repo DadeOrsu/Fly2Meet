@@ -110,8 +110,6 @@ def search_flights():
         flight_inspirations = get_flight_inspirations(iata_departure_city_1, departure_date, max_base_price)
         if flight_inspirations is None:
             return render_template('display_results.html', error_msg="No flight inspirations found.")
-        # Array that collects all the offers of the first departure city
-        first_city_offers = []
         # Set of all destinations for the flights of the first departure city
         first_city_destinations = set()
         for flight in flight_inspirations:
