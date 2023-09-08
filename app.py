@@ -225,17 +225,17 @@ def search_flights():
         include_return = True
     else:
         include_return = False
+    # Query the prolog file
+    return_flag = 'yes' if include_return else 'no'
+    same_airport_flag = 'yes' if same_airport else 'no'
+    different_city_flag = 'yes' if different_city else 'no'
+    waiting_time = max_wait_time if max_wait_time is not None else 'inf'
     # create the prolog server
     with PrologMQI() as mqi:
         with mqi.create_thread() as prolog_thread:
             # Query the file
             prolog_thread.query('consult(prologFacts/prolog_facts)')
             prolog_thread.query('consult(fly2meet)')
-            # Query the prolog file
-            return_flag = 'yes' if include_return else 'no'
-            same_airport_flag = 'yes' if same_airport else 'no'
-            different_city_flag = 'yes' if different_city else 'no'
-            waiting_time = max_wait_time if max_wait_time is not None else 'inf'
             for iata_code1 in first_city_iata_codes:
                 for iata_code2 in second_city_iata_codes:
                     query = (f'fly2meet({iata_code1},{iata_code2}, bestsolution,{return_flag},{waiting_time},'
