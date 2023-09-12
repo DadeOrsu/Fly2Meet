@@ -69,11 +69,11 @@ def search_flights():
         same_airport = False
     else:
         same_airport = True
-    different_city = request.form.get('different_city')
-    if different_city is None:
-        different_city = False
+    new_city = request.form.get('new_city')
+    if new_city is None:
+        new_city = False
     else:
-        different_city = True
+        new_city = True
     # Print the collected datas on the console
     print(
         f"departure_city_1: {departure_city_1}\n"
@@ -86,7 +86,7 @@ def search_flights():
         f"destination: {target_cities}\n"
         f"destination_country: {target_countries}\n"
         f"same_airport: {same_airport}\n"
-        f"different_city: {different_city}\n"
+        f"new_city: {new_city}\n"
     )
 
     # Get the iata code for the first city
@@ -123,7 +123,7 @@ def search_flights():
             if len(fo) > 0:
                 first_city_destinations.add(flight['destination'])
         time.sleep(1)
-        if not different_city:
+        if not new_city:
             # Add the flight offers for the first city with the second city as destination
             fo = get_flight_offers_and_update_iata_codes(iata_departure_city_1, iata_departure_city_2, departure_date,
                                                          return_date, max_base_price, iata_codes)
@@ -138,7 +138,7 @@ def search_flights():
             if fo is not None:
                 second_city_offers.extend(fo)
         time.sleep(1)
-        if not different_city:
+        if not new_city:
             # Add the flight offers for the second city with the first city as destination
             fo = get_flight_offers_and_update_iata_codes(iata_departure_city_2, iata_departure_city_1, departure_date,
                                                          return_date, max_base_price, iata_codes)
@@ -228,7 +228,7 @@ def search_flights():
     # Query the prolog file
     return_flag = 'yes' if include_return else 'no'
     same_airport_flag = 'yes' if same_airport else 'no'
-    different_city_flag = 'yes' if different_city else 'no'
+    new_city_flag = 'yes' if new_city else 'no'
     waiting_time = max_wait_time if max_wait_time is not None else 'inf'
     # create the prolog server
     with PrologMQI() as mqi:
@@ -239,7 +239,7 @@ def search_flights():
             for iata_code1 in first_city_iata_codes:
                 for iata_code2 in second_city_iata_codes:
                     query = (f'fly2meet({iata_code1},{iata_code2}, bestsolution,{return_flag},{waiting_time},'
-                             f'{same_airport_flag},{different_city_flag},Flights).')
+                             f'{same_airport_flag},{new_city_flag},Flights).')
                     result = prolog_thread.query(query)
                     if result:
                         results.extend(result[0]['Flights'])
