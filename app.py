@@ -1,4 +1,3 @@
-from datetime import datetime
 from flask import Flask, render_template, request
 from swiplserver import PrologMQI
 from utils.helpers import *
@@ -6,36 +5,6 @@ from utils.prolog_parser import FlightParser
 import time
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
-
-
-# Filter for Jinja to format the price
-def format_price(value):
-    return f"{value} €"
-
-
-app.jinja_env.filters['format_price'] = format_price
-
-
-# Filter for Jinja to format the duration from seconds to hours and minutes
-def format_duration(value):
-    # convert the duration from seconds to hours and minutes
-    hours = value // 3600
-    minutes = (value % 3600) // 60
-    return f"{hours}h {minutes}m"
-
-
-app.jinja_env.filters['format_duration'] = format_duration
-
-
-# Filter for Jinja to format the departure and arrival time
-def format_datetime(value):
-    date_obj = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S")
-    formatted_date = date_obj.strftime("%d/%m/%Y")
-    formatted_time = date_obj.strftime("%H:%M")
-    return f"{formatted_date} alle {formatted_time}"
-
-
-app.jinja_env.filters['format_datetime'] = format_datetime
 
 
 @app.route('/search_flights', methods=['POST'])
