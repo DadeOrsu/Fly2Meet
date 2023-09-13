@@ -12,12 +12,12 @@ h1 {
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
     font-family: "Lato", sans-serif;
     margin: 20px;
-    font-size: 28px;
+    font-size: 50px;
 }
 
 .colored-character {
     color: #6ca6d4;
-    font-size: 32px;
+    font-size: 50px;
 }
 
 form {
