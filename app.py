@@ -13,36 +13,14 @@ def search_flights():
     departure_city_1 = request.form.get('departure_city_1')
     departure_city_2 = request.form.get('departure_city_2')
     departure_date = request.form.get('departure_date')
-    return_date = request.form.get('return_date')
-    if return_date == '':
-        return_date = None
-    max_base_price = request.form.get('max_base_price')
-    if max_base_price == '':
-        max_base_price = None
-    max_duration = request.form.get('max_duration')
-    if max_duration == '':
-        max_duration = None
-    max_wait_time = request.form.get('max_wait_time')
-    if max_wait_time == '':
-        max_wait_time = None
-    else:
-        max_wait_time = int(max_wait_time) * 60
-    target_cities = request.form.get('target_cities')
-    if target_cities == '':
-        target_cities = None
-    target_countries = request.form.get('target_countries')
-    if target_countries == '':
-        target_countries = None
-    same_airport = request.form.get('same_airport')
-    if same_airport is None:
-        same_airport = False
-    else:
-        same_airport = True
-    new_city = request.form.get('new_city')
-    if new_city is None:
-        new_city = False
-    else:
-        new_city = True
+    return_date = request.form.get('return_date') if request.form.get('return_date') != '' else None
+    max_base_price = request.form.get('max_base_price') if request.form.get('max_base_price') != '' else None
+    max_duration = request.form.get('max_duration') if request.form.get('max_duration') != '' else None
+    max_wait_time = int(request.form.get('max_wait_time'))*60 if request.form.get('max_wait_time') != '' else None
+    target_cities = request.form.get('target_cities') if request.form.get('target_cities') != '' else None
+    target_countries = request.form.get('target_countries') if request.form.get('target_countries') != '' else None
+    same_airport = False if request.form.get('same_airport') is None else True
+    new_city = False if request.form.get('new_city') is None else True
     # Print the collected datas on the console
     print(
         f"departure_city_1: {departure_city_1}\n"
