@@ -8,15 +8,16 @@ body {
 }
 
 h1 {
-  color: white;
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
-  font-family: "Lato", sans-serif;
-  margin: 20px;
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    font-family: "Lato", sans-serif;
+    margin: 20px;
+    font-size: 52px;
 }
 
 /* colore carattere 2 */
 .colored-character {
-  color: #6ca6d4;
+    color: #6ca6d4;
 }
 
 .container {  display: grid;
@@ -68,9 +69,9 @@ h1 {
     align-items: center;
 }
 
-.left-top{color: gray; text-align: left}
+.left-top{color: rgb(128, 128, 128); text-align: left}
 
-.right-top{color: gray; text-align: right}
+.right-top{color: rgb(128, 128, 128); text-align: right}
 
 .center-top { display: flex;
   flex-direction: column;
