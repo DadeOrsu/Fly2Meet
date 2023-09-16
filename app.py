@@ -16,7 +16,7 @@ def search_flights():
     return_date = request.form.get('return_date') if request.form.get('return_date') != '' else None
     max_base_price = request.form.get('max_base_price') if request.form.get('max_base_price') != '' else None
     max_duration = request.form.get('max_duration') if request.form.get('max_duration') != '' else None
-    max_wait_time = int(request.form.get('max_wait_time'))*60 if request.form.get('max_wait_time') != '' else None
+    max_wait_time = int(request.form.get('max_wait_time')) * 60 if request.form.get('max_wait_time') != '' else None
     target_cities = request.form.get('target_cities') if request.form.get('target_cities') != '' else None
     target_countries = request.form.get('target_countries') if request.form.get('target_countries') != '' else None
     same_airport = False if request.form.get('same_airport') is None else True
@@ -140,9 +140,6 @@ def search_flights():
         first_city_offers = filter_flight_offers_by_duration(first_city_offers, int(max_duration))
         second_city_offers = filter_flight_offers_by_duration(second_city_offers, int(max_duration))
 
-    # write the offers on a json dump
-    write_flights_to_json(first_city_offers, 'jsonDumps/' + departure_city_1 + departure_date + '.json')
-    write_flights_to_json(second_city_offers, 'jsonDumps/' + departure_city_2 + departure_date + '.json')
     # convert the flight offers to prolog facts
     flight_parser = FlightParser()
     airport_facts = flight_parser.prolog_airport_parser(iata_codes)
