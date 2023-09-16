@@ -1,9 +1,8 @@
 body {
-    background-image: url("airport.jpg");
-    background-color: #b0cbea;
-    background-repeat: repeat;
-    background-position: center;
-    height: 100vh;
+    background-image: url('Fly2Meet_background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: Arial, sans-serif;
 }
 
