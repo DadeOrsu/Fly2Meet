@@ -5,34 +5,32 @@ body {
     background-attachment: fixed;
     font-family: Arial, sans-serif;
 }
-
 h1 {
     color: white;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
     font-family: "Lato", sans-serif;
     margin: 20px;
-    font-size: 50px;
+    font-size: 52px;
 }
 
 .colored-character {
     color: #6ca6d4;
-    font-size: 50px;
 }
 
 form {
-    max-width: 700px;
+    max-width: 600px;
+    margin: 0 auto;
     background-color: #fff;
-    padding: 30px;
-    border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 0 auto 20px;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 label {
-    font-size: 18px;
+    font-size: 16px;
     display: block;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     font-weight: bold;
     color: #336699;
 }
@@ -41,10 +39,10 @@ input[type="text"],
 input[type="date"],
 input[type="number"] {
     width: 100%;
-    padding: 16px;
-    font-size: 18px;
-    border: 2px solid #b0cbea;
-    border-radius: 6px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #b0cbea;
+    border-radius: 4px;
     box-sizing: border-box;
     transition: border-color 0.3s ease;
 }
@@ -58,10 +56,10 @@ input[type="number"]:hover {
 button[type="submit"] {
     background-color: #336699;
     color: #fff;
-    padding: 16px 32px;
-    font-size: 18px;
+    padding: 12px 24px;
+    font-size: 16px;
     border: none;
-    border-radius: 6px;
+    border-radius: 4px;
     cursor: pointer;
 }
 
@@ -75,7 +73,7 @@ button[type="submit"]:hover {
 }
 
 .checkbox input[type="checkbox"] {
-    margin-right: 8px;
+    margin-right: 5px;
 }
 
 .advanced-option {
