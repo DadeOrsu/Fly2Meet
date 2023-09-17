@@ -47,13 +47,6 @@
             return `${hours}h ${minutes}m`;
         }
 
-        // Filter in JavaScript to format the departure and arrival time
-        function formatDatetime(value) {
-            const dateObj = new Date(value);
-            const formattedDate = dateObj.toLocaleDateString('it-IT');
-            const formattedTime = dateObj.toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' });
-            return `${formattedDate} alle ${formattedTime}`;
-        }
 
         function generateResultHtml(item) {
             let result = `<div class="container">
