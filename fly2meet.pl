@@ -86,10 +86,10 @@ min_max_list([H|T], CurrMin, CurrMax, Min, Max) :-
     min(H, CurrMin, NewMin), max(H, CurrMax, NewMax),
     min_max_list(T, NewMin, NewMax, Min, Max).
 
-waitingTime(ArrDate13, DepDate23, WaitingTime) :-
+waitingTime(ArrDate13, ArrDate23, WaitingTime) :-
     date_time_stamp(ArrDate13, ArrDate13ts),
-    date_time_stamp(DepDate23, DepDate23ts),
-    WaitingTime is abs(DepDate23ts - ArrDate13ts).
+    date_time_stamp(ArrDate23, ArrDate23ts),
+    WaitingTime is abs(ArrDate23ts - ArrDate13ts).
 
 minAndMax(What, Return, Max, Min) :-
     getAll(What, Return, All),
