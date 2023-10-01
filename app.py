@@ -143,8 +143,6 @@ def search_flights():
     # convert the flight offers to prolog facts
     flight_parser = FlightParser()
     airport_facts = flight_parser.prolog_airport_parser(iata_codes)
-    first_city_offers = sorted(first_city_offers, key=lambda x: float(x["price"]["total"]))
-    second_city_offers = sorted(second_city_offers, key=lambda x: float(x["price"]["total"]))
     all_flight_offers = first_city_offers + second_city_offers
     for i, item in enumerate(all_flight_offers):
         item['id'] = i
